@@ -25,9 +25,35 @@ namespace p2m\assets;
 
 class Lightbox2Asset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '2.9.0';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/lightbox2-##-version-##/dist',
+			'css' => [
+				'css/lightbox.min.css',
+			],
+			'js' => [
+				'js/lightbox.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/lightbox2/##-version-##',
+			'css' => [
+				'css/lightbox.min.css',
+			],
+			'js' => [
+				'js/lightbox.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

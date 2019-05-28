@@ -25,9 +25,33 @@ namespace p2m\assets;
 
 class JqueryMigrateAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '3.0.0';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/jquery',
+			'js' => [
+				'jquery-migrate-##-version-##.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//code.jquery.com',
+			'js' => [
+				'jquery-migrate-##-version-##.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+			'p2m\assets\base\P2JqueryAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->insertAssetVersion($this->resourceData['static']['js'][0]);
+		$this->insertAssetVersion($this->resourceData['published']['js'][0]);
+
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

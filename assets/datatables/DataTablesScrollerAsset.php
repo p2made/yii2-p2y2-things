@@ -25,9 +25,35 @@ namespace p2m\assets\datatables;
 
 class DataTablesScrollerAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '1.4.2';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/DataTables/Scroller-##-version-##',
+			'css' => [
+				'css/scroller.bootstrap.min.css',
+			],
+			'js' => [
+				'js/dataTables.scroller.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => 'https://cdn.datatables.net/scroller/##-version-##',
+			'css' => [
+				'css/scroller.bootstrap.min.css',
+			],
+			'js' => [
+				'js/dataTables.scroller.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\datatables\DataTablesBootstrapAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

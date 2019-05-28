@@ -25,9 +25,29 @@ namespace p2m\assets;
 
 class IsotopeAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '3.0.2';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/isotope-##-version-##/dist',
+			'js' => [
+				'jquery.isotope.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/##-version-##',
+			'js' => [
+				'isotope.pkgd.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

@@ -25,9 +25,36 @@ namespace p2m\assets;
 
 class MorrisAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '0.5.1';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/morris.js-##-version-##',
+			'css' => [
+				'morris.css',
+			],
+			'js' => [
+				'morris.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/morris.js/##-version-##',
+			'css' => [
+				'morris.css',
+			],
+			'js' => [
+				'morris.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+			'p2m\assets\RaphaelAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

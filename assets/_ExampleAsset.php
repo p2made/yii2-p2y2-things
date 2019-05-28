@@ -25,14 +25,49 @@ namespace p2m\assets; /* edit this if using elsewhere */
 
 class _ExampleAsset extends \p2m\assets\base\P2AssetBundle
 {
-	$assetData = array(
-		'version' => 'version',
-		'sourcePath' => 'sourcePath',
-		'baseUrl' => 'baseUrl',
-		'css' => [
+	protected $version = '0.0.0';
+
+	protected $resourceData = array(
+
+		/**
+		 * 'published' section
+		 * use this for published version of assets
+		 * leave out if there's no published version
+		 */
+		'published' => [
+			'sourcePath' => '@path/to/assets/folder',
+			'css' => [
+				'css/css_file.css',
+			],
+			'js' => [
+				'js/js_file.js',
+			],
+			/**
+			 * OPTIONAL :
+			 * Use 'endName' for custom assets belonging to one application end,
+			 * AND when you have a static application end to publish asset to,
+			 * AND when you want to publish asset to an end specific folder
+			 * leave any of the above is NOT true
+			 */
+			//
+			'endName' = 'endName',
 		],
-		'js' => [
+
+		/**
+		 * 'static' section
+		 * use this for static version of assets
+		 * leave out if there's no static version
+		 */
+		'static' => [
+			'baseUrl' => '//example.com/path_to_asset/##-version-##',
+			'css' => [
+				'css/css_file.css',
+			],
+			'js' => [
+				'js/js_file.js',
+			],
 		],
+
 		'cssOptions' => [
 			// cssOptions like any other assets
 			// or leave out if no cssOptions
@@ -45,24 +80,12 @@ class _ExampleAsset extends \p2m\assets\base\P2AssetBundle
 			'p2m\assets\P2CoreAsset',
 			// any other depends
 		],
-		'publishOptions' => [
-			// publishOptions like any other assets
-			// or leave out if no publishOptions
-		],
-		/**
-		 * OPTIONAL :
-		 * Use 'endName' for custom assets belonging to one application end,
-		 * AND when you have a static application end to publish asset to,
-		 * AND when you want to publish asset to an end specific folder
-		 * leave any of the above is NOT true
-		 */
-		//
-		'endName' = 'endName',
+
 	);
 
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

@@ -22,9 +22,24 @@ namespace p2m\assets;
 
 class ColorHelpersAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '1.1-1';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/jquery-colorhelpers-jquery-colorhelpers-##-version-##',
+			'js' => [
+				'jquery.colorhelpers.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+			'p2m\assets\flot\FlotTooltipAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

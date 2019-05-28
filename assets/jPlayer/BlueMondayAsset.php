@@ -22,9 +22,30 @@ namespace p2m\assets\jPlayer;
 
 class BlueMondayAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '2.9.2';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@vendor/happyworm/jplayer/dist',
+			'css' => [
+				'skin/blue.monday/css/jplayer.blue.monday.min.css',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/jplayer/##-version-##',
+			'css' => [
+				'skin/blue.monday/css/jplayer.blue.monday.min.css',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+			'p2m\assets\jPlayer\JplayerAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

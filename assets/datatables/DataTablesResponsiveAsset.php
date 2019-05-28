@@ -25,9 +25,37 @@ namespace p2m\assets\datatables;
 
 class DataTablesResponsiveAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '2.1.0';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/DataTables/Responsive-##-version-##',
+			'css' => [
+				'css/responsive.bootstrap.min.css',
+			],
+			'js' => [
+				'js/dataTables.responsive.min.js',
+				'js/responsive.bootstrap.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => 'https://cdn.datatables.net/responsive/##-version-##',
+			'css' => [
+				'css/responsive.bootstrap.min.css',
+			],
+			'js' => [
+				'js/dataTables.responsive.min.js',
+				'js/responsive.bootstrap.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\datatables\DataTablesBootstrapAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

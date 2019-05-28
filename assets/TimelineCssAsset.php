@@ -25,9 +25,29 @@ namespace p2m\assets;
 
 class TimelineCssAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '1.0.0';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/Timeline.css-##-version-##',
+			'css' => [
+				'css/timeline.css',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/timeline.css/##-version-##',
+			'css' => [
+				'timeline.min.css',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

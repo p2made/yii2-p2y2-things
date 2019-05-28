@@ -36,18 +36,19 @@ class _ExampleLoaderAsset extends \p2m\assets\base\P2LoaderAssetBundle
 	 * without loading any assets of its own...
 	 *
 	 * So the paths & URLs are null...
-	 * but that's been specified in P2LoaderAssetBundle.
+	 • but that's been specified in P2LoaderAssetBundle.
 	 */
 
-	public $cssOptions => [
+	'cssOptions' => [
 		// cssOptions like any other assets
 		// or leave out if no cssOptions
 	],
 
-	public $jsOptions => [
+	'jsOptions' => [
 		// jsOptions like any other assets
 		// or leave out if no jsOptions
 	],
+
 }
 
 /* dependency lines for all assets... */

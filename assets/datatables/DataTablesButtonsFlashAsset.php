@@ -25,9 +25,29 @@ namespace p2m\assets\datatables;
 
 class DataTablesButtonsFlashAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '1.3.1';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/DataTables/Buttons-##-version-##',
+			'js' => [
+				'js/buttons.flash.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
+			'js' => [
+				'js/buttons.flash.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\datatables\DataTablesButtonsAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

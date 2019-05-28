@@ -25,9 +25,37 @@ namespace p2m\assets\datatables; /* edit this if using elsewhere */
 
 class DataTablesAutoFillAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '2.2.0';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/DataTables/AutoFill-##-version-##',
+			'css' => [
+				'css/autoFill.bootstrap.min.css',
+			],
+			'js' => [
+				'js/dataTables.autoFill.min.js',
+				'js/autoFill.bootstrap.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => 'https://cdn.datatables.net/autofill/##-version-##',
+			'css' => [
+				'css/autoFill.bootstrap.min.css',
+			],
+			'js' => [
+				'js/dataTables.autoFill.min.js',
+				'js/autoFill.bootstrap.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\datatables\DataTablesBootstrapAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

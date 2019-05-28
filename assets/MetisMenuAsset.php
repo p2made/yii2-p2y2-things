@@ -25,9 +25,35 @@ namespace p2m\assets;
 
 class MetisMenuAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '2.6.2';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@vendor/onokumus/metismenu/dist',
+			'css' => [
+				'metisMenu.min.css',
+			],
+			'js' => [
+				'metisMenu.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/metisMenu/##-version-##',
+			'css' => [
+				'metisMenu.min.css',
+			],
+			'js' => [
+				'metisMenu.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

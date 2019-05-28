@@ -23,40 +23,66 @@
  * ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ #####
  */
 
-namespace p2m\assets\base;
+/**
+ * Load this asset with...
+ * p2m\assets\base\P2BootstrapAsset::register($this);
+ *
+ * or specify as a dependency with...
+ *     'p2m\assets\base\P2BootstrapAsset',
+ */
 
-use p2m\base\helpers\AssetsSettings;
+namespace p2m\assets\base;
 
 class P2BootstrapAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '3.3.7';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/bootstrap-##-version-##-dist',
+			'css' => [
+				'css/bootstrap.min.css',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//maxcdn.bootstrapcdn.com/bootstrap/##-version-##',
+			'css' => [
+				'css/bootstrap.min.css',
+			],
+		],
+		'depends' => [
+			'p2m\assets\base\P2BootstrapPluginAsset',
+		],
+	);
+
 	public function init()
 	{
-		$bootswatch = self::bootswatch();
-
-		if($bootswatch) {
-			$this->assetData['sourcePath'] =
-				'@vendor/thomaspark/bootswatch/' . $bootswatch;
-			$this->assetData['baseUrl'] =
-				'stackpath.bootstrapcdn.com/bootswatch/##-version-##/' . $bootswatch;
+		if(isset(\Yii::$app->params['p2assets']['bootswatchTheme'])) {
+			$themeName = \Yii::$app->params['p2assets']['bootswatchTheme'];
+			$this->resourceData['sourcePath'] = '@vendor/thomaspark/bootswatch/' . $themeName;
+			$this->resourceData['published']['baseUrl'] = [
+				'bootswatch/##-version-##/' . $themeName,
+			];
+			$this->resourceData['published']['css'] = [
+				'bootstrap.min.css',
+			];
+			$this->resourceData['static']['css'] = [
+				'bootstrap.min.css',
+			];
 		}
 
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }
 
 /* params
-	'p2m' => [
-		'assets' => [
-			...
-			// Bootswatch themes
-			'bootswatch' = 'cerulean', // set to _one_ of:
-				// 'cerulean', 'cosmo', 'cyborg', 'darkly',
-				// 'flatly', 'journal', 'lumen', 'paper',
-				// 'readable', 'sandstone', 'simplex', 'slate',
-				// 'spacelab', 'superhero', 'united', 'yeti',
-				// or false or not set to use no theme
-		],
-		...
+	'p2assets' => [
+		'useStatic' => true, // false or not set to use published assets
+		'bootswatchTheme' = 'cerulean', // set to _one_ of:
+			// 'cerulean', 'cosmo', 'cyborg', 'darkly',
+			// 'flatly', 'journal', 'lumen', 'paper',
+			// 'readable', 'sandstone', 'simplex', 'slate',
+			// 'spacelab', 'superhero', 'united', 'yeti',
 	],
 */

@@ -25,9 +25,29 @@ namespace p2m\assets;
 
 class JSZipAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '3.1.3';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@vendor/stuk/jszip/dist',
+			'js' => [
+				'jszip.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/jszip/##-version-##',
+			'js' => [
+				'jszip.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

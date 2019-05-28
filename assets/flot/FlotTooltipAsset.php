@@ -26,9 +26,29 @@ namespace p2m\assets\flot;
 
 class FlotTooltipAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '0.9.0';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/flot.tooltip-##-version-##',
+			'js' => [
+				'js/jquery.flot.tooltip.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/flot.tooltip/##-version-##',
+			'js' => [
+				'jquery.flot.tooltip.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

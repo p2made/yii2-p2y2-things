@@ -27,24 +27,16 @@ class P2AssetBundle extends \p2m\base\assets\P2AssetBase
 {
 	/*
 	 * @var string
+	 * protected $version;
+	 */
+
+	/*
+	 * @var string
 	 * protected $_p2mProjectId;
 	 */
 	protected $_p2mProjectId = 'yii2-p2y2-things';
 
-	/*
-	 * @var string
-	 * protected $version;
-	 */
-	protected $version; // = '0.0.0'
-
-	/*
-	 * @var array
-	 * protected $assetData;
-	 */
-
 	/**
-	 * Yii asset properties
-	 *
 	 * @var string
 	 * public $sourcePath;
 	 *
@@ -68,40 +60,11 @@ class P2AssetBundle extends \p2m\base\assets\P2AssetBase
 	 *
 	 * @var array
 	 * public $publishOptions = [];
+	 *
+	 * @var boolean
+	 * public $_useStatic = false;
+	 *
+	 * @var array | false
+	 * public $_staticEnd = [] | false;
 	 */
-
-	/*
-	 * P2 asset data structure
-
-	'assetName' => array(
-		'version' => 'version',
-		'sourcePath' => 'sourcePath',
-		'baseUrl' => 'baseUrl',
-		'css' => [
-		],
-		'js' => [
-		],
-		'cssOptions' => [
-		],
-		'jsOptions' => [
-		],
-		'depends' => [
-		],
-		'publishOptions' => [
-		],
-	),
-
-	 */
-
-	public function __construct()
-	{
-		$allAssetsData = require(__DIR__ . '/_assetsData.php');
-
-		if(!isset($allAssetsData[get_class($this)])) {
-			return;
-		}
-
-		$this->assetData = $allAssetsData[$assetName];
-		$allAssetsData = null;
-	}
 }

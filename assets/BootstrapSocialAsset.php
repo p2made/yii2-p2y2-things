@@ -25,9 +25,29 @@ namespace p2m\assets;
 
 class BootstrapSocialAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '5.1.1';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/bootstrap-social-##-version-##',
+			'css' => [
+				'bootstrap-social.css',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/bootstrap-social/##-version-##',
+			'css' => [
+				'bootstrap-social.min.css',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

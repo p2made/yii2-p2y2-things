@@ -20,13 +20,23 @@
  * ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ #####
  */
 
+/**
+ * Load this asset with...
+ * p2m\assets\base\P2YiiAsset::register($this);
+ *
+ * or specify as a dependency with...
+ *     'p2m\assets\base\P2YiiAsset',
+ */
+
 namespace p2m\assets\base;
 
 class P2YiiAsset extends \yii\web\AssetBundle
 {
-	public function init()
-	{
-		$this->setAssetProperties();
-		parent::init();
-	}
+	public $sourcePath = '@yii/assets';
+	public $js = [
+		'yii.js',
+	];
+	public $depends = [
+		'p2m\assets\base\P2JqueryAsset',
+	];
 }

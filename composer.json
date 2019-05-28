@@ -33,6 +33,7 @@
 
 	"require": {
 		"yiisoft/yii2": "^2.0",
+		"yiisoft/yii2-bootstrap4": "^2.0",
 		"p2made/yii2-p2y2-base": "dev-1.1.5-beta",
 		"p2made/yii2-p2y2-moment": "dev-2.0.1-beta",
 		"bpampuch/pdfmake": "^0.1.24",

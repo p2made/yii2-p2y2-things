@@ -22,9 +22,27 @@ namespace p2m\assets\flot;
 
 class FlotErrorbarsAsset extends \p2m\assets\flot\FlotAssetBase
 {
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/flot-##-version-##',
+			'js' => [
+				'jquery.flot.errorbars.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/flot/##-version-##',
+			'js' => [
+				'jquery.flot.errorbars.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

@@ -23,15 +23,41 @@
  * ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ #####
  */
 
+/**
+ * Load this asset with...
+ * p2m\assets\base\P2JqueryAsset::register($this);
+ *
+ * or specify as a dependency with...
+ *     'p2m\assets\base\P2JqueryAsset',
+ */
+
 namespace p2m\assets\base;
 
 class P2JqueryAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '3.2.1';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/jquery',
+			'js' => [
+				'jquery-##-version-##.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//code.jquery.com',
+			'js' => [
+				'jquery-##-version-##.min.js',
+			],
+		],
+	);
+
 	public function init()
 	{
-		self::insertAssetVersion($this->assetData['js'][0]);
+		$this->insertAssetVersion($this->resourceData['static']['js'][0]);
+		$this->insertAssetVersion($this->resourceData['published']['js'][0]);
 
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

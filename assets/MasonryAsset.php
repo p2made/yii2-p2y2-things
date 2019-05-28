@@ -25,9 +25,29 @@ namespace p2m\assets;
 
 class MasonryAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '4.1.1';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/masonry-##-version-##/dist',
+			'js' => [
+				'masonry.pkgd.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/masonry/##-version-##',
+			'js' => [
+				'masonry.pkgd.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

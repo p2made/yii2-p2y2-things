@@ -22,9 +22,21 @@ namespace p2m\assets;
 
 class TimelineAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/pub',
+			'css' => [
+				'css/timeline.css',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

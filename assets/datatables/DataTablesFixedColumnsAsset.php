@@ -25,9 +25,35 @@ namespace p2m\assets\datatables;
 
 class DataTablesFixedColumnsAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '3.2.2';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/DataTables/FixedColumns-##-version-##',
+			'css' => [
+				'css/fixedColumns.bootstrap.min.css',
+			],
+			'js' => [
+				'js/dataTables.fixedColumns.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => 'https://cdn.datatables.net/fixedcolumns/##-version-##',
+			'css' => [
+				'css/fixedColumns.bootstrap.min.css',
+			],
+			'js' => [
+				'js/dataTables.fixedColumns.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\datatables\DataTablesBootstrapAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

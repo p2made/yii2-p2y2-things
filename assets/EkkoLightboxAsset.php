@@ -22,9 +22,35 @@ namespace p2m\assets;
 
 class EkkoLightboxAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '4.0.1';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@vendor/drmonty/ekko-lightbox',
+			'css' => [
+				'css/ekko-lightbox.min.css',
+			],
+			'js' => [
+				'js/ekko-lightbox.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/##-version-##',
+			'css' => [
+				'ekko-lightbox.min.css',
+			],
+			'js' => [
+				'ekko-lightbox.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

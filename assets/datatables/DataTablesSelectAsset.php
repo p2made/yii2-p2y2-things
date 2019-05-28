@@ -25,9 +25,35 @@ namespace p2m\assets\datatables;
 
 class DataTablesSelectAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '1.2.2';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/DataTables/Select-##-version-##',
+			'css' => [
+				'css/select.bootstrap.min.css',
+			],
+			'js' => [
+				'js/dataTables.select.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => 'https://cdn.datatables.net/select/##-version-##',
+			'css' => [
+				'css/select.bootstrap.min.css',
+			],
+			'js' => [
+				'js/dataTables.select.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\datatables\DataTablesBootstrapAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

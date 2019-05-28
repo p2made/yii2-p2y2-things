@@ -25,9 +25,35 @@ namespace p2m\assets; /* edit this if using elsewhere */
 
 class MagnificPopupAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '1.1.0';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@vendor/dimsemenov/magnific-popup/dist',
+			'css' => [
+				'magnific-popup.min.css',
+			],
+			'js' => [
+				'jquery.magnific-popup.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/##-version-##',
+			'css' => [
+				'magnific-popup.min.css',
+			],
+			'js' => [
+				'jquery.magnific-popup.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

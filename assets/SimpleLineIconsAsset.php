@@ -25,9 +25,31 @@ namespace p2m\assets;
 
 class SimpleLineIconsAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '2.4.1';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/simple-line-icons-##-version-##',
+			'css' => [
+				'css/simple-line-icons.css',
+			],
+			'js' => [],
+		],
+		'static' => [
+			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/simple-line-icons/##-version-##',
+			'css' => [
+				'simple-line-icons.min.css',
+			],
+			'js' => [],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

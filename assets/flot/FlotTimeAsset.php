@@ -23,9 +23,27 @@ namespace p2m\assets\flot;
 
 class FlotTimeAsset extends \p2m\assets\flot\FlotAssetBase
 {
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/flot-##-version-##',
+			'js' => [
+				'jquery.flot.time.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/flot/##-version-##',
+			'js' => [
+				'jquery.flot.time.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

@@ -22,9 +22,29 @@ namespace p2m\assets;
 
 class P2CoreAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $resourceData = array(
+
+		'published' => [
+			'sourcePath' => '@p2m@/pub',
+			'css' => [
+				'css/p2additions.css',
+			],
+			'js' => [
+				//'js/p2additions.js',
+			],
+		],
+
+		'depends' => [
+			'p2m\assets\base\P2YiiAsset',
+			'p2m\assets\base\P2BootstrapAsset',
+			'p2m\assets\base\P2FontAwesomeAsset',
+		],
+
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

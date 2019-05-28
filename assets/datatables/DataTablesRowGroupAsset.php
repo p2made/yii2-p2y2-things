@@ -25,9 +25,35 @@ namespace p2m\assets\datatables;
 
 class DataTablesRowGroupAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '1.0.0';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/DataTables/RowGroup-##-version-##',
+			'css' => [
+				'css/rowGroup.bootstrap.min.css',
+			],
+			'js' => [
+				'js/dataTables.rowGroup.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => 'https://cdn.datatables.net/rowgroup/##-version-##',
+			'css' => [
+				'css/rowGroup.bootstrap.min.css',
+			],
+			'js' => [
+				'js/dataTables.rowGroup.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\datatables\DataTablesBootstrapAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

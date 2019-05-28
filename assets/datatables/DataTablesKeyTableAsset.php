@@ -25,9 +25,35 @@ namespace p2m\assets\datatables;
 
 class DataTablesKeyTableAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '2.2.1';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/DataTables/KeyTable-##-version-##',
+			'css' => [
+				'css/keyTable.bootstrap.min.css',
+			],
+			'js' => [
+				'js/dataTables.keyTable.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => 'https://cdn.datatables.net/keytable/##-version-##',
+			'css' => [
+				'css/keyTable.bootstrap.min.css',
+			],
+			'js' => [
+				'js/dataTables.keyTable.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\datatables\DataTablesBootstrapAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }

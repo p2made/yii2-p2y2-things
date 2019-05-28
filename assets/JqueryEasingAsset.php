@@ -25,9 +25,33 @@ namespace p2m\assets; /* edit this if using elsewhere */
 
 class JqueryEasingAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '1.4.1';
+
+	protected $resourceData = array(
+		'published' => [
+			'sourcePath' => '@p2m@/jquery.easing-##-version-##',
+			'css' => [],
+			'js' => [
+				'jquery.easing.min.js',
+				'jquery.easing.compatibility.min.js',
+			],
+		],
+		'static' => [
+			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/##-version-##',
+			'css' => [],
+			'js' => [
+				'jquery.easing.min.js',
+				'jquery.easing.compatibility.min.js',
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	);
+
 	public function init()
 	{
-		$this->setAssetProperties();
+		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
 }
