@@ -30,6 +30,7 @@
 
 	"version": "dev-v3-refactor",
 	"minimum-stability": "dev",
+	"prefer-stable" : true,
 
 	"require": {
 		"yiisoft/yii2": "~2.0",
