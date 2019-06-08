@@ -35,19 +35,27 @@ namespace p2m\assets\base;
 
 class P2FontAwesomeAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '4.7.0';
+	protected $version = '5.8.2';
 
 	protected $resourceData = array(
+		'static' => [
+			'baseUrl' => 'https://use.fontawesome.com/releases/v##-version-##',
+			'css' => [
+				'css/all.css',
+			],
+			'cssOptions' => [
+				'integrity' => 'sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay',
+				'crossorigin' => 'anonymous',
+			],
+		],
 		'published' => [
 			'sourcePath' => '@vendor/fortawesome/font-awesome',
 			'css' => [
-				'css/font-awesome.min.css',
+				'css/all.min.css',
 			],
-		],
-		'static' => [
-			'baseUrl' => '//maxcdn.bootstrapcdn.com/font-awesome/##-version-##',
-			'css' => [
-				'css/font-awesome.min.css',
+			'cssOptions' => [
+				'integrity' => 'sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay',
+				'crossorigin' => 'anonymous',
 			],
 		],
 	);

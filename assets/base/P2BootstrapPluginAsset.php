@@ -35,19 +35,27 @@ namespace p2m\assets\base;
 
 class P2BootstrapPluginAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '3.3.7';
+	protected $version = '4.3.1';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@bower/bootstrap/dist',
+		'static' => [
+			'baseUrl' => 'https://stackpath.bootstrapcdn.com/bootstrap/##-version-##',
 			'js' => [
 				'js/bootstrap.min.js',
 			],
+			'jsOptions' => [
+				'integrity' => 'sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM',
+				'crossorigin' => 'anonymous',
+			],
 		],
-		'static' => [
-			'baseUrl' => '//maxcdn.bootstrapcdn.com/bootstrap/',
+		'published' => [
+			'sourcePath' => '@p2m@/bootstrap-##-version-##-dist',
 			'js' => [
 				'js/bootstrap.min.js',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM',
+				'crossorigin' => 'anonymous',
 			],
 		],
 		'depends' => [

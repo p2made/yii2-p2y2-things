@@ -35,26 +35,26 @@ namespace p2m\assets\base;
 
 class P2JqueryAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '3.4.1';
+	protected $version = '3.2.1';
 
 	protected $resourceData = array(
 		'static' => [
 			'baseUrl' => 'https://code.jquery.com',
 			'js' => [
-				'jquery-##-version-##.min.js',
+				'jquery-##-version-##.slim.min.js',
 			],
 			'jsOptions' => [
-				'integrity' => 'sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh',
+				'integrity' => 'sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n',
 				'crossorigin' => 'anonymous',
 			],
 		],
 		'published' => [
 			'sourcePath' => '@p2m@/jquery',
 			'js' => [
-				'jquery-##-version-##.min.js',
+				'jquery-##-version-##.slim.min.js',
 			],
 			'jsOptions' => [
-				'integrity' => 'sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh',
+				'integrity' => 'sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n',
 				'crossorigin' => 'anonymous',
 			],
 		],
