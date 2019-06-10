@@ -41,20 +41,20 @@ class P2BootstrapPluginAsset extends \p2m\assets\base\P2AssetBundle
 		'static' => [
 			'baseUrl' => 'https://stackpath.bootstrapcdn.com/bootstrap/##-version-##',
 			'js' => [
-				'js/bootstrap.min.js',
+				'js/bootstrap.bundle.min.js',
 			],
 			'jsOptions' => [
-				'integrity' => 'sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM',
+				'integrity' => 'sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o',
 				'crossorigin' => 'anonymous',
 			],
 		],
 		'published' => [
 			'sourcePath' => '@p2m@/bootstrap-##-version-##-dist',
 			'js' => [
-				'js/bootstrap.min.js',
+				'js/bootstrap.bundle.min.js',
 			],
 			'jsOptions' => [
-				'integrity' => 'sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM',
+				'integrity' => 'sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o',
 				'crossorigin' => 'anonymous',
 			],
 		],
@@ -65,8 +65,6 @@ class P2BootstrapPluginAsset extends \p2m\assets\base\P2AssetBundle
 
 	public function init()
 	{
-		$this->resourceData['static']['baseUrl'] .= $this->version;
-
 		$this->configureAsset($this->resourceData);
 		parent::init();
 	}
