@@ -25,13 +25,23 @@ namespace p2m\assets;
 
 class AmplitudejsAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '2.2';
+	protected $version = '5.0.2';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/amplitudejs-##-version-##',
+		'static' => [
+			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/amplitudejs/##-version-##',
 			'js' => [
-				'js/amplitude.min.js',
+				'amplitude.min.js',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha256-/qGoEvr4VYrgei+olAkcHAuuwGFZb/AsO75x7xgsajs=',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'sourcePath' => '@vendor/bower-asset/amplitude/dist',
+			'js' => [
+				'amplitude.min.js',
 			],
 		],
 		'depends' => [

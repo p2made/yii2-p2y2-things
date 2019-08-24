@@ -36,6 +36,7 @@
 		"yiisoft/yii2-bootstrap4": "~2.0.6",
 		"p2made/yii2-p2y2-base": "dev-1.1.5-beta",
 		"p2made/yii2-p2y2-moment": "dev-2.0.1-beta",
+		"bower-asset/amplitude": "~5.0",
 		"bpampuch/pdfmake": "~0.1.56",
 		"components/flag-icon-css": "~3.3",
 		"dimsemenov/magnific-popup": "~1.1",
