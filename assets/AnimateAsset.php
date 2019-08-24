@@ -25,19 +25,23 @@ namespace p2m\assets;
 
 class AnimateAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '3.5.2';
+	protected $version = '3.7.2';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@vendor/drmonty/animate.css',
-			'css' => [
-				'css/animate.min.css',
-			],
-		],
 		'static' => [
 			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/animate.css/##-version-##',
 			'css' => [
 				'animate.min.css',
+			],
+			'cssOptions' => [
+				'integrity' => 'sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'sourcePath' => '@vendor/drmonty/animate.css',
+			'css' => [
+				'css/animate.min.css',
 			],
 		],
 		'depends' => [

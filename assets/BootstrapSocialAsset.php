@@ -28,16 +28,20 @@ class BootstrapSocialAsset extends \p2m\assets\base\P2AssetBundle
 	protected $version = '5.1.1';
 
 	protected $resourceData = array(
+		'static' => [
+			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/##-version-##',
+			'css' => [
+				'bootstrap-social.min.css',
+			],
+			'cssOptions' => [
+				'integrity' => 'sha256-rFMLRbqAytD9ic/37Rnzr2Ycy/RlpxE5QH52h7VoIZo=',
+				'crossorigin' => 'anonymous',
+			],
+		],
 		'published' => [
 			'sourcePath' => '@p2m@/bootstrap-social-##-version-##',
 			'css' => [
 				'bootstrap-social.css',
-			],
-		],
-		'static' => [
-			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/bootstrap-social/##-version-##',
-			'css' => [
-				'bootstrap-social.min.css',
 			],
 		],
 		'depends' => [
