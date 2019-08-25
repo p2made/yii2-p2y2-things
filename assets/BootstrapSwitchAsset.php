@@ -22,11 +22,11 @@ namespace p2m\assets;
 
 class BootstrapSwitchAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '3.3.2';
+	protected $version = '3.3.4';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@vendor/nostalgiaz/bootstrap-switch/dist',
+		'static' => [
+			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/##-version-##',
 			'css' => [
 				'css/bootstrap3/bootstrap-switch.min.css',
 			],
@@ -34,8 +34,8 @@ class BootstrapSwitchAsset extends \p2m\assets\base\P2AssetBundle
 				'js/bootstrap-switch.min.js',
 			],
 		],
-		'static' => [
-			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/##-version-##',
+		'published' => [
+			'sourcePath' => '@vendor/nostalgiaz/bootstrap-switch/dist',
 			'css' => [
 				'css/bootstrap3/bootstrap-switch.min.css',
 			],
@@ -54,3 +54,4 @@ class BootstrapSwitchAsset extends \p2m\assets\base\P2AssetBundle
 		parent::init();
 	}
 }
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/##-version-##/js/bootstrap-switch.min.js" integrity="sha256-AKUJYz2DyEoZYHh2/+zPHm1tTdYb4cmG8HC2ydmTzM4=" crossorigin="anonymous"></script>

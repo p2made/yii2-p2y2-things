@@ -25,14 +25,33 @@ namespace p2m\assets;
 
 class BootstrapSweetalertAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $version = '1.0.1';
+
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/bootstrap-sweetalert-##-version-##/dist',
+		'static' => [
+			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/##-version-##',
 			'css' => [
-				'sweet-alert.css',
+				'sweetalert.min.css',
 			],
 			'js' => [
-				'sweet-alert.min.js',
+				'sweetalert.min.js',
+			],
+			'cssOptions' => [
+				'integrity' => 'sha256-zuyRv+YsWwh1XR5tsrZ7VCfGqUmmPmqBjIvJgQWoSDo=',
+				'crossorigin' => 'anonymous',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha256-JirYRqbf+qzfqVtEE4GETyHlAbiCpC005yBTa4rj6xg=',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'sourcePath' => '@p2m@/bootstrap-social-##-version-##',
+			'css' => [
+				'sweetalert.min.css',
+			],
+			'js' => [
+				'sweetalert.min.js',
 			],
 		],
 		'depends' => [

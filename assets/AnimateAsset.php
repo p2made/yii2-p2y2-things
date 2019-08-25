@@ -29,7 +29,7 @@ class AnimateAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $resourceData = array(
 		'static' => [
-			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/animate.css/##-version-##',
+			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/##-version-##',
 			'css' => [
 				'animate.min.css',
 			],

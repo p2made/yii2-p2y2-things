@@ -55,3 +55,6 @@ class BootstrapSocialAsset extends \p2m\assets\base\P2AssetBundle
 		parent::init();
 	}
 }
+
+
+//		"bower-asset/bootstrap-social":"~5.1",
