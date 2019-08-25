@@ -34,6 +34,11 @@
 
 	"require": {
 		"yiisoft/yii2-bootstrap4": "~2.0.6",
+		"bower-asset/amplitude":"~5.0",
+		"bower-asset/bootstrap-sweetalert":"~1.0",
+		"bower-asset/bootstrap": "~4.3",
+		"bower-asset/flag-icon-css": "~3.3",
+		"bower-asset/jquery": "~3.4",
 
 		"thomaspark/bootswatch": "~4.3"
 	},
