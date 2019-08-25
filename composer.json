@@ -34,8 +34,10 @@
 
 	"require": {
 		"yiisoft/yii2-bootstrap4": "~2.0.6",
-		"p2made/yii2-p2y2-base": "dev-1.1.5-beta",
-		"p2made/yii2-p2y2-moment": "dev-2.0.1-beta",
+		"bower-asset/amplitude":"~5.0",
+		"bower-asset/bootstrap-sweetalert":"~1.0",
+		"bower-asset/bootstrap": "~4.3",
+		"bower-asset/jquery": "~3.4",
 		"bpampuch/pdfmake": "~0.1.56",
 		"components/flag-icon-css": "~3.3",
 		"dimsemenov/magnific-popup": "~1.1",
@@ -47,6 +49,8 @@
 		"moontoast/math": "~1.1",
 		"nostalgiaz/bootstrap-switch": "~3.3",
 		"onokumus/metismenu": "~3.0",
+		"p2made/yii2-p2y2-base": "dev-1.1.5-beta",
+		"p2made/yii2-p2y2-moment": "dev-2.0.1-beta",
 		"philippfrenzel/yii2fullcalendar": "~4.0",
 		"ramsey/uuid": "~3.8",
 		"stuk/jszip": "~3.0",
