@@ -33,14 +33,21 @@
 	"prefer-stable" : true,
 
 	"require": {
-		"yiisoft/yii2-bootstrap4": "~2.0.6",
+		"p2made/yii2-p2y2-base": "dev-1.1.5-beta",
+		"p2made/yii2-p2y2-moment": "dev-2.0.1-beta",
 		"bower-asset/amplitude":"~5.0",
+		"bower-asset/animate.css": "~3.7",
 		"bower-asset/bootstrap-sweetalert":"~1.0",
 		"bower-asset/bootstrap": "~4.3",
 		"bower-asset/flag-icon-css": "~3.3",
 		"bower-asset/jquery": "~3.4",
+		"bpampuch/pdfmake": "~0.1.56",
 		"dimsemenov/magnific-popup": "~1.1",
-		"bower-asset/animate.css": "~3.7",
+		"drmonty/ekko-lightbox": "~5.3",
+		"happyworm/jplayer": "~2.9",
+		"imsky/holder": "~2.9",
+		"moontoast/math": "~1.1",
+		"nostalgiaz/bootstrap-switch": "~3.3",
 
 		"thomaspark/bootswatch": "~4.3"
 	},
