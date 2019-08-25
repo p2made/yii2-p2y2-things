@@ -39,6 +39,8 @@
 		"bower-asset/bootstrap": "~4.3",
 		"bower-asset/flag-icon-css": "~3.3",
 		"bower-asset/jquery": "~3.4",
+		"bpampuch/pdfmake": "~0.1.56",
+		"dimsemenov/magnific-popup": "~1.1",
 
 		"thomaspark/bootswatch": "~4.3"
 	},
