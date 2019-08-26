@@ -44,11 +44,9 @@
 		"bpampuch/pdfmake": "~0.1.56",
 		"dimsemenov/magnific-popup": "~1.1",
 		"drmonty/ekko-lightbox": "~5.3",
-		"happyworm/jplayer": "~2.9",
 		"imsky/holder": "~2.9",
 		"moontoast/math": "~1.1",
 		"nostalgiaz/bootstrap-switch": "~3.3",
-
 		"thomaspark/bootswatch": "~4.3"
 	},
 	"require-dev": {
