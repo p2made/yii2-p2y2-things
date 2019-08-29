@@ -39,7 +39,7 @@ class AmplitudejsAsset extends \p2m\assets\base\P2AssetBundle
 			],
 		],
 		'published' => [
-			'sourcePath' => '@vendor/bower-asset/amplitude/dist',
+			'sourcePath' => '@bower/amplitude/dist',
 			'js' => [
 				'amplitude.min.js',
 			],

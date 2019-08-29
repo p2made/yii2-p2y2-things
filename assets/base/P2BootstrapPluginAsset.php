@@ -49,17 +49,13 @@ class P2BootstrapPluginAsset extends \p2m\assets\base\P2AssetBundle
 			],
 		],
 		'published' => [
-			'sourcePath' => '@p2m@/bootstrap-##-version-##-dist',
+			'sourcePath' => '@bower/bootstrap/dist',
 			'js' => [
 				'js/bootstrap.bundle.min.js',
 			],
-			'jsOptions' => [
-				'integrity' => 'sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o',
-				'crossorigin' => 'anonymous',
-			],
 		],
 		'depends' => [
-			'p2m\assets\base\P2JqueryAsset',
+			'p2m\assets\base\P2YiiAsset',
 		],
 	);
 

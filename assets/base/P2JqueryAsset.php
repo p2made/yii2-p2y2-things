@@ -49,13 +49,9 @@ class P2JqueryAsset extends \p2m\assets\base\P2AssetBundle
 			],
 		],
 		'published' => [
-			'sourcePath' => '@p2m@/jquery',
+			'sourcePath' => '@bower/jquery/dist',
 			'js' => [
-				'jquery-##-version-##.min.js',
-			],
-			'jsOptions' => [
-				'integrity' => 'sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh',
-				'crossorigin' => 'anonymous',
+				'jquery.min.js',
 			],
 		],
 	);
@@ -63,8 +59,6 @@ class P2JqueryAsset extends \p2m\assets\base\P2AssetBundle
 	public function init()
 	{
 		$this->insertAssetVersion($this->resourceData['static']['js'][0]);
-		$this->insertAssetVersion($this->resourceData['published']['js'][0]);
-
 		$this->configureAsset($this->resourceData);
 		parent::init();
 	}

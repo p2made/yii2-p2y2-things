@@ -39,6 +39,7 @@
 		"bower-asset/animate.css": "~3.7",
 		"bower-asset/bootstrap-sweetalert":"~1.0",
 		"bower-asset/bootstrap": "~4.3",
+		"bower-asset/chart.js": "~2.8",
 		"bower-asset/flag-icon-css": "~3.3",
 		"bower-asset/jquery": "~3.4",
 		"bpampuch/pdfmake": "~0.1.56",
@@ -47,6 +48,7 @@
 		"imsky/holder": "~2.9",
 		"moontoast/math": "~1.1",
 		"nostalgiaz/bootstrap-switch": "~3.3",
+		"npm-asset/flot": "~3.2",
 		"thomaspark/bootswatch": "~4.3"
 	},
 	"require-dev": {

@@ -49,13 +49,9 @@ class P2BootstrapAsset extends \p2m\assets\base\P2AssetBundle
 			],
 		],
 		'published' => [
-			'sourcePath' => '@p2m@/bootstrap-##-version-##-dist',
+			'sourcePath' => '@bower/bootstrap/dist',
 			'css' => [
 				'css/bootstrap.min.css',
-			],
-			'cssOptions' => [
-				'integrity' => 'sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T',
-				'crossorigin' => 'anonymous',
 			],
 		],
 		'depends' => [
@@ -91,8 +87,10 @@ class P2BootstrapAsset extends \p2m\assets\base\P2AssetBundle
 	{
 		if(isset(\Yii::$app->params['p2assets']['bootswatchTheme'])) {
 			$themeName = \Yii::$app->params['p2assets']['bootswatchTheme'];
-			$this->resourceData['static']['baseUrl'] = 'https://stackpath.bootstrapcdn.com/bootswatch/##-version-##/' . $themeName;
-			$this->resourceData['published']['sourcePath'] = '@vendor/thomaspark/bootswatch/' . $themeName;
+			$this->resourceData['static']['baseUrl'] =
+				'https://stackpath.bootstrapcdn.com/bootswatch/##-version-##/' . $themeName;
+			$this->resourceData['published']['sourcePath'] =
+				'@vendor/thomaspark/bootswatch/dist/' . $themeName;
 			$this->resourceData['static']['css'] = [
 				'bootstrap.min.css',
 			];
@@ -102,10 +100,6 @@ class P2BootstrapAsset extends \p2m\assets\base\P2AssetBundle
 			];
 			$this->resourceData['published']['css'] = [
 				'bootstrap.min.css',
-			];
-			$this->resourceData['published']['cssOptions'] = [
-				'integrity' => $this->bootswatchIntegrity[$themeName],
-				'crossorigin' => 'anonymous',
 			];
 		}
 

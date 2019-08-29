@@ -6,7 +6,7 @@
  * http://example.com/
  *
  * @author Pedro Plowman
- * @copyright Copyright &copy; Pedro Plowman, 2017
+ * @copyright Copyright &copy; Pedro Plowman, 2019
  * @link https://github.com/p2made
  * @package p2made/yii2-p2y2-things
  * @class \p2m\assets\_ExampleAsset
@@ -30,6 +30,29 @@ class _ExampleAsset extends \p2m\assets\base\P2AssetBundle
 	protected $resourceData = array(
 
 		/**
+		 * 'static' section
+		 * use this for static version of assets
+		 * leave out if there's no static version
+		 */
+		'static' => [
+			'baseUrl' => '//example.com/path_to_asset/##-version-##',
+			'css' => [
+				'css/css_file.css',
+			],
+			'js' => [
+				'js/js_file.js',
+			],
+			'cssOptions' => [
+				'integrity' => 'hash',
+				'crossorigin' => 'anonymous',
+			],
+			'jsOptions' => [
+				'integrity' => 'hash',
+				'crossorigin' => 'anonymous',
+			],
+		],
+
+		/**
 		 * 'published' section
 		 * use this for published version of assets
 		 * leave out if there's no published version
@@ -51,21 +74,6 @@ class _ExampleAsset extends \p2m\assets\base\P2AssetBundle
 			 */
 			//
 			'endName' = 'endName',
-		],
-
-		/**
-		 * 'static' section
-		 * use this for static version of assets
-		 * leave out if there's no static version
-		 */
-		'static' => [
-			'baseUrl' => '//example.com/path_to_asset/##-version-##',
-			'css' => [
-				'css/css_file.css',
-			],
-			'js' => [
-				'js/js_file.js',
-			],
 		],
 
 		'cssOptions' => [
