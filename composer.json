@@ -55,7 +55,7 @@
 		"bower-asset/flag-icon-css": "~3.3",
 		"bower-asset/jquery": "~3.4",
 		"bower-asset/jszip": "~2.5",
-		"bower-asset/pdfmake": "~0.1",
+		"bower-asset/wow": "~1.1",
 		"bpampuch/pdfmake": "~0.1.56",
 		"datatables/datatables": "~1.10",
 		"dimsemenov/magnific-popup": "~1.1",

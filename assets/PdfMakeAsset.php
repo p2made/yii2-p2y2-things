@@ -25,25 +25,27 @@ namespace p2m\assets;
 
 class PdfMakeAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '0.1.27';
+	protected $version = '0.1.58';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@vendor/bpampuch/pdfmake',
+		'static' => [
+			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/##-version-##',
 			'js' => [
-				'build/pdfmake.min.js',
-				'build/vfs_fonts.js',
+				'pdfmake.min.js',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha256-OTZ52txWFX9FcHKxJDvp7VYnyLrrYK1wKiS7hZafU/c=',
+				'crossorigin' => 'anonymous',
 			],
 		],
-		'static' => [
-			'baseUrl' => 'https://cdn.rawgit.com/bpampuch/pdfmake/##-version-##',
+		'published' => [
+			'sourcePath' => '@vendor/bpampuch/pdfmake/build',
 			'js' => [
-				'build/pdfmake.min.js',
-				'build/vfs_fonts.js',
+				'pdfmake.min.js',
 			],
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2m\assets\VfsFontsAsset',
 		],
 	);
 

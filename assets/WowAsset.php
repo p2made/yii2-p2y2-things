@@ -28,14 +28,14 @@ class WowAsset extends \p2m\assets\base\P2AssetBundle
 	protected $version = '1.1.2';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/WOW-##-version-##/dist',
+		'static' => [
+			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/wow/##-version-##',
 			'js' => [
 				'wow.min.js',
 			],
 		],
-		'static' => [
-			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/wow/##-version-##',
+		'published' => [
+			'sourcePath' => '@bower/wow/dist',
 			'js' => [
 				'wow.min.js',
 			],
