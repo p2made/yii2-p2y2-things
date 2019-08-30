@@ -25,32 +25,39 @@ namespace p2m\assets\datatables;
 
 class DataTablesBootstrapAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '1.10.15';
+	protected $version = '1.10.18';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/DataTables/DataTables-##-version-##/media',
-			'css' => [
-				'css/dataTables.bootstrap.min.css',
-			],
-			'js' => [
-				'js/jquery.dataTables.min.js',
-				'js/dataTables.bootstrap.min.js',
-			],
-		],
 		'static' => [
 			'baseUrl' => 'https://cdn.datatables.net/##-version-##',
 			'css' => [
-				'css/dataTables.bootstrap.min.css',
+				'css/dataTables.bootstrap4.min.css',
 			],
 			'js' => [
-				'js/jquery.dataTables.min.js',
-				'js/dataTables.bootstrap.min.js',
+				'js/dataTables.bootstrap4.min.js',
+			],
+			'cssOptions' => [
+				'integrity' => 'sha384-EkHEUZ6lErauT712zSr0DZ2uuCmi3DoQj6ecNdHQXpMpFNGAQ48WjfXCE5n20W+R',
+				'crossorigin' => 'anonymous',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha384-uiSTMvD1kcI19sAHJDVf68medP9HA2E2PzGis9Efmfsdb8p9+mvbQNgFhzii1MEX',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'sourcePath' => '@bower/datatables.net-bs4',
+			'css' => [
+				'css\dataTables.bootstrap4.min.css',
+			],
+			'js' => [
+				'js\dataTables.bootstrap4.min.js',
 			],
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2m\assets\datatables\base\DataTablesBase',
 		],
+
 	);
 
 	public function init()

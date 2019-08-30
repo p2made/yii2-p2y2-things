@@ -25,25 +25,33 @@ namespace p2m\assets\datatables;
 
 class DataTablesKeyTableAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '2.2.1';
+	protected $version = '2.5.0';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/DataTables/KeyTable-##-version-##',
-			'css' => [
-				'css/keyTable.bootstrap.min.css',
-			],
-			'js' => [
-				'js/dataTables.keyTable.min.js',
-			],
-		],
 		'static' => [
 			'baseUrl' => 'https://cdn.datatables.net/keytable/##-version-##',
 			'css' => [
-				'css/keyTable.bootstrap.min.css',
+				'css/keyTable.bootstrap4.min.css',
 			],
 			'js' => [
-				'js/dataTables.keyTable.min.js',
+				'js/keyTable.bootstrap4.min.js',
+			],
+			'cssOptions' => [
+				'integrity' => 'sha384-yJbK2SgMp7dq69V9ykO2BN4oLSTAdtCT2rijg6Q7XggrijC8tXH3joWeewmRunmA',
+				'crossorigin' => 'anonymous',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha384-tYn4iw6//3CR7hRfLIB6kNnlIl9UF+D2myFuIG/VDVxATo+g80g5VVQZsIWFHGUG',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'sourcePath' => '@bower/datatables.net-keytable-bs4',
+			'css' => [
+				'css/keyTable.bootstrap4.min.css',
+			],
+			'js' => [
+				'js/keyTable.bootstrap4.min.js',
 			],
 		],
 		'depends' => [

@@ -25,31 +25,37 @@ namespace p2m\assets\datatables; /* edit this if using elsewhere */
 
 class DataTablesAutoFillAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '2.2.0';
+	protected $version = '2.3.3';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/DataTables/AutoFill-##-version-##',
-			'css' => [
-				'css/autoFill.bootstrap.min.css',
-			],
-			'js' => [
-				'js/dataTables.autoFill.min.js',
-				'js/autoFill.bootstrap.min.js',
-			],
-		],
 		'static' => [
 			'baseUrl' => 'https://cdn.datatables.net/autofill/##-version-##',
 			'css' => [
-				'css/autoFill.bootstrap.min.css',
+				'css/autoFill.bootstrap4.min.css',
 			],
 			'js' => [
-				'js/dataTables.autoFill.min.js',
-				'js/autoFill.bootstrap.min.js',
+				'js/autoFill.bootstrap4.min.js',
+			],
+			'cssOptions' => [
+				'integrity' => 'sha384-UQiYV506lsxVwwSgMRYrON2zHOJRxal00n3itqC8DoX7QzokQyQ/0ZMZVMvcc/2T',
+				'crossorigin' => 'anonymous',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha384-ve+9IYl+b4Xe2YHsHn+EfUNo2uUyvLX7RtvuRViSXsY76AaPCRzKR3r0Vd19Z9uN',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'sourcePath' => '@bower/datatables.net-autofill-bs4',
+			'css' => [
+				'css\autoFill.bootstrap4.min.css',
+			],
+			'js' => [
+				'js\autoFill.bootstrap4.min.js',
 			],
 		],
 		'depends' => [
-			'p2m\assets\datatables\DataTablesBootstrapAsset',
+			'p2m\assets\datatables\base\DataTablesAutoFillBase',
 		],
 	);
 

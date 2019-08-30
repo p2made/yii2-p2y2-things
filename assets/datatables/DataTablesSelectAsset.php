@@ -25,25 +25,33 @@ namespace p2m\assets\datatables;
 
 class DataTablesSelectAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '1.2.2';
+	protected $version = '1.3.0';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/DataTables/Select-##-version-##',
-			'css' => [
-				'css/select.bootstrap.min.css',
-			],
-			'js' => [
-				'js/dataTables.select.min.js',
-			],
-		],
 		'static' => [
 			'baseUrl' => 'https://cdn.datatables.net/select/##-version-##',
 			'css' => [
-				'css/select.bootstrap.min.css',
+				'css/select.bootstrap4.min.css',
 			],
 			'js' => [
-				'js/dataTables.select.min.js',
+				'js/select.bootstrap4.min.js',
+			],
+			'cssOptions' => [
+				'integrity' => 'sha384-GT95DpievPCoEMQK7wFUKNSmBUItft1absIeFqP30FKpnjz8YPvV34CC79GirigE',
+				'crossorigin' => 'anonymous',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha384-BOLkGGAnN6CMw/ec63leFIKz5xERBa18lsxFT23+lFmSNZ61jNjoS8InT2qguzJ+',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'sourcePath' => '@bower/datatables.net-select-bs4',
+			'css' => [
+				'css/select.bootstrap4.min.css',
+			],
+			'js' => [
+				'js/select.bootstrap4.min.js',
 			],
 		],
 		'depends' => [

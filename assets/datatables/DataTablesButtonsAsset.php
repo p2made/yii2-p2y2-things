@@ -25,31 +25,37 @@ namespace p2m\assets\datatables;
 
 class DataTablesButtonsAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '1.3.1';
+	protected $version = '1.5.6';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/DataTables/Buttons-##-version-##',
-			'css' => [
-				'css/buttons.bootstrap.min.css',
-			],
-			'js' => [
-				'js/dataTables.buttons.min.js',
-				'js/buttons.bootstrap.min.js',
-			],
-		],
 		'static' => [
 			'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
 			'css' => [
-				'css/buttons.bootstrap.min.css',
+				'css/buttons.bootstrap4.min.css',
 			],
 			'js' => [
-				'js/dataTables.buttons.min.js',
-				'js/buttons.bootstrap.min.js',
+				'js/buttons.bootstrap4.min.js',
+			],
+			'cssOptions' => [
+				'integrity' => 'sha384-OLZx0O9PR6mUkYxy5tjpEYCKNt+XHYFUgTNrjk6PikePywBxU9chg3Bw2iTDtt1U',
+				'crossorigin' => 'anonymous',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha384-D36Bd08fsynYPtpfHuAx5odG6zzSPqgA0DdnQK4ENUk4HKLMmSTXM61H2xx0Jhs0',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'sourcePath' => '@bower/datatables.net-buttons-bs4',
+			'css' => [
+				'css/buttons.bootstrap4.min.css',
+			],
+			'js' => [
+				'js/buttons.bootstrap4.min.js',
 			],
 		],
 		'depends' => [
-			'p2m\assets\datatables\DataTablesBootstrapAsset',
+			'p2m\assets\datatables\base\DataTablesButtonsBase',
 		],
 	);
 

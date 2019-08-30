@@ -25,25 +25,33 @@ namespace p2m\assets\datatables;
 
 class DataTablesFixedColumnsAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '3.2.2';
+	protected $version = '3.2.5';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/DataTables/FixedColumns-##-version-##',
-			'css' => [
-				'css/fixedColumns.bootstrap.min.css',
-			],
-			'js' => [
-				'js/dataTables.fixedColumns.min.js',
-			],
-		],
 		'static' => [
 			'baseUrl' => 'https://cdn.datatables.net/fixedcolumns/##-version-##',
 			'css' => [
-				'css/fixedColumns.bootstrap.min.css',
+				'css/fixedColumns.bootstrap4.min.css',
 			],
 			'js' => [
-				'js/dataTables.fixedColumns.min.js',
+				'js/fixedColumns.bootstrap4.min.js',
+			],
+			'cssOptions' => [
+				'integrity' => 'sha384-6UaahaGONjdvtByljPEW3meoPtJdoyYctaoe/KjxgUn7Vhf/4D7RSschQsQrBVIQ',
+				'crossorigin' => 'anonymous',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha384-c/3Lz+z1aZPDTPVhQpOQItupH+vL0VPyewM+sDzFxtA2T36OmJG5BSpYB5vPUGaL',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'sourcePath' => '@bower/datatables.net-fixedcolumns-bs4',
+			'css' => [
+				'css/fixedColumns.bootstrap4.min.css',
+			],
+			'js' => [
+				'js/fixedColumns.bootstrap4.min.js',
 			],
 		],
 		'depends' => [

@@ -25,25 +25,33 @@ namespace p2m\assets\datatables;
 
 class DataTablesRowReorderAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '1.2.0';
+	protected $version = '1.2.4';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/DataTables/RowReorder-##-version-##',
-			'css' => [
-				'css/rowReorder.bootstrap.min.css',
-			],
-			'js' => [
-				'js/dataTables.rowReorder.min.js',
-			],
-		],
 		'static' => [
 			'baseUrl' => 'https://cdn.datatables.net/rowreorder/##-version-##',
 			'css' => [
-				'css/rowReorder.bootstrap.min.css',
+				'css/rowReorder.bootstrap4.min.css',
 			],
 			'js' => [
-				'js/dataTables.rowReorder.min.js',
+				'js/rowReorder.bootstrap4.min.js',
+			],
+			'cssOptions' => [
+				'integrity' => 'sha384-pVrsWa1E1GlEJUfnZXLCxT6AScWbwY/NkJAW8vKG5ZhEbCsSUfj7tY/ePTD9MevD',
+				'crossorigin' => 'anonymous',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha384-L5j63zghDDQIDhoqtf+8j5PbKSAmg5Zha4iSoodiDYJJXkw7nG5qbrhlhPh500ab',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'sourcePath' => '@bower/datatables.net-rowreorder-bs4',
+			'css' => [
+				'css/rowReorder.bootstrap4.min.css',
+			],
+			'js' => [
+				'js/rowReorder.bootstrap4.min.js',
 			],
 		],
 		'depends' => [

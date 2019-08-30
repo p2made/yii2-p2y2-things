@@ -25,25 +25,33 @@ namespace p2m\assets\datatables;
 
 class DataTablesColReorderAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '1.3.3';
+	protected $version = '1.5.0';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/DataTables/ColReorder-##-version-##',
-			'css' => [
-				'css/colReorder.bootstrap.min.css',
-			],
-			'js' => [
-				'js/dataTables.colReorder.min.js',
-			],
-		],
 		'static' => [
 			'baseUrl' => 'https://cdn.datatables.net/colreorder/##-version-##',
 			'css' => [
-				'css/colReorder.bootstrap.min.css',
+				'css/colReorder.bootstrap4.min.css',
 			],
 			'js' => [
-				'js/dataTables.colReorder.min.js',
+				'js/colReorder.bootstrap4.min.js',
+			],
+			'cssOptions' => [
+				'integrity' => 'sha384-RZygVb1fZHVXuu7ppEDHdp39XsL8YoCh4VjdoKiWkjwwfOXVpxJhSsUfMKKmRzam',
+				'crossorigin' => 'anonymous',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha384-0TkfIniai+f9zIGcJOumyqzPzYOnWzHyjFcoB0+hQ+sU1lDJsgYPJoHXURh3uKbC',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'sourcePath' => '@bower/datatables.net-colreorder-bs4',
+			'css' => [
+				'css/colReorder.bootstrap4.min.css',
+			],
+			'js' => [
+				'js/colReorder.bootstrap4.min.js',
 			],
 		],
 		'depends' => [

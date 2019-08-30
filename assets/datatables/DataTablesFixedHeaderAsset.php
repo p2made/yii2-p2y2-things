@@ -25,25 +25,33 @@ namespace p2m\assets\datatables;
 
 class DataTablesFixedHeaderAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '3.1.2';
+	protected $version = '3.1.4';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/DataTables/FixedHeader-##-version-##',
-			'css' => [
-				'css/fixedHeader.bootstrap.min.css',
-			],
-			'js' => [
-				'js/dataTables.fixedHeader.min.js',
-			],
-		],
 		'static' => [
 			'baseUrl' => 'https://cdn.datatables.net/fixedheader/##-version-##',
 			'css' => [
-				'css/fixedHeader.bootstrap.min.css',
+				'css/fixedHeader.bootstrap4.min.css',
 			],
 			'js' => [
-				'js/dataTables.fixedHeader.min.js',
+				'js/fixedHeader.bootstrap4.min.js',
+			],
+			'cssOptions' => [
+				'integrity' => 'sha384-WCvWgurF5s3iQOhbC89lPn7E9F0QnmdzbG4MOluQuDFxCarl/3LXKgCeQKvjf+dF',
+				'crossorigin' => 'anonymous',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha384-FbRtTwmTNH3ZWe3jBaPPQqFTIDInWDgZrcConhcWKTgfZ4P32acCe5tOY0YabCcf',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'sourcePath' => '@bower/datatables.net-fixedheader-bs4',
+			'css' => [
+				'css/fixedHeader.bootstrap4.min.css',
+			],
+			'js' => [
+				'js/fixedHeader.bootstrap4.min.js',
 			],
 		],
 		'depends' => [

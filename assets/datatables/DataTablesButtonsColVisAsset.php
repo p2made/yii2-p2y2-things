@@ -25,17 +25,21 @@ namespace p2m\assets\datatables;
 
 class DataTablesButtonsColVisAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '1.3.1';
+	protected $version = '1.5.6';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/DataTables/Buttons-##-version-##',
+		'static' => [
+			'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
 			'js' => [
 				'js/buttons.colVis.min.js',
 			],
+			'jsOptions' => [
+				'integrity' => 'sha384-TwrHEzXDg3dBmJ5hf4M5SONk47FzeIk2Hb5puVlc77bck+/qmKgxu8SR3hUn3VGk',
+				'crossorigin' => 'anonymous',
+			],
 		],
-		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
+		'published' => [
+			'sourcePath' => '@bower/datatables.net-buttons',
 			'js' => [
 				'js/buttons.colVis.min.js',
 			],

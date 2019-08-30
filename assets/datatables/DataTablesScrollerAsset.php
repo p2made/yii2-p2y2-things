@@ -25,25 +25,33 @@ namespace p2m\assets\datatables;
 
 class DataTablesScrollerAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '1.4.2';
+	protected $version = '2.0.0';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/DataTables/Scroller-##-version-##',
-			'css' => [
-				'css/scroller.bootstrap.min.css',
-			],
-			'js' => [
-				'js/dataTables.scroller.min.js',
-			],
-		],
 		'static' => [
 			'baseUrl' => 'https://cdn.datatables.net/scroller/##-version-##',
 			'css' => [
-				'css/scroller.bootstrap.min.css',
+				'css/scroller.bootstrap4.min.css',
 			],
 			'js' => [
-				'js/dataTables.scroller.min.js',
+				'js/scroller.bootstrap4.min.js',
+			],
+			'cssOptions' => [
+				'integrity' => 'sha384-wIRbCocqGp2W33vrUhPum15S17ENhIRifUVmP+DPvKsI9jaMV6DGZ1JQEm0Wts8b',
+				'crossorigin' => 'anonymous',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha384-8NepXINgwyY7TGQs3Y4A6fMK0kQ3SuiFFGqLh6CFeHn/DcZR1mAD+t6QRNH4Vbq2',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'sourcePath' => '@bower/datatables.net-scroller-bs4',
+			'css' => [
+				'css/scroller.bootstrap4.min.css',
+			],
+			'js' => [
+				'js/scroller.bootstrap4.min.js',
 			],
 		],
 		'depends' => [

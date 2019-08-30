@@ -25,17 +25,21 @@ namespace p2m\assets\datatables;
 
 class DataTablesButtonsPrintAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '1.3.1';
+	protected $version = '1.5.6';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/DataTables/Buttons-##-version-##',
+		'static' => [
+			'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
 			'js' => [
 				'js/buttons.print.min.js',
 			],
+			'jsOptions' => [
+				'integrity' => 'sha384-XB54OBl3rOOjrhqlr+qwWqLv0GRnzVGFYKHPwdJnah4TyB7vQuYckQSsxQxGOA8d',
+				'crossorigin' => 'anonymous',
+			],
 		],
-		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
+		'published' => [
+			'sourcePath' => '@bower/datatables.net-buttons',
 			'js' => [
 				'js/buttons.print.min.js',
 			],
