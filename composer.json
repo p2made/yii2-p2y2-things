@@ -63,7 +63,6 @@
 		"imsky/holder": "~2.9",
 		"moontoast/math": "~1.1",
 		"nostalgiaz/bootstrap-switch": "~3.3",
-		"npm-asset/flot": "~3.2",
 		"thomaspark/bootswatch": "~4.3"
 	},
 	"autoload": {
