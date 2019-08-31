@@ -27,11 +27,9 @@
 		"issues": "https://github.com/p2made/yii2-p2y2-things/issues?state=open",
 		"source": "https://github.com/p2made/yii2-p2y2-things"
 	},
-
 	"version": "dev-v3-refactor",
 	"minimum-stability": "dev",
 	"prefer-stable" : true,
-
 	"require": {
 		"p2made/yii2-p2y2-base": "dev-1.1.5-beta",
 		"p2made/yii2-p2y2-moment": "dev-2.0.1-beta",
@@ -68,9 +66,6 @@
 		"npm-asset/flot": "~3.2",
 		"thomaspark/bootswatch": "~4.3"
 	},
-	"require-dev": {
-	},
-
 	"autoload": {
 		"psr-4": {
 			"p2m\\": ""
