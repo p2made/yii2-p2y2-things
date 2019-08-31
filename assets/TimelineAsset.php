@@ -24,9 +24,9 @@ class TimelineAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $resourceData = array(
 		'published' => [
-			'sourcePath' => '@p2m@/pub',
+			'sourcePath' => '@p2m/yii2-p2y2-things/vendor/pub',
 			'css' => [
-				'css/timeline.css',
+				'css/timeline.min.css',
 			],
 		],
 		'depends' => [
