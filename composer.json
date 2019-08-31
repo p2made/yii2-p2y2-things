@@ -27,7 +27,7 @@
 		"issues": "https://github.com/p2made/yii2-p2y2-things/issues?state=open",
 		"source": "https://github.com/p2made/yii2-p2y2-things"
 	},
-	"version": "dev-v3-refactor",
+	"version": "3.0.0-dev",
 	"minimum-stability": "dev",
 	"prefer-stable" : true,
 	"require": {
