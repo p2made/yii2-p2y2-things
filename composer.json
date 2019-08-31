@@ -41,7 +41,7 @@
 		"npm-asset/moment-timezone": "~0.5",
 		"npm-asset/moment": "~2.24",
 		"npm-asset/sweetalert": "~2.1",
-		"bower-asset/amplitudejs":"~5.0",
+		"bower-asset/amplitude":"~5.0",
 		"bower-asset/bootstrap-sweetalert":"~1.0",
 		"bower-asset/datatables.net-autofill-bs4": "~2.3",
 		"bower-asset/datatables.net-bs4": "~1.10",
