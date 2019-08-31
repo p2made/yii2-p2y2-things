@@ -28,16 +28,20 @@ class TimelineCssAsset extends \p2m\assets\base\P2AssetBundle
 	protected $version = '1.0.0';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/Timeline.css-##-version-##',
-			'css' => [
-				'css/timeline.css',
-			],
-		],
 		'static' => [
-			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/timeline.css/##-version-##',
+			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/timeline.css/##-version-##',
 			'css' => [
 				'timeline.min.css',
+			],
+			'cssOptions' => [
+				'integrity' => 'sha256-LT2WEwbehWYhBvSyceJbc6WbIJxMp5k6Z1dNTPZt+pM=',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'sourcePath' => '@p2m/yii2-p2y2-things/vendor/Timeline.css-##-version-##/css',
+			'css' => [
+				'timeline.css',
 			],
 		],
 		'depends' => [

@@ -33,6 +33,10 @@ class WowAsset extends \p2m\assets\base\P2AssetBundle
 			'js' => [
 				'wow.min.js',
 			],
+			'jsOptions' => [
+				'integrity' => 'sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=',
+				'crossorigin' => 'anonymous',
+			],
 		],
 		'published' => [
 			'sourcePath' => '@bower/wow/dist',
