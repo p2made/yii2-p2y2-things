@@ -3,7 +3,7 @@
  * SweetAlertAsset.php
  *
  * Yii2 asset for Sweetalert
- * http://t4t5.github.io/sweetalert/
+ * https://sweetalert.js.org
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2017
@@ -25,25 +25,23 @@ namespace p2m\assets;
 
 class SweetAlertAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '1.1.3';
+	protected $version = '2.1.2';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/sweetalert-##-version-##/dist',
-			'css' => [
-				'sweetalert.css',
-			],
+		'static' => [
+			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/sweetalert/##-version-##',
 			'js' => [
 				'sweetalert.min.js',
 			],
-		],
-		'static' => [
-			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/sweetalert/##-version-##',
-			'css' => [
-				'sweet-alert.css',
+			'jsOptions' => [
+				'integrity' => 'sha256-KsRuvuRtUVvobe66OFtOQfjP8WA2SzYsmm4VPfMnxms=',
+				'crossorigin' => 'anonymous',
 			],
+		],
+		'published' => [
+			'sourcePath' => '@npm/sweetalert/dist',
 			'js' => [
-				'sweet-alert.min.js',
+				'sweetalert.min.js',
 			],
 		],
 		'depends' => [
