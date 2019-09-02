@@ -49,7 +49,7 @@ class P2BootstrapPluginAsset extends \p2m\assets\base\P2AssetBundle
 			],
 		],
 		'published' => [
-			'sourcePath' => '@bower/bootstrap/dist',
+			'sourcePath' => '@npm/bootstrap/dist',
 			'js' => [
 				'js/bootstrap.bundle.min.js',
 			],

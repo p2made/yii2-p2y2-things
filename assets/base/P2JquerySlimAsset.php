@@ -49,7 +49,7 @@ class P2JqueryAsset extends \p2m\assets\base\P2AssetBundle
 			],
 		],
 		'published' => [
-			'sourcePath' => '@bower/jquery/dist',
+			'sourcePath' => '@npm/jquery/dist',
 			'js' => [
 				'jquery.slim.min.js',
 			],
