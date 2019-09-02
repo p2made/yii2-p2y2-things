@@ -21,51 +21,33 @@
  *     'p2m\assets\ChartJsAsset',
  */
 
-namespace p2m\assets; /* edit this if using elsewhere */
+namespace p2m\assets;
 
 class ChartJsAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $_p2mProjectId = 'yii2-p2y2-project';
+
 	protected $version = '2.8.0';
 
-	protected $resourceData = array(
+	protected $assetName = 'chart.js';
 
-		'static' => [
-			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/##-version-##',
-			'css' => [
-				'Chart.min.css',
-			],
-			'js' => [
-				'Chart.min.js',
-			],
-			'cssOptions' => [
-				'integrity' => 'sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=',
-				'crossorigin' => 'anonymous',
-			],
-			'jsOptions' => [
-				'integrity' => 'sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=',
-				'crossorigin' => 'anonymous',
-			],
-		],
+	protected $assetPath = 'dist';
 
-		'published' => [
-			'sourcePath' => '@bower/chart.js/dist',
-			'css' => [
-				'Chart.min.css',
-			],
-			'js' => [
-				'Chart.min.js',
-			],
-		],
+	public $js = [
+		'Chart.min.js'
+	];
 
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
+	public $css = [
+		'Chart.min.css'
+	];
 
-	);
+	public $depends = [
+		'p2m\assets\P2CoreAsset',
+	];
 
 	public function init()
 	{
-		$this->configureAsset($this->resourceData);
+		$this->configureUnpkgAsset();
 		parent::init();
 	}
 }
