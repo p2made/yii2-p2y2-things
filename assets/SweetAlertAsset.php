@@ -23,35 +23,25 @@
 
 namespace p2m\assets;
 
-class SweetAlertAsset extends \p2m\assets\base\P2AssetBundle
+class _ExampleUnpkgAsset extends \p2m\base\assets\P2UnpkgAssetBase
 {
 	protected $version = '2.1.2';
 
-	protected $resourceData = array(
-		'static' => [
-			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/sweetalert/##-version-##',
-			'js' => [
-				'sweetalert.min.js',
-			],
-			'jsOptions' => [
-				'integrity' => 'sha256-KsRuvuRtUVvobe66OFtOQfjP8WA2SzYsmm4VPfMnxms=',
-				'crossorigin' => 'anonymous',
-			],
-		],
-		'published' => [
-			'sourcePath' => '@npm/sweetalert/dist',
-			'js' => [
-				'sweetalert.min.js',
-			],
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	);
+	protected $assetName = 'sweetalert';
+
+	protected $assetPath = 'dist';
+
+	public $js = [
+		'sweetalert.min.js'
+	];
+
+	public $depends = [
+		'p2m\assets\P2CoreAsset'
+	];
 
 	public function init()
 	{
-		$this->configureAsset($this->resourceData);
+		$this->configureUnpkgAsset();
 		parent::init();
 	}
 }

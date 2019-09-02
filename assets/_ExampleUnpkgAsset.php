@@ -23,8 +23,6 @@ namespace p2m\base\assets; /* edit this if using elsewhere */
 
 class _ExampleUnpkgAsset extends \p2m\base\assets\P2UnpkgAssetBase
 {
-	protected $_p2mProjectId = 'yii2-p2y2-project';
-
 	protected $version = '0.0.0';
 
 	protected $assetName = 'assetName';
@@ -48,7 +46,7 @@ class _ExampleUnpkgAsset extends \p2m\base\assets\P2UnpkgAssetBase
 	];
 
 	public $depends = [
-		'depends'
+		'p2m\assets\P2CoreAsset'
 	];
 
 	public $publishOptions = [
