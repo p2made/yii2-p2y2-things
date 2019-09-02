@@ -24,27 +24,19 @@ class FlagIconCssAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $version = '2.8.0';
 
-	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@vendor/components/flag-icon-css',
-			'css' => [
-				'css/flag-icon.min.css',
-			],
-		],
-		'static' => [
-			'baseUrl' => '//cdn.jsdelivr.net/flag-icon-css/##-version-##',
-			'css' => [
-				'css/flag-icon.min.css',
-			],
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	);
+	protected $assetName = 'assetName';
+
+	public $css = [
+		'css/flag-icon.min.css'
+	];
+
+	public $depends = [
+		'p2m\assets\P2CoreAsset',
+	];
 
 	public function init()
 	{
-		$this->configureAsset($this->resourceData);
+		$this->configureUnpkgAsset();
 		parent::init();
 	}
 }
