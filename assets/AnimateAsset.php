@@ -55,3 +55,45 @@ class AnimateAsset extends \p2m\assets\base\P2AssetBundle
 		parent::init();
 	}
 }
+?>
+<?php
+class _ExampleUnpkgAsset extends \p2m\base\assets\P2UnpkgAssetBase
+{
+	protected $_p2mProjectId = 'yii2-p2y2-project';
+
+	protected $version = '0.0.0';
+
+	protected $assetName = 'assetName';
+
+	protected $assetPath = 'assetPath';
+
+	public $depends = [
+		'depends'
+	];
+
+	public $js = [
+		'javascipt.min.js'
+	];
+
+	public $css = [
+		'css'
+	];
+
+	public $jsOptions = [
+		'jsOptions'
+	];
+
+	public $cssOptions = [
+		'cssOptions'
+	];
+
+	public $publishOptions = [
+		'publishOptions'
+	];
+
+	public function init()
+	{
+		$this->configureUnpkgAsset();
+		parent::init();
+	}
+}
