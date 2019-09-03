@@ -25,32 +25,13 @@ namespace p2m\assets;
 
 class VfsFontsAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '0.1.58';
-
-	protected $resourceData = [
-		'static' => [
-			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/##-version-##',
-			'jsOptions' => [
-				'integrity' => 'sha256-UsYCHdwExTu9cZB+QgcOkNzUCTweXr5cNfRlAAtIlPY=',
-				'crossorigin' => 'anonymous',
-			],
-		],
-		'published' => [
-			'sourcePath' => '@vendor/bpampuch/pdfmake/build',
-		],
-	];
-
-	public $js = [
-		'vfs_fonts.js.min.js'
-	];
-
-	public $depends = [
-		'p2m\assets\P2CoreAsset'
-	];
+	protected $assetName = 'vfs_fonts';
 
 	public function init()
 	{
-		$this->configureAsset($this->resourceData);
+		$this->assetData = $this->_assetData[$assetName];
+		$this->newConfigureAsset();
+
 		parent::init();
 	}
 }
