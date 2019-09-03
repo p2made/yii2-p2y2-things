@@ -32,6 +32,7 @@ class JSZipAsset extends \p2m\assets\base\P2AssetBundle
 	public $js = [
 		'jszip.min.js'
 	];
+
 	public $depends = [
 		'p2m\assets\P2CoreAsset'
 	];

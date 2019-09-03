@@ -27,12 +27,9 @@ class WowAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $version = '1.1.2';
 
-	protected $resourceData = array(
+	protected $resourceData = [
 		'static' => [
 			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/wow/##-version-##',
-			'js' => [
-				'wow.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=',
 				'crossorigin' => 'anonymous',
@@ -40,15 +37,17 @@ class WowAsset extends \p2m\assets\base\P2AssetBundle
 		],
 		'published' => [
 			'sourcePath' => '@bower/wow/dist',
-			'js' => [
-				'wow.min.js',
-			],
 		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\AnimateAsset',
-		],
-	);
+	];
+
+	public $js = [
+		'wow.min.js'
+	];
+
+	public $depends = [
+		'p2m\assets\P2CoreAsset'
+		'p2m\assets\AnimateAsset',
+	];
 
 	public function init()
 	{
