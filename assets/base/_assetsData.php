@@ -115,99 +115,20 @@ return [
 	],
 	'wow' => [ // Cdnjs
 		'version' => '1.1.2',
-		'sourcePath' => 'sourcePath',
+		'sourcePath' => '@bower/wow/dist',
 		'path' => 'path',
 		'static' => [
-			'css' => [
-				'asset.min.css'
-			],
-			'js' => [
-				'asset.min.js'
-			],
-			'cssOptions' => [
-				'cssOptions'
-			],
-			'jsOptions' => [
-				'jsOptions'
-			],
-			'publishOptions' => [
-				'publishOptions'
-			],
-		],
-		'published' => [
-			'css' => [
-				'asset.min.css'
-			],
-			'js' => [
-				'asset.min.js'
-			],
-			'cssOptions' => [
-				'cssOptions'
-			],
-			'jsOptions' => [
-				'jsOptions'
-			],
-			'publishOptions' => [
-				'publishOptions'
-			],
-		],
-		'css' => [
-			'asset.min.css'
-		],
-		'js' => [
-			'asset.min.js'
-		],
-		'cssOptions' => [
-			'cssOptions'
-		],
-		'jsOptions' => [
-			'jsOptions'
-		],
-		'publishOptions' => [
-			'publishOptions'
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	],
-];
-
-
-
-
-
-
-
-
-class WowAsset extends \p2m\assets\base\P2AssetBundle
-{
-	protected $version = '';
-
-	protected $resourceData = [
-		'static' => [
-			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/wow/##-version-##',
 			'jsOptions' => [
 				'integrity' => 'sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@bower/wow/dist',
+		'js' => [
+			'wow.min.js'
 		],
-	];
-
-	public $js = [
-		'wow.min.js'
-	];
-
-	public $depends = [
-		'p2m\assets\P2CoreAsset'
-		'p2m\assets\AnimateAsset',
-	];
-
-	public function init()
-	{
-		$this->configureAsset($this->resourceData);
-		parent::init();
-	}
-}
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+			'p2m\assets\AnimateAsset',
+		],
+	],
+];
