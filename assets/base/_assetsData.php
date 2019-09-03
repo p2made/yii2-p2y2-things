@@ -180,6 +180,20 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
+	'magnific-popup' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
+		'version' => '1.1.0',
+		'path' => 'dist',
+		'css' => [
+			'magnific-popup.css'
+		],
+		'js' => [
+			'jquery.magnific-popup.min.js'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
 	'pdfmake' => [ // NPM/Unpkg
 		'pattern' => 'unpkg',
 		'version' => '0.1.58',
