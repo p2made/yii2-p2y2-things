@@ -25,30 +25,13 @@ namespace p2m\assets;
 
 class GMapsAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '0.4.25';
-
-	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/gmaps-##-version-##',
-			'js' => [
-				'gmaps.min.js',
-			],
-		],
-		'static' => [
-			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/gmaps.js/##-version-##',
-			'js' => [
-				'gmaps.min.js',
-			],
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\GMapsApiAsset',
-		],
-	);
+	protected $assetName = 'gmaps.js';
 
 	public function init()
 	{
-		$this->configureAsset($this->resourceData);
+		$this->assetData = $this->_assetData[$assetName];
+		$this->newConfigureAsset();
+
 		parent::init();
 	}
 }
