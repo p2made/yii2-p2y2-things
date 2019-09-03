@@ -244,6 +244,38 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
+	'prettyPhoto' => [ // Cdnjs
+		'pattern' => 'cdnjs',
+		'version' => '3.1.6',
+		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/prettyphoto-3.1.6',
+		'static' => [
+			'css' => [
+				'css/prettyPhoto.min.css'
+			],
+			'js' => [
+				'asset.min.js'
+			],
+			'cssOptions' => [
+				'integrity' => 'sha256-9Sj5XFO4jLdh3Qeb6eoKXMEADGEiXUseIDIlVsZcehs=',
+				'crossorigin' => 'anonymous',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha256-mWjIE4FAMgUEB4FhgndyTGeQoEULqnYtlaIU8x697zs=',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'css' => [
+				'prettyPhoto.css'
+			],
+			'js' => [
+				'jquery.prettyPhoto.js'
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
 	'scrollreveal' => [ // NPM/Unpkg
 		'pattern' => 'unpkg',
 		'version' => '3.3.4',
