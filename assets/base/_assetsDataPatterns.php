@@ -12,53 +12,9 @@
  */
 
 return [
-	// Pattern for NPM/Unpkg assets
-	'assetName' => [ // NPM/Unpkg
-		'version' => '0.0.0',
-		'path' => 'path',
-		'css' => [
-			'asset.min.css'
-		],
-		'js' => [
-			'asset.min.js'
-		],
-		'cssOptions' => [
-			'cssOptions'
-		],
-		'jsOptions' => [
-			'jsOptions'
-		],
-		'publishOptions' => [
-			'publishOptions'
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	],
-	// Pattern for ../vendor assets
-	'assetName' => [ // ../vendor
-		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/...',
-		'css' => [
-			'asset.min.css'
-		],
-		'js' => [
-			'asset.min.js'
-		],
-		'cssOptions' => [
-			'cssOptions'
-		],
-		'jsOptions' => [
-			'jsOptions'
-		],
-		'publishOptions' => [
-			'publishOptions'
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	],
 	// Pattern for Cdnjs assets
 	'assetName' => [ // Cdnjs
+		'pattern' => 'cdnjs',
 		'version' => '0.0.0',
 		'sourcePath' => 'sourcePath',
 		'static' => [
@@ -95,6 +51,53 @@ return [
 				'publishOptions'
 			],
 		],
+		'css' => [
+			'asset.min.css'
+		],
+		'js' => [
+			'asset.min.js'
+		],
+		'cssOptions' => [
+			'cssOptions'
+		],
+		'jsOptions' => [
+			'jsOptions'
+		],
+		'publishOptions' => [
+			'publishOptions'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
+	// Pattern for NPM/Unpkg assets
+	'assetName' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
+		'version' => '0.0.0',
+		'path' => 'path',
+		'css' => [
+			'asset.min.css'
+		],
+		'js' => [
+			'asset.min.js'
+		],
+		'cssOptions' => [
+			'cssOptions'
+		],
+		'jsOptions' => [
+			'jsOptions'
+		],
+		'publishOptions' => [
+			'publishOptions'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
+	// Pattern for ../vendor assets
+	'assetName' => [ // ../vendor
+		'pattern' => 'vendor',
+		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/...',
 		'css' => [
 			'asset.min.css'
 		],
