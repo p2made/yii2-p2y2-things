@@ -22,20 +22,11 @@ namespace p2m\assets;
 
 class FlagIconCssAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '2.8.0';
-
 	protected $assetName = 'assetName';
-
-	public $css = [
-		'css/flag-icon.min.css'
-	];
-
-	public $depends = [
-		'p2m\assets\P2CoreAsset',
-	];
 
 	public function init()
 	{
+		$this->assetData = $this->_assetData[$assetName];
 		$this->configureUnpkgAsset();
 		parent::init();
 	}
