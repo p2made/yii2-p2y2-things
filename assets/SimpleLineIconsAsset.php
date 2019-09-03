@@ -2,15 +2,13 @@
 /**
  * SimpleLineIconsAsset.php
  *
- * Yii2 asset for Simple Line Icons
- * http://simplelineicons.com
- *
+ * @copyright Copyright &copy; Pedro Plowman, 2019
  * @author Pedro Plowman
- * @copyright Copyright &copy; Pedro Plowman, 2017
  * @link https://github.com/p2made
- * @package p2made/yii2-p2y2-things
- * @class \p2m\assets\base\SimpleLineIconsAsset
  * @license MIT
+ *
+ * @package p2made/yii2-p2y2-base
+ * @class \p2m\base\assets\SimpleLineIconsAsset
  */
 
 /**
@@ -27,14 +25,7 @@ class SimpleLineIconsAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $version = '2.4.1';
 
-	protected $resourceData = [
-		'static' => [
-			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/simple-line-icons/##-version-##',
-		],
-		'published' => [
-			'sourcePath' => '@p2m@/simple-line-icons-##-version-##',
-		],
-	];
+	protected $assetName = 'simple-line-icons';
 
 	public $css = [
 		'css/simple-line-icons.css'
@@ -46,7 +37,7 @@ class SimpleLineIconsAsset extends \p2m\assets\base\P2AssetBundle
 
 	public function init()
 	{
-		$this->configureAsset($this->resourceData);
+		$this->configureUnpkgAsset();
 		parent::init();
 	}
 }
