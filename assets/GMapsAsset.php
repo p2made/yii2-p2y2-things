@@ -30,7 +30,6 @@ class GMapsAsset extends \p2m\assets\base\P2AssetBundle
 	public function init()
 	{
 		$this->assetData = $this->_assetData[$assetName];
-		$this->newConfigureAsset();
 
 		parent::init();
 	}
