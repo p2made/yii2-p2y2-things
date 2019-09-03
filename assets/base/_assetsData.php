@@ -186,6 +186,18 @@ return [
 			'p2m\assets\AnimateAsset',
 		],
 	],
+	'vfs_fonts' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
+		'package' => 'pdfmake',
+		'version' => '0.1.58',
+		'path' => 'build',
+		'js' => [
+			'vfs_fonts.js.min.js'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
 	'wow' => [ // Cdnjs
 		'pattern' => 'cdnjs',
 		'version' => '1.1.2',
