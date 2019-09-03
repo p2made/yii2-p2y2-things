@@ -166,6 +166,20 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
+	'lightbox2' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
+		'version' => '2.11.1',
+		'path' => 'dist',
+		'css' => [
+			'css/lightbox.min.css'
+		],
+		'js' => [
+			'js/lightbox.min.js'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
 	'pdfmake' => [ // NPM/Unpkg
 		'pattern' => 'unpkg',
 		'version' => '0.1.58',
@@ -236,7 +250,6 @@ return [
 		'pattern' => 'cdnjs',
 		'version' => '1.1.2',
 		'sourcePath' => '@bower/wow/dist',
-		'path' => 'path',
 		'static' => [
 			'jsOptions' => [
 				'integrity' => 'sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U=',
