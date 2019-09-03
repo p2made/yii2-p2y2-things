@@ -25,31 +25,12 @@ namespace p2m\assets;
 
 class ScrollRevealAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '3.3.4';
-
-	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/scrollreveal-##-version-##/dist',
-			'css' => [],
-			'js' => [
-				'scrollreveal.min.js',
-			],
-		],
-		'static' => [
-			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/##-version-##',
-			'css' => [],
-			'js' => [
-				'scrollreveal.min.js',
-			],
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	);
+	protected $assetName = 'scrollreveal';
 
 	public function init()
 	{
-		$this->configureAsset($this->resourceData);
+		$this->assetData = $this->_assetData[$assetName];
+		$this->configureUnpkgAsset();
 		parent::init();
 	}
 }
