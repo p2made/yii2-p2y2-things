@@ -60,7 +60,43 @@ return [
 	// Pattern for Cdnjs assets
 	'assetName' => [ // Cdnjs
 		'version' => '0.0.0',
+		'baseUrl' => 'baseUrl',
+		'sourcePath' => 'sourcePath',
 		'path' => 'path',
+		'static' => [
+			'css' => [
+				'asset.min.css'
+			],
+			'js' => [
+				'asset.min.js'
+			],
+			'cssOptions' => [
+				'cssOptions'
+			],
+			'jsOptions' => [
+				'jsOptions'
+			],
+			'publishOptions' => [
+				'publishOptions'
+			],
+		],
+		'published' => [
+			'css' => [
+				'asset.min.css'
+			],
+			'js' => [
+				'asset.min.js'
+			],
+			'cssOptions' => [
+				'cssOptions'
+			],
+			'jsOptions' => [
+				'jsOptions'
+			],
+			'publishOptions' => [
+				'publishOptions'
+			],
+		],
 		'css' => [
 			'asset.min.css'
 		],
