@@ -73,12 +73,10 @@ return [
 		],
 	],
 	'sweetalert' => [
-		'version' => '0.0.0',
-		'css' => [
-			'asset.min.css'
-		],
+		'version' => '2.1.2',
+		'assetPath' => 'dist',
 		'js' => [
-			'asset.min.js'
+			'sweetalert.min.js'
 		],
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
