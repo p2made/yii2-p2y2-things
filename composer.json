@@ -57,7 +57,7 @@
 		"bower-asset/datatables.net-select-bs4": "~1.3",
 		"npm-asset/jszip": "~3.2",
 		"bower-asset/wow": "~1.1",
-		"bpampuch/pdfmake": "~0.1",
+		"bpampuch/pdfmake": "~0.1.58",
 		"dimsemenov/magnific-popup": "~1.1",
 		"drmonty/ekko-lightbox": "~5.3",
 		"imsky/holder": "~2.9",
