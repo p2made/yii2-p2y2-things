@@ -22,20 +22,12 @@ namespace p2m\assets;
 
 class TimelineAsset extends \p2m\assets\base\P2AssetBundle
 {
-	public $sourcePath = '@p2m/yii2-p2y2-things/vendor/pub';
-
-	public $css = [
-		'css/timeline.min.css'
-	];
-
-	public $depends = [
-		'p2m\assets\P2CoreAsset'
-		'p2m\assets\AnimateAsset',
-	];
+	protected $assetName = 'timeline';
 
 	public function init()
 	{
-		$this->configureAsset($this->resourceData);
+		$this->assetData = $this->_assetData[$assetName];
+		$this->configureVendorAsset();
 		parent::init();
 	}
 }
