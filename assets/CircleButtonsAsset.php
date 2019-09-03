@@ -22,21 +22,12 @@ namespace p2m\assets;
 
 class CircleButtonsAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/pub',
-			'css' => [
-				'css/circle-buttons.css',
-			],
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	);
+	protected $assetName = 'circle-buttons';
 
 	public function init()
 	{
-		$this->configureAsset($this->resourceData);
+		$this->assetData = $this->_assetData[$assetName];
+		$this->configureVendorAsset();
 		parent::init();
 	}
 }
