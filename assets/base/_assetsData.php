@@ -11,7 +11,7 @@
  */
 
 return [
-	'animate.css' => [
+	'animate.css' => [ // NPM/Unpkg
 		'version' => '3.7.2',
 		'css' => [
 			'animate.min.css'
@@ -20,7 +20,7 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
-	'chart.js' => [
+	'chart.js' => [ // NPM/Unpkg
 		'version' => '2.8.0',
 		'path' => 'dist',
 		'css' => [
@@ -33,7 +33,7 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
-	'flag-icon-css' => [
+	'flag-icon-css' => [ // NPM/Unpkg
 		'version' => '2.8.0',
 		'css' => [
 			'css/flag-icon.min.css'
@@ -42,7 +42,7 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
-	'jszip' => [
+	'jszip' => [ // NPM/Unpkg
 		'version' => '3.2.2',
 		'path' => 'dist',
 		'js' => [
@@ -52,7 +52,7 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
-	'scrollreveal' => [
+	'scrollreveal' => [ // NPM/Unpkg
 		'version' => '3.3.4',
 		'path' => 'dist',
 		'js' => [
@@ -62,7 +62,7 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
-	'simple-line-icons' => [
+	'simple-line-icons' => [ // NPM/Unpkg
 		'version' => '2.4.1',
 		'css' => [
 			'css/simple-line-icons.css'
@@ -71,7 +71,7 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
-	'sweetalert' => [
+	'sweetalert' => [ // NPM/Unpkg
 		'version' => '2.1.2',
 		'path' => 'dist',
 		'js' => [
@@ -79,6 +79,16 @@ return [
 		],
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
+		],
+	],
+	'timeline' => [ // ../vendor
+		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/pub',
+		'css' => [
+			'css/timeline.min.css'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+			'p2m\assets\AnimateAsset',
 		],
 	],
 ];
