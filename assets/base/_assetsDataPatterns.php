@@ -60,7 +60,6 @@ return [
 	// Pattern for Cdnjs assets
 	'assetName' => [ // Cdnjs
 		'version' => '0.0.0',
-		'baseUrl' => 'baseUrl',
 		'sourcePath' => 'sourcePath',
 		'path' => 'path',
 		'static' => [
