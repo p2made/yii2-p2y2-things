@@ -44,12 +44,10 @@ return [
 		],
 	],
 	'jszip' => [
-		'version' => '0.0.0',
-		'css' => [
-			'asset.min.css'
-		],
+		'version' => '3.2.2',
+		'assetPath' => 'dist',
 		'js' => [
-			'asset.min.js'
+			'jszip.min.js'
 		],
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
