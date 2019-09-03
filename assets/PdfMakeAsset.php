@@ -30,9 +30,6 @@ class PdfMakeAsset extends \p2m\assets\base\P2AssetBundle
 	protected $resourceData = array(
 		'static' => [
 			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/##-version-##',
-			'js' => [
-				'pdfmake.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha256-OTZ52txWFX9FcHKxJDvp7VYnyLrrYK1wKiS7hZafU/c=',
 				'crossorigin' => 'anonymous',
@@ -40,14 +37,16 @@ class PdfMakeAsset extends \p2m\assets\base\P2AssetBundle
 		],
 		'published' => [
 			'sourcePath' => '@vendor/bpampuch/pdfmake/build',
-			'js' => [
-				'pdfmake.min.js',
-			],
-		],
-		'depends' => [
-			'p2m\assets\VfsFontsAsset',
 		],
 	);
+
+	public $js = [
+		'pdfmake.min.js'
+	];
+
+	public $depends = [
+		'p2m\assets\P2CoreAsset'
+	];
 
 	public function init()
 	{
