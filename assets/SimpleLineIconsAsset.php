@@ -23,20 +23,11 @@ namespace p2m\assets;
 
 class SimpleLineIconsAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '2.4.1';
-
 	protected $assetName = 'simple-line-icons';
-
-	public $css = [
-		'css/simple-line-icons.css'
-	];
-
-	public $depends = [
-		'p2m\assets\P2CoreAsset'
-	];
 
 	public function init()
 	{
+		$this->assetData = $this->_assetData[$assetName];
 		$this->configureUnpkgAsset();
 		parent::init();
 	}
