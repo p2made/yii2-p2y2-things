@@ -13,7 +13,7 @@
 return [
 	'amplitudejs' => [ // Cdnjs
 		'version' => '5.0.2',
-		'sourcePath' => 'sourcePath',
+		'sourcePath' => '@bower/amplitude/dist',
 		'static' => [
 			'jsOptions' => [
 				'integrity' => 'sha256-/qGoEvr4VYrgei+olAkcHAuuwGFZb/AsO75x7xgsajs=',
