@@ -22,24 +22,22 @@ return [
 		],
 	],
 	'chart.js' => [
-		'version' => '0.0.0',
+		'version' => '2.8.0',
+		'assetPath' => 'dist',
 		'css' => [
-			'asset.min.css'
+			'Chart.min.css'
 		],
 		'js' => [
-			'asset.min.js'
+			'Chart.min.js'
 		],
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
 	'flag-icon-css' => [
-		'version' => '0.0.0',
+		'version' => '2.8.0',
 		'css' => [
-			'asset.min.css'
-		],
-		'js' => [
-			'asset.min.js'
+			'css/flag-icon.min.css'
 		],
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
