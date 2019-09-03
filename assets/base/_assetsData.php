@@ -42,6 +42,19 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
+	'ekko-lightbox' => [ // NPM/Unpkg
+		'version' => '5.3.0',
+		'path' => 'dist',
+		'css' => [
+			'ekko-lightbox.css'
+		],
+		'js' => [
+			'ekko-lightbox.min.js'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
 	'flag-icon-css' => [ // NPM/Unpkg
 		'version' => '2.8.0',
 		'css' => [
