@@ -319,6 +319,28 @@ return [
 			'p2m\assets\AnimateAsset',
 		],
 	],
+	'timeline.css' => [ // Cdnjs
+		'pattern' => 'cdnjs',
+		'version' => '1.0.0',
+		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/Timeline.css-1.0.0/css',
+		'static' => [
+			'css' => [
+				'timeline.min.css'
+			],
+			'cssOptions' => [
+				'integrity' => 'sha256-LT2WEwbehWYhBvSyceJbc6WbIJxMp5k6Z1dNTPZt+pM=',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'css' => [
+				'timeline.css'
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
 	'vfs_fonts' => [ // NPM/Unpkg
 		'pattern' => 'unpkg',
 		'package' => 'pdfmake',
