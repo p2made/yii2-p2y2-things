@@ -22,29 +22,12 @@ namespace p2m\assets;
 
 class HolderAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '2.9.4';
-
-	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@vendor/imsky/holderjs',
-			'js' => [
-				'holder.min.js',
-			],
-		],
-		'static' => [
-			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/holder/##-version-##',
-			'js' => [
-				'holder.min.js',
-			],
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	);
+	protected $assetName = 'holder';
 
 	public function init()
 	{
-		$this->configureAsset($this->resourceData);
+		$this->assetData = $this->_assetData[$assetName];
+
 		parent::init();
 	}
 }
