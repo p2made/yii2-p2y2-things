@@ -27,19 +27,9 @@ class AnimateAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'animate.css';
 
-	protected $resourceData =
-
-
-	public $css = [
-		'animate.min.css'
-	];
-
-	public $depends = [
-		'p2m\assets\P2CoreAsset',
-	];
-
 	public function init()
 	{
+		$this->assetData = $this->_assetData[$assetName];
 		$this->configureUnpkgAsset();
 		parent::init();
 	}

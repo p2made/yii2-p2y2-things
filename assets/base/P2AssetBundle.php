@@ -36,6 +36,12 @@ class P2AssetBundle extends \p2m\base\assets\P2AssetBase
 	 */
 	protected $_p2mProjectId = 'yii2-p2y2-things';
 
+	/*
+	 * @var string
+	 * protected $_assetData = [];
+	 */
+	protected $_assetData = require(__DIR__ . '/_assetsData.php');
+
 	/**
 	 * @var string
 	 * public $sourcePath;

@@ -23,7 +23,7 @@ return [
 	],
 	'chart.js' => [
 		'version' => '2.8.0',
-		'assetPath' => 'dist',
+		'path' => 'dist',
 		'css' => [
 			'Chart.min.css'
 		],
@@ -45,7 +45,7 @@ return [
 	],
 	'jszip' => [
 		'version' => '3.2.2',
-		'assetPath' => 'dist',
+		'path' => 'dist',
 		'js' => [
 			'jszip.min.js'
 		],
@@ -55,7 +55,7 @@ return [
 	],
 	'scrollreveal' => [
 		'version' => '3.3.4',
-		'assetPath' => 'dist',
+		'path' => 'dist',
 		'js' => [
 			'scrollreveal.min.js'
 		],
@@ -74,7 +74,7 @@ return [
 	],
 	'sweetalert' => [
 		'version' => '2.1.2',
-		'assetPath' => 'dist',
+		'path' => 'dist',
 		'js' => [
 			'sweetalert.min.js'
 		],
