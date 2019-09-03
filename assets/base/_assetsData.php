@@ -205,6 +205,20 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
+	'metismenu' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
+		'version' => '3.0.4',
+		'path' => 'dist',
+		'css' => [
+			'metisMenu.min.css'
+		],
+		'js' => [
+			'metisMenu.min.js'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
 	'pdfmake' => [ // NPM/Unpkg
 		'pattern' => 'unpkg',
 		'version' => '0.1.58',
