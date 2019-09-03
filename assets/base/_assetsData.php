@@ -121,6 +121,23 @@ return [
 			'p2m\assets\GMapsApiAsset',
 		],
 	],
+	'holder' => [ // Cdnjs
+		'pattern' => 'cdnjs',
+		'version' => '2.9.6',
+		'sourcePath' => '@bower/holderjs',
+		'static' => [
+			'jsOptions' => [
+				'integrity' => 'sha256-yF/YjmNnXHBdym5nuQyBNU62sCUN9Hx5awMkApzhZR0=',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'js' => [
+			'holder.min.js'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
 	'jszip' => [ // NPM/Unpkg
 		'pattern' => 'unpkg',
 		'version' => '3.2.2',
