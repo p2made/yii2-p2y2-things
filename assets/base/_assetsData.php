@@ -89,22 +89,11 @@ return [
 	'gmaps.js' => [ // Cdnjs
 		'pattern' => 'cdnjs',
 		'version' => '0.4.25',
-		'sourcePath' => 'sourcePath',
+		'sourcePath' => '@bower/gmaps.js',
 		'static' => [
-			'css' => [
-				'asset.min.css'
-			],
-			'js' => [
-				'asset.min.js'
-			],
-			'cssOptions' => [
-				'cssOptions'
-			],
 			'jsOptions' => [
-				'jsOptions'
-			],
-			'publishOptions' => [
-				'publishOptions'
+				'integrity' => 'sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=',
+				'crossorigin' => 'anonymous',
 			],
 		],
 		'published' => [
@@ -124,23 +113,12 @@ return [
 				'publishOptions'
 			],
 		],
-		'css' => [
-			'asset.min.css'
-		],
 		'js' => [
-			'asset.min.js'
-		],
-		'cssOptions' => [
-			'cssOptions'
-		],
-		'jsOptions' => [
-			'jsOptions'
-		],
-		'publishOptions' => [
-			'publishOptions'
+			'gmaps.min.js'
 		],
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
+			'p2m\assets\GMapsApiAsset',
 		],
 	],
 	'jszip' => [ // NPM/Unpkg
@@ -217,33 +195,3 @@ return [
 		],
 	],
 ];
-
-<script src="gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
-{
-	protected $version = '0.4.25';
-
-	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/gmaps-##-version-##',
-			'js' => [
-				'gmaps.min.js',
-			],
-		],
-		'static' => [
-			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs//##-version-##',
-			'js' => [
-				'gmaps.min.js',
-			],
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\GMapsApiAsset',
-		],
-	);
-
-	public function init()
-	{
-		$this->configureAsset($this->resourceData);
-		parent::init();
-	}
-}
