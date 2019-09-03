@@ -25,34 +25,12 @@ namespace p2m\assets;
 
 class AmplitudejsAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '5.0.2';
-
-	protected $resourceData = array(
-		'static' => [
-			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/amplitudejs/##-version-##',
-			'js' => [
-				'amplitude.min.js',
-			],
-			'jsOptions' => [
-				'integrity' => 'sha256-/qGoEvr4VYrgei+olAkcHAuuwGFZb/AsO75x7xgsajs=',
-				'crossorigin' => 'anonymous',
-			],
-		],
-		'published' => [
-			'sourcePath' => '@bower/amplitude/dist',
-			'js' => [
-				'amplitude.min.js',
-			],
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-
-	);
+	protected $assetName = 'amplitudejs';
 
 	public function init()
 	{
-		$this->configureAsset($this->resourceData);
+		$this->assetData = $this->_assetData[$assetName];
+		$this->configureCdnjsAsset();
 		parent::init();
 	}
 }
