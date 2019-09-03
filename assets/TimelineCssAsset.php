@@ -27,7 +27,7 @@ class TimelineCssAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $version = '1.0.0';
 
-	protected $resourceData = array(
+	protected $resourceData = [
 		'static' => [
 			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/timeline.css/##-version-##',
 			'css' => [
@@ -44,10 +44,11 @@ class TimelineCssAsset extends \p2m\assets\base\P2AssetBundle
 				'timeline.css',
 			],
 		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	);
+	];
+
+	public $depends = [
+		'p2m\assets\P2CoreAsset'
+	];
 
 	public function init()
 	{
