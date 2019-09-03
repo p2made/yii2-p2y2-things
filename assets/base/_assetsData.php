@@ -219,6 +219,20 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
+	'morris.js' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
+		'version' => '0.5.0',
+		'css' => [
+			'morris.css'
+		],
+		'js' => [
+			'morris.min.js'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+			'p2m\assets\RaphaelAsset',
+		],
+	],
 	'pdfmake' => [ // NPM/Unpkg
 		'pattern' => 'unpkg',
 		'version' => '0.1.58',
