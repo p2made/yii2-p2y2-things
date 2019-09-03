@@ -69,7 +69,7 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
-	'assetName' => [
+	'scrollreveal' => [
 		'version' => '0.0.0',
 		'css' => [
 			'asset.min.css'
@@ -81,7 +81,7 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
-	'assetName' => [
+	'simple-line-icons' => [
 		'version' => '0.0.0',
 		'css' => [
 			'asset.min.css'
@@ -93,7 +93,7 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
-	'assetName' => [
+	'sweetalert' => [
 		'version' => '0.0.0',
 		'css' => [
 			'asset.min.css'
@@ -105,7 +105,7 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
-	'assetName' => [
+	'jszip' => [
 		'version' => '0.0.0',
 		'css' => [
 			'asset.min.css'
@@ -116,34 +116,5 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'assetName' => [
-		'version' => '0.0.0',
-		'css' => [
-			'asset.min.css'
-		],
-		'js' => [
-			'asset.min.js'
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	],
-	'assetName' => [
-		// asset contents
 	],
 ];
-
-
-
-
-
-	"": "~2.8",
-	"": "~3.3",
-	"": "~3.4",
-	"": "~2.24",
-	"": "~0.5",
-	"scrollreveal": "~4.0",
-	"simple-line-icons": "~2.4",
-	"sweetalert": "~2.1",
-	"jszip": "~3.2",
