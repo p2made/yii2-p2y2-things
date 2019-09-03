@@ -21,7 +21,7 @@
 
 namespace p2m\base\assets; /* edit this if using elsewhere */
 
-class _ExampleUnpkgAsset extends \p2m\base\assets\P2UnpkgAssetBase
+class _ExampleUnpkgAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $version = '0.0.0';
 
