@@ -33,6 +33,15 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
+	'circle-buttons' => [ // ../vendor
+		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/pub',
+		'css' => [
+			'css/circle-buttons.css'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
 	'flag-icon-css' => [ // NPM/Unpkg
 		'version' => '2.8.0',
 		'css' => [
@@ -92,27 +101,3 @@ return [
 		],
 	],
 ];
-
-
-
-
-class CircleButtonsAsset extends \p2m\assets\base\P2AssetBundle
-{
-	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/pub',
-			'css' => [
-				'css/circle-buttons.css',
-			],
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	);
-
-	public function init()
-	{
-		$this->configureAsset($this->resourceData);
-		parent::init();
-	}
-}
