@@ -23,22 +23,11 @@ namespace p2m\assets;
 
 class JSZipAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '3.2.2';
-
 	protected $assetName = 'jszip';
-
-	protected $assetPath = 'dist';
-
-	public $js = [
-		'jszip.min.js'
-	];
-
-	public $depends = [
-		'p2m\assets\P2CoreAsset'
-	];
 
 	public function init()
 	{
+		$this->assetData = $this->_assetData[$assetName];
 		$this->configureUnpkgAsset();
 		parent::init();
 	}
