@@ -132,6 +132,17 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
+	'pdfmake' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
+		'version' => '0.1.58',
+		'path' => 'build',
+		'js' => [
+			'build'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
 	'scrollreveal' => [ // NPM/Unpkg
 		'pattern' => 'unpkg',
 		'version' => '3.3.4',
