@@ -12,56 +12,16 @@
 
 return [
 	'amplitudejs' => [ // Cdnjs
-		'version' => '0.0.0',
+		'version' => '5.0.2',
 		'sourcePath' => 'sourcePath',
 		'static' => [
-			'css' => [
-				'asset.min.css'
-			],
-			'js' => [
-				'asset.min.js'
-			],
-			'cssOptions' => [
-				'cssOptions'
-			],
 			'jsOptions' => [
-				'jsOptions'
+				'integrity' => 'sha256-/qGoEvr4VYrgei+olAkcHAuuwGFZb/AsO75x7xgsajs=',
+				'crossorigin' => 'anonymous',
 			],
-			'publishOptions' => [
-				'publishOptions'
-			],
-		],
-		'published' => [
-			'css' => [
-				'asset.min.css'
-			],
-			'js' => [
-				'asset.min.js'
-			],
-			'cssOptions' => [
-				'cssOptions'
-			],
-			'jsOptions' => [
-				'jsOptions'
-			],
-			'publishOptions' => [
-				'publishOptions'
-			],
-		],
-		'css' => [
-			'asset.min.css'
 		],
 		'js' => [
-			'asset.min.js'
-		],
-		'cssOptions' => [
-			'cssOptions'
-		],
-		'jsOptions' => [
-			'jsOptions'
-		],
-		'publishOptions' => [
-			'publishOptions'
+			'amplitude.min.js'
 		],
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
@@ -188,35 +148,3 @@ return [
 		],
 	],
 ];
-{
-	protected $version = '5.0.2';
-
-	protected $resourceData = array(
-		'static' => [
-			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/amplitudejs/##-version-##',
-			'js' => [
-				'amplitude.min.js',
-			],
-			'jsOptions' => [
-				'integrity' => 'sha256-/qGoEvr4VYrgei+olAkcHAuuwGFZb/AsO75x7xgsajs=',
-				'crossorigin' => 'anonymous',
-			],
-		],
-		'published' => [
-			'sourcePath' => '@bower/amplitude/dist',
-			'js' => [
-				'amplitude.min.js',
-			],
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-
-	);
-
-	public function init()
-	{
-		$this->configureAsset($this->resourceData);
-		parent::init();
-	}
-}
