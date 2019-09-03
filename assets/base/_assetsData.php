@@ -45,6 +45,18 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
+	'jszip' => [
+		'version' => '0.0.0',
+		'css' => [
+			'asset.min.css'
+		],
+		'js' => [
+			'asset.min.js'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
 	'moment' => [
 		'version' => '0.0.0',
 		'css' => [
@@ -94,18 +106,6 @@ return [
 		],
 	],
 	'sweetalert' => [
-		'version' => '0.0.0',
-		'css' => [
-			'asset.min.css'
-		],
-		'js' => [
-			'asset.min.js'
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	],
-	'jszip' => [
 		'version' => '0.0.0',
 		'css' => [
 			'asset.min.css'
