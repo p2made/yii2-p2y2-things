@@ -25,22 +25,11 @@ namespace p2m\assets;
 
 class _ExampleUnpkgAsset extends \p2m\base\assets\P2UnpkgAssetBase
 {
-	protected $version = '2.1.2';
-
 	protected $assetName = 'sweetalert';
-
-	protected $assetPath = 'dist';
-
-	public $js = [
-		'sweetalert.min.js'
-	];
-
-	public $depends = [
-		'p2m\assets\P2CoreAsset'
-	];
 
 	public function init()
 	{
+		$this->assetData = $this->_assetData[$assetName];
 		$this->configureUnpkgAsset();
 		parent::init();
 	}
