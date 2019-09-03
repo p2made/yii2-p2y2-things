@@ -53,37 +53,11 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
-	'moment' => [
-		'version' => '0.0.0',
-		'css' => [
-			'asset.min.css'
-		],
-		'js' => [
-			'asset.min.js'
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	],
-	'moment-timezone' => [
-		'version' => '0.0.0',
-		'css' => [
-			'asset.min.css'
-		],
-		'js' => [
-			'asset.min.js'
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	],
 	'scrollreveal' => [
-		'version' => '0.0.0',
-		'css' => [
-			'asset.min.css'
-		],
+		'version' => '3.3.4',
+		'assetPath' => 'dist',
 		'js' => [
-			'asset.min.js'
+			'scrollreveal.min.js'
 		],
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
