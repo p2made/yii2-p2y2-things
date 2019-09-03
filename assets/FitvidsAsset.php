@@ -28,16 +28,16 @@ class FitvidsAsset extends \p2m\assets\base\P2AssetBundle
 	protected $version = '1.2.0';
 
 	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/FitVids.js-##-version-##',
-			'js' => [
-				'jquery.fitvids.js',
-			],
-		],
+		'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/fitvids/##-version-##',
+		'sourcePath' => '@bower/fitvids',
 		'static' => [
-			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/fitvids/##-version-##',
 			'js' => [
 				'jquery.fitvids.min.js',
+			],
+		],
+		'published' => [
+			'js' => [
+				'jquery.fitvids.js',
 			],
 		],
 		'depends' => [
