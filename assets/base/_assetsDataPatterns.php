@@ -13,7 +13,7 @@
 
 return [
 	// Pattern for NPM/Unpkg assets
-	'assetName' => [
+	'assetName' => [ // NPM/Unpkg
 		'version' => '0.0.0',
 		'path' => 'path',
 		'css' => [
@@ -36,7 +36,7 @@ return [
 		],
 	],
 	// Pattern for ../vendor assets
-	'assetName' => [
+	'assetName' => [ // ../vendor
 		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/...',
 		'css' => [
 			'asset.min.css'
