@@ -56,9 +56,11 @@ class EkkoLightboxAsset extends \p2m\assets\base\P2AssetBundle
 }
 
 /*
+ekko-lightbox
+5.3.0
+
 	@vendor/bower/ekko-lightbox/dist/ekko-lightbox.min.css
 	@vendor/bower/ekko-lightbox/dist/ekko-lightbox.min.js
-
 	//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.css
 	//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js
  */
