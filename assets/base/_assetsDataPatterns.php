@@ -57,4 +57,27 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
+	// Pattern for Cdnjs assets
+	'assetName' => [ // Cdnjs
+		'version' => '0.0.0',
+		'path' => 'path',
+		'css' => [
+			'asset.min.css'
+		],
+		'js' => [
+			'asset.min.js'
+		],
+		'cssOptions' => [
+			'cssOptions'
+		],
+		'jsOptions' => [
+			'jsOptions'
+		],
+		'publishOptions' => [
+			'publishOptions'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
 ];
