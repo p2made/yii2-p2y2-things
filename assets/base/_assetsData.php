@@ -194,6 +194,17 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
+	'masonry-layout' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
+		'version' => '4.2.2',
+		'path' => 'dist',
+		'js' => [
+			'masonry.pkgd.min.js'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
 	'pdfmake' => [ // NPM/Unpkg
 		'pattern' => 'unpkg',
 		'version' => '0.1.58',
