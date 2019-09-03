@@ -12,6 +12,7 @@
 
 return [
 	'amplitudejs' => [ // Cdnjs
+		'pattern' => 'cdnjs',
 		'version' => '5.0.2',
 		'sourcePath' => '@bower/amplitude/dist',
 		'static' => [
@@ -28,6 +29,7 @@ return [
 		],
 	],
 	'animate.css' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
 		'version' => '3.7.2',
 		'css' => [
 			'animate.min.css'
@@ -37,6 +39,7 @@ return [
 		],
 	],
 	'chart.js' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
 		'version' => '2.8.0',
 		'path' => 'dist',
 		'css' => [
@@ -50,6 +53,7 @@ return [
 		],
 	],
 	'circle-buttons' => [ // ../vendor
+		'pattern' => 'vendor',
 		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/pub',
 		'css' => [
 			'css/circle-buttons.css'
@@ -59,6 +63,7 @@ return [
 		],
 	],
 	'ekko-lightbox' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
 		'version' => '5.3.0',
 		'path' => 'dist',
 		'css' => [
@@ -72,6 +77,7 @@ return [
 		],
 	],
 	'flag-icon-css' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
 		'version' => '2.8.0',
 		'css' => [
 			'css/flag-icon.min.css'
@@ -81,6 +87,7 @@ return [
 		],
 	],
 	'jszip' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
 		'version' => '3.2.2',
 		'path' => 'dist',
 		'js' => [
@@ -91,6 +98,7 @@ return [
 		],
 	],
 	'scrollreveal' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
 		'version' => '3.3.4',
 		'path' => 'dist',
 		'js' => [
@@ -101,6 +109,7 @@ return [
 		],
 	],
 	'simple-line-icons' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
 		'version' => '2.4.1',
 		'css' => [
 			'css/simple-line-icons.css'
@@ -110,6 +119,7 @@ return [
 		],
 	],
 	'sweetalert' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
 		'version' => '2.1.2',
 		'path' => 'dist',
 		'js' => [
@@ -120,6 +130,7 @@ return [
 		],
 	],
 	'timeline' => [ // ../vendor
+		'pattern' => 'vendor',
 		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/pub',
 		'css' => [
 			'css/timeline.min.css'
@@ -130,6 +141,7 @@ return [
 		],
 	],
 	'wow' => [ // Cdnjs
+		'pattern' => 'cdnjs',
 		'version' => '1.1.2',
 		'sourcePath' => '@bower/wow/dist',
 		'path' => 'path',
