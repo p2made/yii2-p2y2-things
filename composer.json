@@ -39,6 +39,7 @@
 		"npm-asset/chart.js": "~2.8",
 		"npm-asset/ekko-lightbox": "~5.3",
 		"npm-asset/flag-icon-css": "~3.3",
+		"npm-asset/gmaps.js": "~0.4",
 		"npm-asset/jszip": "~3.2",
 		"npm-asset/moment": "~2.24",
 		"npm-asset/moment-timezone": "~0.5",
