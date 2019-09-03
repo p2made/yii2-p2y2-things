@@ -55,28 +55,6 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
-	'fitvids.1.1.0' => [ // NPM/Unpkg
-		'version' => '1.2.0',
-		'path' => 'path',
-		'css' => [
-			'asset.min.css'
-		],
-		'js' => [
-			'asset.min.js'
-		],
-		'cssOptions' => [
-			'cssOptions'
-		],
-		'jsOptions' => [
-			'jsOptions'
-		],
-		'publishOptions' => [
-			'publishOptions'
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	],
 	'flag-icon-css' => [ // NPM/Unpkg
 		'version' => '2.8.0',
 		'css' => [
@@ -136,35 +114,3 @@ return [
 		],
 	],
 ];
-
-
-fitvids.1.1.0
-
-class FitvidsAsset extends \p2m\assets\base\P2AssetBundle
-{
-	protected $version = '';
-
-	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/FitVids.js-##-version-##',
-			'js' => [
-				'jquery.fitvids.js',
-			],
-		],
-		'static' => [
-			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/fitvids/##-version-##',
-			'js' => [
-				'jquery.fitvids.min.js',
-			],
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	);
-
-	public function init()
-	{
-		$this->configureAsset($this->resourceData);
-		parent::init();
-	}
-}
