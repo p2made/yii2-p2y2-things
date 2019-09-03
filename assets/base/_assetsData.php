@@ -64,12 +64,9 @@ return [
 		],
 	],
 	'simple-line-icons' => [
-		'version' => '0.0.0',
+		'version' => '2.4.1',
 		'css' => [
-			'asset.min.css'
-		],
-		'js' => [
-			'asset.min.js'
+			'css/simple-line-icons.css'
 		],
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
