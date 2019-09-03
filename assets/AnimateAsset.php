@@ -25,9 +25,10 @@ namespace p2m\assets;
 
 class AnimateAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '3.7.2';
-
 	protected $assetName = 'animate.css';
+
+	protected $resourceData =
+
 
 	public $css = [
 		'animate.min.css'
