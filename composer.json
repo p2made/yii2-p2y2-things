@@ -40,7 +40,7 @@
 		"npm-asset/jquery": "~3.4",
 		"npm-asset/moment": "~2.24",
 		"npm-asset/moment-timezone": "~0.5",
-		"npm-asset/scrollreveal": "~4.0.5",
+		"npm-asset/scrollreveal": "~4.0",
 		"npm-asset/simple-line-icons": "~2.4",
 		"npm-asset/sweetalert": "~2.1",
 		"bower-asset/amplitude":"~5.0",
