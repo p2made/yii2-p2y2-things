@@ -25,58 +25,12 @@ namespace p2m\assets;
 
 class Lightbox2Asset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '2.9.0';
-
-	protected $resourceData = array(
-		'published' => [
-			'sourcePath' => '@p2m@/lightbox2-##-version-##/dist',
-			'css' => [
-				'css/lightbox.min.css',
-			],
-			'js' => [
-				'js/lightbox.min.js',
-			],
-		],
-		'static' => [
-			'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/lightbox2/##-version-##',
-			'css' => [
-				'css/lightbox.min.css',
-			],
-			'js' => [
-				'js/lightbox.min.js',
-			],
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	);
+	protected $assetName = 'lightbox2';
 
 	public function init()
 	{
-		$this->configureAsset($this->resourceData);
+		$this->assetData = $this->_assetData[$assetName];
+
 		parent::init();
 	}
 }
-
-/*
-	@vendor/bower/lightbox2/dist/css/lightbox.min.css
-
-	@vendor/bower/lightbox2/dist/images/close.png
-	@vendor/bower/lightbox2/dist/images/loading.gif
-	@vendor/bower/lightbox2/dist/images/next.png
-	@vendor/bower/lightbox2/dist/images/prev.png
-
-	@vendor/bower/lightbox2/dist/js/lightbox-plus-jquery.min.js
-	@vendor/bower/lightbox2/dist/js/lightbox.min.js
-
-
-	//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css
-
-	//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/images/close.png
-	//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/images/loading.gif
-	//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/images/next.png
-	//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/images/prev.png
-
-	//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox-plus-jquery.min.js
-	//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js
- */
