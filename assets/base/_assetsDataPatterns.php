@@ -61,7 +61,6 @@ return [
 	'assetName' => [ // Cdnjs
 		'version' => '0.0.0',
 		'sourcePath' => 'sourcePath',
-		'path' => 'path',
 		'static' => [
 			'css' => [
 				'asset.min.css'
