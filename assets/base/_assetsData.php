@@ -138,6 +138,23 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
+	'jquery.isotope' => [ // Cdnjs
+		'pattern' => 'cdnjs',
+		'version' => '3.0.6',
+		'sourcePath' => '@bower/isotope/dist',
+		'static' => [
+			'jsOptions' => [
+				'integrity' => 'sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'js' => [
+			'asset.min.js'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
 	'jszip' => [ // NPM/Unpkg
 		'pattern' => 'unpkg',
 		'version' => '3.2.2',
