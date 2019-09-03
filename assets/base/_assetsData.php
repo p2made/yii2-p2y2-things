@@ -276,6 +276,16 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	],
+	'raphael' => [ // NPM/Unpkg
+		'pattern' => 'unpkg',
+		'version' => '2.3.0',
+		'js' => [
+			'raphael.min.js'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
 	'scrollreveal' => [ // NPM/Unpkg
 		'pattern' => 'unpkg',
 		'version' => '3.3.4',
