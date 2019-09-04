@@ -1,6 +1,6 @@
 <?php
 return [
-	'amplitudejs' => [ // Cdnjs
+	'amplitudejs' => [
 		'pattern' => 'cdnjs',
 		'version' => '5.0.2',
 		'sourcePath' => '@bower/amplitude/dist',
@@ -16,8 +16,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'animate.css' => [ // NPM/Unpkg
+	], // Cdnjs
+	'animate.css' => [
 		'pattern' => 'unpkg',
 		'version' => '3.7.2',
 		'css' => [
@@ -26,8 +26,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'chart.js' => [ // NPM/Unpkg
+	], // NPM/Unpkg
+	'chart.js' => [
 		'pattern' => 'unpkg',
 		'version' => '2.8.0',
 		'path' => 'dist',
@@ -40,8 +40,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'circle-buttons' => [ // ../vendor
+	], // NPM/Unpkg
+	'circle-buttons' => [
 		'pattern' => 'vendor',
 		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/pub',
 		'css' => [
@@ -50,8 +50,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'ekko-lightbox' => [ // NPM/Unpkg
+	], // ../vendor
+	'ekko-lightbox' => [
 		'pattern' => 'unpkg',
 		'version' => '5.3.0',
 		'path' => 'dist',
@@ -64,8 +64,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'flag-icon-css' => [ // NPM/Unpkg
+	], // NPM/Unpkg
+	'flag-icon-css' => [
 		'pattern' => 'unpkg',
 		'version' => '2.8.0',
 		'css' => [
@@ -74,8 +74,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'gmaps.js' => [ // Cdnjs
+	], // NPM/Unpkg
+	'gmaps.js' => [
 		'pattern' => 'cdnjs',
 		'version' => '0.4.25',
 		'sourcePath' => '@bower/gmaps.js',
@@ -85,23 +85,6 @@ return [
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'css' => [
-				'asset.min.css'
-			],
-			'js' => [
-				'asset.min.js'
-			],
-			'cssOptions' => [
-				'cssOptions'
-			],
-			'jsOptions' => [
-				'jsOptions'
-			],
-			'publishOptions' => [
-				'publishOptions'
-			],
-		],
 		'js' => [
 			'gmaps.min.js'
 		],
@@ -109,8 +92,8 @@ return [
 			'p2m\assets\P2CoreAsset',
 			'p2m\assets\GMapsApiAsset',
 		],
-	],
-	'holder' => [ // Cdnjs
+	], // Cdnjs
+	'holder' => [
 		'pattern' => 'cdnjs',
 		'version' => '2.9.6',
 		'sourcePath' => '@bower/holderjs',
@@ -126,8 +109,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'jquery.isotope' => [ // Cdnjs
+	], // Cdnjs
+	'jquery.isotope' => [
 		'pattern' => 'cdnjs',
 		'version' => '3.0.6',
 		'sourcePath' => '@bower/isotope/dist',
@@ -143,8 +126,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'jszip' => [ // NPM/Unpkg
+	], // Cdnjs
+	'jszip' => [
 		'pattern' => 'unpkg',
 		'version' => '3.2.2',
 		'path' => 'dist',
@@ -154,8 +137,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'lightbox2' => [ // NPM/Unpkg
+	], // NPM/Unpkg
+	'lightbox2' => [
 		'pattern' => 'unpkg',
 		'version' => '2.11.1',
 		'path' => 'dist',
@@ -168,8 +151,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'magnific-popup' => [ // NPM/Unpkg
+	], // NPM/Unpkg
+	'magnific-popup' => [
 		'pattern' => 'unpkg',
 		'version' => '1.1.0',
 		'path' => 'dist',
@@ -182,8 +165,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'masonry-layout' => [ // NPM/Unpkg
+	], // NPM/Unpkg
+	'masonry-layout' => [
 		'pattern' => 'unpkg',
 		'version' => '4.2.2',
 		'path' => 'dist',
@@ -193,8 +176,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'metismenu' => [ // NPM/Unpkg
+	], // NPM/Unpkg
+	'metismenu' => [
 		'pattern' => 'unpkg',
 		'version' => '3.0.4',
 		'path' => 'dist',
@@ -207,8 +190,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'morris.js' => [ // NPM/Unpkg
+	], // NPM/Unpkg
+	'morris.js' => [
 		'pattern' => 'unpkg',
 		'version' => '0.5.0',
 		'css' => [
@@ -221,8 +204,8 @@ return [
 			'p2m\assets\P2CoreAsset',
 			'p2m\assets\RaphaelAsset',
 		],
-	],
-	'pdfmake' => [ // NPM/Unpkg
+	], // NPM/Unpkg
+	'pdfmake' => [
 		'pattern' => 'unpkg',
 		'version' => '0.1.58',
 		'path' => 'build',
@@ -232,8 +215,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'prettyPhoto' => [ // Cdnjs
+	], // NPM/Unpkg
+	'prettyPhoto' => [
 		'pattern' => 'cdnjs',
 		'version' => '3.1.6',
 		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/prettyphoto-3.1.6',
@@ -264,8 +247,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'raphael' => [ // NPM/Unpkg
+	], // Cdnjs
+	'raphael' => [
 		'pattern' => 'unpkg',
 		'version' => '2.3.0',
 		'js' => [
@@ -274,8 +257,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'scrollreveal' => [ // NPM/Unpkg
+	], // NPM/Unpkg
+	'scrollreveal' => [
 		'pattern' => 'unpkg',
 		'version' => '3.3.4',
 		'path' => 'dist',
@@ -285,8 +268,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'simple-line-icons' => [ // NPM/Unpkg
+	], // NPM/Unpkg
+	'simple-line-icons' => [
 		'pattern' => 'unpkg',
 		'version' => '2.4.1',
 		'css' => [
@@ -295,8 +278,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'sweetalert' => [ // NPM/Unpkg
+	], // NPM/Unpkg
+	'sweetalert' => [
 		'pattern' => 'unpkg',
 		'version' => '2.1.2',
 		'path' => 'dist',
@@ -306,8 +289,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'timeline' => [ // ../vendor
+	], // NPM/Unpkg
+	'timeline' => [
 		'pattern' => 'vendor',
 		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/pub',
 		'css' => [
@@ -317,8 +300,8 @@ return [
 			'p2m\assets\P2CoreAsset',
 			'p2m\assets\AnimateAsset',
 		],
-	],
-	'timeline.css' => [ // Cdnjs
+	], // ../vendor
+	'timeline.css' => [
 		'pattern' => 'cdnjs',
 		'version' => '1.0.0',
 		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/Timeline.css-1.0.0/css',
@@ -339,8 +322,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'vfs_fonts' => [ // NPM/Unpkg
+	], // Cdnjs
+	'vfs_fonts' => [
 		'pattern' => 'unpkg',
 		'package' => 'pdfmake',
 		'version' => '0.1.58',
@@ -351,8 +334,8 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
-	'wow' => [ // Cdnjs
+	], // NPM/Unpkg
+	'wow' => [
 		'pattern' => 'cdnjs',
 		'version' => '1.1.2',
 		'sourcePath' => '@bower/wow/dist',
@@ -369,5 +352,5 @@ return [
 			'p2m\assets\P2CoreAsset',
 			'p2m\assets\AnimateAsset',
 		],
-	],
+	], // Cdnjs
 ];

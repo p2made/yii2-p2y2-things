@@ -40,7 +40,7 @@ class P2AssetBundle extends \p2m\base\assets\P2AssetBase
 	 * @var string
 	 * protected $_assetData = [];
 	 */
-	protected $_assetData = require('_assetsData.php');
+	protected $_assetData = array_merge(require_once('_assetsData.php'));
 
 	/**
 	 * @var string
