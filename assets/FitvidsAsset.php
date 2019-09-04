@@ -25,29 +25,5 @@ namespace p2m\assets;
 
 class FitvidsAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '1.2.0';
-
-	protected $resourceData = array(
-		'baseUrl' => '//cdnjs.cloudflare.com/ajax/libs/fitvids/##-version-##',
-		'sourcePath' => '@bower/fitvids',
-		'static' => [
-			'js' => [
-				'jquery.fitvids.min.js',
-			],
-		],
-		'published' => [
-			'js' => [
-				'jquery.fitvids.js',
-			],
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	);
-
-	public function init()
-	{
-		$this->configureAsset($this->resourceData);
-		parent::init();
-	}
+	protected $assetName = 'fitvids';
 }
