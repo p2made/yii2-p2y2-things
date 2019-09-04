@@ -13,7 +13,7 @@
 
 return [
 	// Pattern for Cdnjs assets
-	'assetName' => [ // Cdnjs
+	'assetName' => [
 		'pattern' => 'cdnjs',
 		'version' => '0.0.0',
 		'sourcePath' => 'sourcePath',
@@ -69,9 +69,9 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
+	], // Cdnjs
 	// Pattern for NPM/Unpkg assets
-	'assetName' => [ // NPM/Unpkg
+	'assetName' => [
 		'pattern' => 'unpkg',
 		'version' => '0.0.0',
 		'path' => 'path',
@@ -93,9 +93,9 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
+	], // NPM/Unpkg
 	// Pattern for ../vendor assets
-	'assetName' => [ // ../vendor
+	'assetName' => [
 		'pattern' => 'vendor',
 		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/...',
 		'css' => [
@@ -116,5 +116,5 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
+	], // ../vendor
 ];
