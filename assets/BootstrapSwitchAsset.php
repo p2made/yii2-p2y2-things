@@ -22,36 +22,5 @@ namespace p2m\assets;
 
 class BootstrapSwitchAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '3.3.4';
-
-	protected $resourceData = array(
-		'static' => [
-			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/##-version-##',
-			'css' => [
-				'css/bootstrap3/bootstrap-switch.min.css',
-			],
-			'js' => [
-				'js/bootstrap-switch.min.js',
-			],
-			'jsOptions' => [
-				'integrity' => 'sha256-AKUJYz2DyEoZYHh2/+zPHm1tTdYb4cmG8HC2ydmTzM4=',
-				'crossorigin' => 'anonymous',
-			],
-		],
-		'published' => [
-			'sourcePath' => '@vendor/nostalgiaz/bootstrap-switch/dist',
-			'js' => [
-				'js/bootstrap-switch.min.js',
-			],
-		],
-		'depends' => [
-			'p2m\assets\P2CoreAsset',
-		],
-	);
-
-	public function init()
-	{
-		$this->configureAsset($this->resourceData);
-		parent::init();
-	}
+	protected $assetName = 'bootstrap-switch';
 }
