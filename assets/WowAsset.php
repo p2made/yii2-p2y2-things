@@ -26,11 +26,4 @@ namespace p2m\assets;
 class WowAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'wow';
-
-	public function init()
-	{
-		$this->assetData = $this->_assetData[$assetName];
-
-		parent::init();
-	}
 }

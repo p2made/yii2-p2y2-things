@@ -26,11 +26,4 @@ namespace p2m\assets;
 class MetisMenuAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'metismenu';
-
-	public function init()
-	{
-		$this->assetData = $this->_assetData[$assetName];
-
-		parent::init();
-	}
 }

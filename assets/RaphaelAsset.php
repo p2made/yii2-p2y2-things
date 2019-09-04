@@ -26,11 +26,4 @@ namespace p2m\assets;
 class RaphaelAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'raphael';
-
-	public function init()
-	{
-		$this->assetData = $this->_assetData[$assetName];
-
-		parent::init();
-	}
 }

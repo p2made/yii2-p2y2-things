@@ -26,11 +26,4 @@ namespace p2m\assets; /* edit this if using elsewhere */
 class MagnificPopupAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'magnific-popup';
-
-	public function init()
-	{
-		$this->assetData = $this->_assetData[$assetName];
-
-		parent::init();
-	}
 }

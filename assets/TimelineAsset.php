@@ -23,11 +23,4 @@ namespace p2m\assets;
 class TimelineAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'timeline';
-
-	public function init()
-	{
-		$this->assetData = $this->_assetData[$assetName];
-
-		parent::init();
-	}
 }

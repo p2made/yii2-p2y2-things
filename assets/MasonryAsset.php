@@ -26,11 +26,4 @@ namespace p2m\assets;
 class MasonryAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'masonry-layout';
-
-	public function init()
-	{
-		$this->assetData = $this->_assetData[$assetName];
-
-		parent::init();
-	}
 }

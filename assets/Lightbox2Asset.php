@@ -26,11 +26,4 @@ namespace p2m\assets;
 class Lightbox2Asset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'lightbox2';
-
-	public function init()
-	{
-		$this->assetData = $this->_assetData[$assetName];
-
-		parent::init();
-	}
 }

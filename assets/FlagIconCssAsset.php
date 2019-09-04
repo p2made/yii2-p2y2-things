@@ -23,11 +23,4 @@ namespace p2m\assets;
 class FlagIconCssAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'assetName';
-
-	public function init()
-	{
-		$this->assetData = $this->_assetData[$assetName];
-
-		parent::init();
-	}
 }

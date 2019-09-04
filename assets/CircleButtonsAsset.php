@@ -23,11 +23,4 @@ namespace p2m\assets;
 class CircleButtonsAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'circle-buttons';
-
-	public function init()
-	{
-		$this->assetData = $this->_assetData[$assetName];
-
-		parent::init();
-	}
 }

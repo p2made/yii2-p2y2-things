@@ -26,11 +26,4 @@ namespace p2m\assets;
 class GMapsAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'gmaps.js';
-
-	public function init()
-	{
-		$this->assetData = $this->_assetData[$assetName];
-
-		parent::init();
-	}
 }

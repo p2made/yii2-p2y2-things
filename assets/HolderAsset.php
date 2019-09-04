@@ -23,11 +23,4 @@ namespace p2m\assets;
 class HolderAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'holder';
-
-	public function init()
-	{
-		$this->assetData = $this->_assetData[$assetName];
-
-		parent::init();
-	}
 }

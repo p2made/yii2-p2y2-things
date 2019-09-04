@@ -26,11 +26,4 @@ namespace p2m\assets;
 class _ExampleUnpkgAsset extends \p2m\base\assets\P2UnpkgAssetBase
 {
 	protected $assetName = 'sweetalert';
-
-	public function init()
-	{
-		$this->assetData = $this->_assetData[$assetName];
-
-		parent::init();
-	}
 }

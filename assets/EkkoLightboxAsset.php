@@ -26,11 +26,4 @@ namespace p2m\assets;
 class EkkoLightboxAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'ekko-lightbox';
-
-	public function init()
-	{
-		$this->assetData = $this->_assetData[$assetName];
-
-		parent::init();
-	}
 }

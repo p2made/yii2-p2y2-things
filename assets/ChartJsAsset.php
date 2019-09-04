@@ -26,11 +26,4 @@ namespace p2m\assets;
 class ChartJsAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'chart.js';
-
-	public function init()
-	{
-		$this->assetData = $this->_assetData[$assetName];
-
-		parent::init();
-	}
 }

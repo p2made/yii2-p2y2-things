@@ -26,11 +26,4 @@ namespace p2m\assets;
 class VfsFontsAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'vfs_fonts';
-
-	public function init()
-	{
-		$this->assetData = $this->_assetData[$assetName];
-
-		parent::init();
-	}
 }
