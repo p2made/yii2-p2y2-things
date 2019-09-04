@@ -86,7 +86,7 @@ return [
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
 		],
-	],
+	], // NPM/Unpkg
 	'flag-icon-css' => [
 		'pattern' => 'unpkg',
 		'version' => '2.8.0',
