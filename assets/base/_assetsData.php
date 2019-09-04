@@ -65,6 +65,28 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	], // NPM/Unpkg
+	'fitvids' => [ // Cdnjs
+		'pattern' => 'cdnjs',
+		'version' => '1.2.0',
+		'sourcePath' => '@bower/fitvids',
+		'static' => [
+			'js' => [
+				'jquery.fitvids.min.js'
+			],
+			'jsOptions' => [
+				'integrity' => 'sha256-nA828blBCdUSSdI8jpciOZsf72IGt1eBcdx1ioEfa8o='
+				'crossorigin' => 'anonymous'
+			],
+		],
+		'published' => [
+			'js' => [
+				'jquery.fitvids.js'
+			],
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	],
 	'flag-icon-css' => [
 		'pattern' => 'unpkg',
 		'version' => '2.8.0',
