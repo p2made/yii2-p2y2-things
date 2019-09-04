@@ -30,10 +30,7 @@ return [
 	'bootstrap-switch' => [
 		'pattern' => 'unpkg',
 		'version' => '3.4.0',
-		'path' => 'path',
-		'css' => [
-			'css/bootstrap3/bootstrap-switch.min.css'
-		],
+		'path' => 'dist',
 		'js' => [
 			'js/bootstrap-switch.min.js'
 		],
