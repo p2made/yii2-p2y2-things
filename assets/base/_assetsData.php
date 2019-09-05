@@ -54,7 +54,7 @@ return [
 	], // NPM/Unpkg
 	'circle-buttons' => [
 		'pattern' => 'vendor',
-		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/pub',
+		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/lib',
 		'css' => [
 			'css/circle-buttons.css'
 		],
@@ -325,7 +325,7 @@ return [
 	], // NPM/Unpkg
 	'timeline' => [
 		'pattern' => 'vendor',
-		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/pub',
+		'sourcePath' => '@p2m/yii2-p2y2-things/vendor/lib',
 		'css' => [
 			'css/timeline.min.css'
 		],

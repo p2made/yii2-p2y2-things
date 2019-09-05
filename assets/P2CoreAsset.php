@@ -22,30 +22,18 @@ namespace p2m\assets;
 
 class P2CoreAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $resourceData = array(
+	public $sourcePath = '@p2m/yii2-p2y2-things/vendor/lib';
 
-		'published' => [
-			'sourcePath' => '@p2m@/pub',
-			'css' => [
-				'css/p2additions.css',
-			],
-			'js' => [
-				//'js/p2additions.js',
-			],
+	public $css = [
+		'css' => [
+			'css/p2additions.css',
 		],
+	];
 
-		'depends' => [
-			'p2m\assets\base\P2YiiAsset',
-			'p2m\assets\base\P2BootstrapAsset',
-		],
-
-	);
-
-	public function init()
-	{
-		$this->configureAsset($this->resourceData);
-		parent::init();
-	}
+	public $depends = [
+		'p2m\assets\base\P2YiiAsset',
+		'p2m\assets\base\P2BootstrapAsset',
+	];
 }
 
 /* dependency lines for all assets... */

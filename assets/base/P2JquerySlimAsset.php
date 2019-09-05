@@ -35,13 +35,14 @@ namespace p2m\assets\base;
 
 class P2JqueryAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '3.2.1';
-
-	protected $resourceData = array(
+	protected $assetData = [
+		'package' => 'jquery',
+		'version' => '3.4.1',
+		'baseUrl' => 'https://code.jquery.com',
+		'sourcePath' => '@npm/jquery/dist',
 		'static' => [
-			'baseUrl' => 'https://code.jquery.com',
 			'js' => [
-				'jquery-##-version-##.slim.min.js',
+				'jquery-3.4.1.slim.min.js',
 			],
 			'jsOptions' => [
 				'integrity' => 'sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n',
@@ -49,17 +50,9 @@ class P2JqueryAsset extends \p2m\assets\base\P2AssetBundle
 			],
 		],
 		'published' => [
-			'sourcePath' => '@npm/jquery/dist',
 			'js' => [
 				'jquery.slim.min.js',
 			],
 		],
-	);
-
-	public function init()
-	{
-		$this->insertAssetVersion($this->resourceData['static']['js'][0]);
-		$this->configureAsset($this->resourceData);
-		parent::init();
-	}
+	];
 }
