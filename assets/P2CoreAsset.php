@@ -3,7 +3,7 @@
  * P2CoreAsset.php
  *
  * @author Pedro Plowman
- * @copyright Copyright &copy; Pedro Plowman, 2017
+ * @copyright Copyright &copy; Pedro Plowman, 2019
  * @link https://github.com/p2made
  * @package p2made/yii2-p2y2-things
  * @class \p2m\assets\base\P2CoreAsset
@@ -22,7 +22,7 @@ namespace p2m\assets;
 
 class P2CoreAsset extends \p2m\assets\base\P2AssetBundle
 {
-	public $sourcePath = '@p2m/yii2-p2y2-things/vendor/lib';
+	public $sourcePath = '@vendor/p2made/yii2-p2y2-things/vendor/lib';
 
 	public $css = [
 		'css' => [

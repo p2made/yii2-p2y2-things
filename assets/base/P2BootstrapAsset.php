@@ -6,7 +6,7 @@
  * http://getbootstrap.com/
  *
  * @author Pedro Plowman
- * @copyright Copyright &copy; Pedro Plowman, 2017
+ * @copyright Copyright &copy; Pedro Plowman, 2019
  * @link https://github.com/p2made
  * @package p2made/yii2-p2y2-things
  * @class \p2m\assets\base\P2BootstrapAsset
@@ -57,31 +57,6 @@ class P2BootstrapAsset extends \p2m\assets\base\P2AssetBundle
 			],
 		],
 	];
-}
-{
-	protected $version = '4.3.1';
-
-	protected $resourceData = array(
-		'static' => [
-			'baseUrl' => 'https://stackpath.bootstrapcdn.com/bootstrap/##-version-##',
-			'css' => [
-				'css/bootstrap.min.css',
-			],
-			'cssOptions' => [
-				'integrity' => 'sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T',
-				'crossorigin' => 'anonymous',
-			],
-		],
-		'published' => [
-			'sourcePath' => '@npm/bootstrap/dist',
-			'css' => [
-				'css/bootstrap.min.css',
-			],
-		],
-		'depends' => [
-			'p2m\assets\base\P2BootstrapPluginAsset',
-		],
-	);
 
 	private $bootswatchIntegrity = array(
 		'cerulean'  => 'sha384-C++cugH8+Uf86JbNOnQoBweHHAe/wVKN/mb0lTybu/NZ9sEYbd+BbbYtNpWYAsNP',

@@ -1,4 +1,16 @@
 <?php
+/**
+ * _assetsData.php
+ *
+ * @author Pedro Plowman
+ * @copyright Copyright &copy; Pedro Plowman, 2019
+ * @link https://github.com/p2made
+ * @license MIT
+ *
+ * @package p2made/yii2-p2y2-things
+ * @class \p2m\assets\base\P2AssetBundle
+ */
+
 return [
 	'amplitudejs' => [
 		'pattern' => 'cdnjs',
@@ -27,6 +39,23 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	], // NPM/Unpkg
+	'bootstrap-plugin' => [
+		'pattern' => 'bootstrap',
+		'package' => 'bootstrap', // when needed
+		'version' => '4.3.1',
+		'static' => [
+			'jsOptions' => [
+				'integrity' => 'sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'js' => [
+			'js/bootstrap.bundle.min.js'
+		],
+		'depends' => [
+			'p2m\assets\P2CoreAsset',
+		],
+	], // bootstrap
 	'bootstrap-switch' => [
 		'pattern' => 'unpkg',
 		'version' => '3.4.0',
@@ -85,8 +114,8 @@ return [
 				'jquery.fitvids.min.js'
 			],
 			'jsOptions' => [
-				'integrity' => 'sha256-nA828blBCdUSSdI8jpciOZsf72IGt1eBcdx1ioEfa8o='
-				'crossorigin' => 'anonymous'
+				'integrity' => 'sha256-nA828blBCdUSSdI8jpciOZsf72IGt1eBcdx1ioEfa8o=',
+				'crossorigin' => 'anonymous',
 			],
 		],
 		'published' => [
@@ -143,6 +172,26 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	], // Cdnjs
+	'jquery' => [
+		'package' => 'jquery', // when needed
+		'version' => '3.4.1',
+		'baseUrl' => 'https://code.jquery.com',
+		'sourcePath' => '@npm/jquery/dist',
+		'static' => [
+			'js' => [
+				'jquery-3.4.1.min.js',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'js' => [
+				'jquery.min.js',
+			],
+		],
+	], // Default
 	'jquery.isotope' => [
 		'pattern' => 'cdnjs',
 		'version' => '3.0.6',
