@@ -73,4 +73,17 @@ class P2AssetBundle extends \p2m\base\assets\P2AssetBase
 	 * @var array | false
 	 * public $_staticEnd = [] | false;
 	 */
+
+
+	public function __construct($abort = false)
+	{
+		if($abort) return;
+
+		// now get on with stuff...
+	}
+
+
+
+
+
 }
