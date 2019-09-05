@@ -37,9 +37,8 @@ class P2JqueryAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'jquery';
 
-
-	'jquery' => [
-		'package' => 'jquery',
+	protected $assetData = [
+		'pattern' => 'jquery',
 		'version' => '3.4.1',
 		'baseUrl' => 'https://code.jquery.com',
 		'sourcePath' => '@npm/jquery/dist',
@@ -54,8 +53,27 @@ class P2JqueryAsset extends \p2m\assets\base\P2AssetBundle
 		],
 		'published' => [
 			'js' => [
-				'jquery.min.js',
+				'jquery.min.js'
 			],
 		],
-	], // Default
+	];
+
+
+	/**
+	public $baseUrl = 'https://code.jquery.com';
+	public $js = [
+		'jquery-3.4.1.min.js',
+	];
+	public $jsOptions = [
+		'integrity' => 'sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh',
+		'crossorigin' => 'anonymous',
+	];
+	 */
+
+	/**
+	public $sourcePath = '@npm/jquery/dist';
+	public $js = [
+		'jquery.min.js',
+	];
+	 */
 }

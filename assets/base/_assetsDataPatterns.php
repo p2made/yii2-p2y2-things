@@ -143,6 +143,7 @@ return [
 	], // jQuery
 	// Default pattern
 	'assetName' => [
+		'pattern' => 'default',
 		'package' => 'package', // when needed
 		'version' => '0.0.0',
 		'baseUrl' => 'baseUrl',

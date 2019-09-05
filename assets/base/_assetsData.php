@@ -40,7 +40,9 @@ return [
 		],
 	], // NPM/Unpkg
 	'bootstrap' => [
+		'pattern' => 'bootstrap',
 		'version' => '4.3.1',
+		'path' => 'dist',
 		'static' => [
 			'cssOptions' => [
 				'integrity' => 'sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T',
@@ -53,11 +55,13 @@ return [
 		'depends' => [
 			'p2m\assets\base\P2BootstrapPluginAsset',
 		],
-	], // Default
+	], // bootstrap
 	'bootstrap-plugin' => [
+		'pattern' => 'bootstrap',
 		'pattern' => 'bootstrap',
 		'package' => 'bootstrap',
 		'version' => '4.3.1',
+		'path' => 'dist',
 		'static' => [
 			'jsOptions' => [
 				'integrity' => 'sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o',
@@ -188,8 +192,9 @@ return [
 		],
 	], // Cdnjs
 	'jquery' => [
-		'package' => 'jquery',
+		'pattern' => 'jquery',
 		'version' => '3.4.1',
+		'path' => 'dist',
 		'baseUrl' => 'https://code.jquery.com',
 		'sourcePath' => '@npm/jquery/dist',
 		'static' => [
@@ -206,10 +211,12 @@ return [
 				'jquery.min.js',
 			],
 		],
-	], // Default
+	], // jquery
 	'jquery-slim' => [
+		'pattern' => 'jquery',
 		'package' => 'jquery',
 		'version' => '3.4.1',
+		'path' => 'dist',
 		'baseUrl' => 'https://code.jquery.com',
 		'sourcePath' => '@npm/jquery/dist',
 		'static' => [
@@ -226,7 +233,7 @@ return [
 				'jquery.slim.min.js',
 			],
 		],
-	], // Default
+	], // jquery
 	'jquery.isotope' => [
 		'pattern' => 'cdnjs',
 		'version' => '3.0.6',
