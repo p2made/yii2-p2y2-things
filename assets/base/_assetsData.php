@@ -39,9 +39,24 @@ return [
 			'p2m\assets\P2CoreAsset',
 		],
 	], // NPM/Unpkg
+	'bootstrap' => [
+		'version' => '4.3.1',
+		'static' => [
+			'cssOptions' => [
+				'integrity' => 'sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'css' => [
+			'css/bootstrap.min.css'
+		],
+		'depends' => [
+			'p2m\assets\base\P2BootstrapPluginAsset',
+		],
+	], // Default
 	'bootstrap-plugin' => [
 		'pattern' => 'bootstrap',
-		'package' => 'bootstrap', // when needed
+		'package' => 'bootstrap',
 		'version' => '4.3.1',
 		'static' => [
 			'jsOptions' => [
@@ -53,7 +68,7 @@ return [
 			'js/bootstrap.bundle.min.js'
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2m\assets\base\P2JqueryAsset',
 		],
 	], // bootstrap
 	'bootstrap-switch' => [
@@ -173,7 +188,7 @@ return [
 		],
 	], // Cdnjs
 	'jquery' => [
-		'package' => 'jquery', // when needed
+		'package' => 'jquery',
 		'version' => '3.4.1',
 		'baseUrl' => 'https://code.jquery.com',
 		'sourcePath' => '@npm/jquery/dist',
@@ -189,6 +204,26 @@ return [
 		'published' => [
 			'js' => [
 				'jquery.min.js',
+			],
+		],
+	], // Default
+	'jquery-slim' => [
+		'package' => 'jquery',
+		'version' => '3.4.1',
+		'baseUrl' => 'https://code.jquery.com',
+		'sourcePath' => '@npm/jquery/dist',
+		'static' => [
+			'js' => [
+				'jquery-3.4.1.slim.min.js',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'js' => [
+				'jquery.slim.min.js',
 			],
 		],
 	], // Default

@@ -36,6 +36,7 @@
 		"npm-asset/bootstrap": "~4.3",
 		"npm-asset/jquery": "~3.4",
 		"npm-asset/animate.css": "~3.7",
+		"npm-asset/bootswatch": "~4.3",
 		"npm-asset/bootstrap-switch": "~3.4",
 		"npm-asset/chart.js": "~2.8",
 		"npm-asset/ekko-lightbox": "~5.3",

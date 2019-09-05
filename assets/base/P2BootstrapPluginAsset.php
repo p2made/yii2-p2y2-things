@@ -36,25 +36,4 @@ namespace p2m\assets\base;
 class P2BootstrapPluginAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'bootstrap-plugin';
-
-	protected $assetData = [
-		'package' => 'bootstrap',
-		'version' => '4.3.1',
-		'baseUrl' => 'https://stackpath.bootstrapcdn.com/bootstrap/##-version-##',
-		'sourcePath' => '@npm/bootstrap/dist',
-		'static' => [
-			'js' => [
-				'js/bootstrap.bundle.min.js',
-			],
-			'jsOptions' => [
-				'integrity' => 'sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o',
-				'crossorigin' => 'anonymous',
-			],
-		],
-		'published' => [
-			'js' => [
-				'js/bootstrap.bundle.min.js',
-			],
-		],
-	];
 }
