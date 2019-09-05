@@ -191,6 +191,15 @@ class P2AssetBundle extends \yii\web\AssetBundle
 			return null;
 		}
 
+		$bootstrap_baseUrl = function() {
+			return 'https://stackpath.bootstrapcdn.com'
+				. '/' . $package() . '/' . $configItem('version');
+		}
+
+		$bootstrap_sourcePath = function() {
+			return $unpkg_sourcePath;
+		}
+
 		$jquery_baseUrl = function() {
 			return $configItem('baseUrl');
 		}
@@ -216,21 +225,8 @@ class P2AssetBundle extends \yii\web\AssetBundle
 			return $configItem('sourcePath');
 		}
 
-		$moment_baseUrl = function() {
-			return $unpkg_baseUrl();
-		}
-
-		$moment_sourcePath = function() {
-			return $unpkg_sourcePath();
-		}
-
-		$bootstrap_baseUrl = function() {
-			return 'https://stackpath.bootstrapcdn.com'
-				. '/' . $package() . '/' . $configItem('version');
-		}
-
-		$bootstrap_sourcePath = function() {
-			return $unpkg_sourcePath;
+		$vendor_sourcePath = function() {
+			return $configItem('sourcePath');
 		}
 
 		$bootswatch_baseUrl = function() {
@@ -241,8 +237,12 @@ class P2AssetBundle extends \yii\web\AssetBundle
 			return $unpkg_sourcePath . '/' . self::bootswatchTheme();
 		}
 
-		$vendor_sourcePath = function() {
-			return $configItem('sourcePath');
+		$moment_baseUrl = function() {
+			return $unpkg_baseUrl();
+		}
+
+		$moment_sourcePath = function() {
+			return $unpkg_sourcePath();
 		}
 
 		$tail = function() {
@@ -251,25 +251,14 @@ class P2AssetBundle extends \yii\web\AssetBundle
 			return '';
 		}
 
-		if($pattern == 'bootstrap') {
-			if(self::bootswatchTheme() && isset($this->assetData['css'])) {
-				$pattern = 'bootswatch';
-				$this->assetData['package'] = 'bootswatch';
-				$hash = ;
-				$this->assetData['static']['cssOptions']['integrity'] = $hash;
-				$this->css = 'bootstrap.min.css';
-			}
+		if($pattern == 'bootstrap' && self::bootswatchTheme() && isset($this->assetData['css'])) {
+			$pattern = 'bootswatch';
+			$this->assetData['package'] = 'bootswatch';
+			$allHashs = require_once('_bootswatchIntegrity.php');
+			$hash = $allHashs[self::bootswatchTheme()];
+			$this->assetData['static']['cssOptions']['integrity'] = $hash;
+			$this->css = 'bootstrap.min.css';
 		}
-
-		'static' => [
-			'cssOptions' => [
-				'integrity' => 'sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T',
-				'crossorigin' => 'anonymous',
-			],
-		],
-
-
-
 
 		if(self::useStatic()) {
 			$pattern .= '_' . 'baseUrl';
@@ -287,50 +276,6 @@ class P2AssetBundle extends \yii\web\AssetBundle
 		$this->setYiiVariables($this->assetData);
 	}
 
-integrity="sha384-C++cugH8+Uf86JbNOnQoBweHHAe/wVKN/mb0lTybu/NZ9sEYbd+BbbYtNpWYAsNP" crossorigin="anonymous"
-
-	private function configureBootstrapAsset()
-	{
-		$theme;
-
-		$urlOrPath = function($theme, $isUrl = true) {
-			if($isUrl)
-				$result = ;
-			else
-				$result = '@npm/' . $this->packageName() . '/dist';
-
-			if(!isset($theme))
-				return $result;
-
-			return $result . '/' . $theme;
-		};
-
-		$themed = isset(\Yii::$app->params['p2assets']['bootswatchTheme']);
-
-		if($themed && $isCss) {
-			$theme = \Yii::$app->params['p2assets']['bootswatchTheme'];
-			$this->setPackageName('bootswatch');
-			$this->css = 'bootstrap.min.css';
-		};
-
-		// $baseUrl OR $sourcePath
-		if(self::useStatic()) {
-			$this->baseUrl = $urlOrPath($theme);
-			if(isset($this->assetData['static']))
-				$this->setYiiVariables($this->assetData['static']);
-		};
-		else {
-			$this->baseUrl = $urlOrPath($theme, false);
-			if(isset($this->assetData['published']))
-				$this->setYiiVariables($this->assetData['published']);
-		};
-
-		// Set any variables not already set
-		$this->setYiiVariables($this->assetData);
-	}
-
-
-
 	private function setAssetData()
 	{
 		if(isset($this->assetData))
@@ -338,6 +283,18 @@ integrity="sha384-C++cugH8+Uf86JbNOnQoBweHHAe/wVKN/mb0lTybu/NZ9sEYbd+BbbYtNpWYAs
 
 		$allData = require_once('_assetsData.php');
 		$this->assetData = $allData[$this->assetName];
+	}
+
+	private function setYiiVariables($source)
+	{
+		$keyList = [
+			'css', 'js', 'cssOptions', 'jsOptions', 'publishOptions', 'depends'
+		];
+
+		foreach($keyList as $key) {
+			if(!isset($this->$key) && isset($source[$key]))
+				$this->$key = $source[$key];
+		}
 	}
 
 	/**
@@ -386,85 +343,5 @@ integrity="sha384-C++cugH8+Uf86JbNOnQoBweHHAe/wVKN/mb0lTybu/NZ9sEYbd+BbbYtNpWYAs
 		}
 
 		return self::$_theme;
-	}
-}
-class P2AssetBase extends \yii\web\AssetBundle
-{
-	/*
-	 * Configures an asset not described by a pattern.
-	 * This should ONLY be on assets that are part of
-	 * P2CoreAsset
-	 */
-	protected function configureDefaultAsset()
-	{
-		$this->setAssetVersion();
-
-		// $baseUrl OR $sourcePath
-		if(self::useStatic()) {
-			$this->setYiiVariable($source, 'baseUrl');
-			if(isset($this->assetData['static']))
-				$this->setYiiVariables($this->assetData['static']);
-		};
-		else {
-			$this->setYiiVariable($source, 'sourcePath');
-			if(isset($this->assetData['published']))
-				$this->setYiiVariables($this->assetData['published']);
-		};
-
-		$this->setYiiVariables($this->assetData);
-	}
-
-	// ##### ^ ##### UTILITY FUNCTIONS ##### ^ ##### //
-
-	protected function assetVersion()
-	{
-		return $this->_version;
-	}
-
-	protected function insertAssetVersion(&$target)
-	{
-		if(isset($this->_version))
-			$target = str_replace('##-version-##', $this->_version, $target);
-	}
-
-	protected function packageName()
-	{
-		return $this->_package;
-	}
-
-	/**
-	 * Sets the variable named in $key
-	 * if it is not already set & we have a value for it
-	 */
-	private function setYiiVariable($source, $key)
-	{
-		if(!isset($this->$key) && isset($source[$key]))
-			$this->$key = $source[$key];
-		$this->$key = $this->$key;
-	}
-
-	/**
-	 * Performs setYiiVariable(...) on a block of variables
-	 */
-	private function setYiiVariables($source)
-	{
-		$this->setYiiVariable($source, 'css');
-		$this->setYiiVariable($source, 'js');
-		$this->setYiiVariable($source, 'cssOptions');
-		$this->setYiiVariable($source, 'jsOptions');
-		$this->setYiiVariable($source, 'publishOptions');
-		$this->setYiiVariable($source, 'depends');
-	}
-
-	/**
-	 * Returns common ending of paths where there is one
-	 * @return string
-	 * @default ''
-	 */
-	private function pathTail()
-	{
-		if(isset($this->assetData['path']))
-			return '/' . $this->assetData['path'];
-		return '';
 	}
 }
