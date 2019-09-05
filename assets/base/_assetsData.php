@@ -68,7 +68,7 @@ return [
 			'js/bootstrap.bundle.min.js'
 		],
 		'depends' => [
-			'p2m\assets\base\P2JqueryAsset',
+			'p2m\assets\base\P2YiiAsset',
 		],
 	], // bootstrap
 	'bootstrap-switch' => [
