@@ -36,4 +36,26 @@ namespace p2m\assets\base;
 class P2JqueryAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $assetName = 'jquery';
+
+
+	'jquery' => [
+		'package' => 'jquery',
+		'version' => '3.4.1',
+		'baseUrl' => 'https://code.jquery.com',
+		'sourcePath' => '@npm/jquery/dist',
+		'static' => [
+			'js' => [
+				'jquery-3.4.1.min.js',
+			],
+			'jsOptions' => [
+				'integrity' => 'sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh',
+				'crossorigin' => 'anonymous',
+			],
+		],
+		'published' => [
+			'js' => [
+				'jquery.min.js',
+			],
+		],
+	], // Default
 }
