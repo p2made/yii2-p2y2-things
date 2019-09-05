@@ -163,95 +163,15 @@ class P2AssetBundle extends \yii\web\AssetBundle
 
 	public function __construct($bypass = false)
 	{
-		//parent::__construct(true);
-		//if($bypass) return;
-
-		// now get on with stuff...
 		$this->setAssetData();
 
-		$this->configureAssetByPattern($this->assetData['pattern']);
-	}
-
-	private function configureAssetByPattern($pattern = null)
-	{
 		if(!isset($pattern)) // default is everything already configured
 			return;
 
-		$package = function() {
-			if(isset($this->assetData['package']))
-				return $this->assetData['package'];
-
-			return $this->assetName;
-		}
-
-		$configItem = function($name) {
-			if(isset($this->assetData[$name]))
-				return $this->assetData[$name];
-
-			return null;
-		}
-
-		$bootstrap_baseUrl = function() {
-			return 'https://stackpath.bootstrapcdn.com'
-				. '/' . $package() . '/' . $configItem('version');
-		}
-
-		$bootstrap_sourcePath = function() {
-			return $unpkg_sourcePath;
-		}
-
-		$jquery_baseUrl = function() {
-			return $configItem('baseUrl');
-		}
-
-		$jquery_sourcePath = function() {
-			return $unpkg_sourcePath();
-		}
-
-		$unpkg_baseUrl = function() {
-			return 'https://unpkg.com/' . $package() . '@' . $configItem('version') . $tail();
-		}
-
-		$unpkg_sourcePath = function() {
-			return '@npm/' . $package() . $tail();
-		}
-
-		$cdnjs_baseUrl = function() {
-			return 'https://cdnjs.cloudflare.com/ajax/libs/'
-				. $package() . '/' . $configItem('version') . $tail();
-		}
-
-		$cdnjs_sourcePath = function() {
-			return $configItem('sourcePath');
-		}
-
-		$vendor_sourcePath = function() {
-			return $configItem('sourcePath');
-		}
-
-		$bootswatch_baseUrl = function() {
-			return $bootstrap_baseUrl . '/' . self::bootswatchTheme();
-		}
-
-		$bootswatch_sourcePath = function() {
-			return $unpkg_sourcePath . '/' . self::bootswatchTheme();
-		}
-
-		$moment_baseUrl = function() {
-			return $unpkg_baseUrl();
-		}
-
-		$moment_sourcePath = function() {
-			return $unpkg_sourcePath();
-		}
-
-		$tail = function() {
-			if(isset($this->assetData['path']))
-				return '/' . $this->assetData['path'];
-			return '';
-		}
-
 		if($pattern == 'bootstrap' && self::bootswatchTheme() && isset($this->assetData['css'])) {
+			/**
+			 * If all these conditions are met we have a few things to do
+			 */
 			$pattern = 'bootswatch';
 			$this->assetData['package'] = 'bootswatch';
 			$allHashs = require_once('_bootswatchIntegrity.php');
@@ -261,14 +181,14 @@ class P2AssetBundle extends \yii\web\AssetBundle
 		}
 
 		if(self::useStatic()) {
-			$pattern .= '_' . 'baseUrl';
-			$this->baseUrl = ${$pattern()};
+			$pattern = 'baseUrl_' . $pattern;
+			$this->baseUrl = $this->$pattern();
 			if(isset($this->assetData['static']))
 				$this->setYiiVariables($this->assetData['static']);
 		}
 		else {
-			$pattern .= '_' . 'sourcePath';
-			$this->sourcePath = ${$pattern()};
+			$pattern = 'sourcePath_' . $pattern;
+			$this->sourcePath = $this->$pattern();
 			if(isset($this->assetData['published']))
 				$this->setYiiVariables($this->assetData['published']);
 		}
@@ -295,6 +215,97 @@ class P2AssetBundle extends \yii\web\AssetBundle
 			if(!isset($this->$key) && isset($source[$key]))
 				$this->$key = $source[$key];
 		}
+	}
+
+	private function package()
+	{
+		if(isset($this->assetData['package']))
+			return $this->assetData['package'];
+
+		return $this->assetName;
+	}
+
+	private function dataItem($name)
+	{
+		if(isset($this->assetData[$name]))
+			return $this->assetData[$name];
+
+		return null;
+	}
+
+	private function baseUrl_bootstrap()
+	{
+		return 'https://stackpath.bootstrapcdn.com'
+			. '/' . $this->package() . '/' . $this->dataItem('version');
+	}
+
+	private function sourcePath_bootstrap()
+	{
+		return $this->sourcePath_unpkg;
+	}
+
+	private function baseUrl_jquery()
+	{
+		return $this->dataItem('baseUrl');
+	}
+
+	private function sourcePath_jquery()
+	{
+		return $this->sourcePath_unpkg();
+	}
+
+	private function baseUrl_unpkg()
+	{
+		return 'https://unpkg.com/' . $this->package()
+			. '@' . $this->dataItem('version') . $this->tail();
+	}
+
+	private function sourcePath_unpkg()
+	{
+		return '@npm/' . $this->package() . $this->tail();
+	}
+
+	private function baseUrl_cdnjs()
+	{
+		return 'https://cdnjs.cloudflare.com/ajax/libs/' . $this->package()
+			. '/' . $this->dataItem('version') . $this->tail();
+	}
+
+	private function sourcePath_cdnjs()
+	{
+		return $this->sourcePath_vendor();
+	}
+
+	private function sourcePath_vendor()
+	{
+		return $this->dataItem('sourcePath');
+	}
+
+	private function baseUrl_bootswatch()
+	{
+		return $this->bootstrap_baseUrl . '/' . self::bootswatchTheme();
+	}
+
+	private function sourcePath_bootswatch()
+	{
+		return $this->sourcePath_unpkg . '/' . self::bootswatchTheme();
+	}
+
+	private function baseUrl_moment()
+	{
+		return $this->baseUrl_unpkg();
+	}
+
+	private function sourcePath_moment()
+	{
+		return $this->sourcePath_unpkg();
+	}
+
+	private function tail()
+	{
+		if(isset($this->assetData['path']))
+			return '/' . $this->assetData['path'];
+		return '';
 	}
 
 	/**
