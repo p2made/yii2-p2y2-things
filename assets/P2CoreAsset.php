@@ -31,8 +31,10 @@ class P2CoreAsset extends \p2m\assets\base\P2AssetBundle
 	];
 
 	public $depends = [
+		'p2m\assets\base\P2JqueryAsset',
 		'p2m\assets\base\P2YiiAsset',
-		'p2m\assets\base\P2BootstrapAsset',
+		//'p2m\assets\base\P2BootstrapPluginAsset',
+		//'p2m\assets\base\P2BootstrapAsset',
 	];
 }
 

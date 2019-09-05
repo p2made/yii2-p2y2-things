@@ -113,8 +113,8 @@ class P2AssetBundle extends \p2m\base\assets\P2AssetBase
 
 	public function __construct($bypass = false)
 	{
-		parent::__construct(true);
-		if($bypass) return;
+		//parent::__construct(true);
+		//if($bypass) return;
 
 		// now get on with stuff...
 		$allData = require_once('_assetsData.php');
@@ -137,22 +137,50 @@ class P2AssetBundle extends \p2m\base\assets\P2AssetBase
 			case 'vendor';
 				$this->configureVendorAsset();
 				break;
+			case 'bootstrap';
+				$this->configureBootstrapAsset();
+				break;
 			default:
 				$this->configureDefaultAsset();
 		}
 	}
 
-	protected function configureBootstrapAsset()
+	private function configureBootstrapAsset()
 	{
+		$theme;
+
+		$urlOrPath = function($theme, $isUrl = true) {
+			if($isUrl)
+				$result = "https://stackpath.bootstrapcdn.com"
+					. "/" . $this->packageName() . "/" . $this->assetVersion();
+			else
+				$result = "@npm/" . $this->packageName() . "/dist";
+
+			if(!isset($theme))
+				return $result;
+
+			return $result . "/" . $theme;
+		};
+
+		$themed = isset(\Yii::$app->params['p2assets']['bootswatchTheme']);
+		$isCss = isset($this->assetData['static']['css'])
+			|| isset($this->assetData['published']['css'])
+			|| isset($this->assetData['css']);
+
+		if($themed && $isCss) {
+			$theme = \Yii::$app->params['p2assets']['bootswatchTheme'];
+			$this->setPackageName('bootswatch');
+			$this->css = 'bootstrap.min.css';
+		}
+
 		// $baseUrl OR $sourcePath
 		if(self::useStatic()) {
-			$this->baseUrl = "https://stackpath.bootstrapcdn.com"
-				. "/" . $this->packageName() . "/" . $this->assetVersion();
+			$this->baseUrl = $urlOrPath($theme);
 			if(isset($this->assetData['static']))
 				$this->setYiiVariables($this->assetData['static']);
 		}
 		else {
-			$this->sourcePath = "@npm/" . $this->packageName() . "/dist";
+			$this->baseUrl = $urlOrPath($theme, false);
 			if(isset($this->assetData['published']))
 				$this->setYiiVariables($this->assetData['published']);
 		}
