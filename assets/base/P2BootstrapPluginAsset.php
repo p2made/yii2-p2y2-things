@@ -35,11 +35,14 @@ namespace p2m\assets\base;
 
 class P2BootstrapPluginAsset extends \p2m\assets\base\P2AssetBundle
 {
-	protected $version = '4.3.1';
+	protected $assetName = 'bootstrap-plugin';
 
-	protected $resourceData = array(
+	protected $assetData = [
+		'package' => 'bootstrap',
+		'version' => '4.3.1',
+		'baseUrl' => 'https://stackpath.bootstrapcdn.com/bootstrap/##-version-##',
+		'sourcePath' => '@npm/bootstrap/dist',
 		'static' => [
-			'baseUrl' => 'https://stackpath.bootstrapcdn.com/bootstrap/##-version-##',
 			'js' => [
 				'js/bootstrap.bundle.min.js',
 			],
@@ -49,19 +52,9 @@ class P2BootstrapPluginAsset extends \p2m\assets\base\P2AssetBundle
 			],
 		],
 		'published' => [
-			'sourcePath' => '@npm/bootstrap/dist',
 			'js' => [
 				'js/bootstrap.bundle.min.js',
 			],
 		],
-		'depends' => [
-			'p2m\assets\base\P2YiiAsset',
-		],
-	);
-
-	public function init()
-	{
-		$this->configureAsset($this->resourceData);
-		parent::init();
-	}
+	];
 }

@@ -35,6 +35,8 @@ namespace p2m\assets\base;
 
 class P2JquerySlimAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $assetName = 'jquery-slim';
+
 	protected $assetData = [
 		'package' => 'jquery',
 		'version' => '3.4.1',

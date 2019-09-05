@@ -35,6 +35,8 @@ namespace p2m\assets\base;
 
 class P2JqueryAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $assetName = 'jquery';
+
 	protected $assetData = [
 		'package' => 'jquery',
 		'version' => '3.4.1',
