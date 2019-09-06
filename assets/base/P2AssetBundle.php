@@ -161,7 +161,7 @@ class P2AssetBundle extends \yii\web\AssetBundle
 		self::assetsEnd()
 	 */
 
-	public function __construct($bypass = false)
+	public function __construct()
 	{
 		$this->setAssetData();
 
