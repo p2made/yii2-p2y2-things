@@ -239,19 +239,9 @@ class P2AssetBundle extends \yii\web\AssetBundle
 			. '/' . $this->package() . '/' . $this->dataItem('version');
 	}
 
-	private function sourcePath_bootstrap()
-	{
-		return $this->sourcePath_unpkg;
-	}
-
 	private function baseUrl_jquery()
 	{
 		return $this->dataItem('baseUrl');
-	}
-
-	private function sourcePath_jquery()
-	{
-		return $this->sourcePath_unpkg();
 	}
 
 	private function baseUrl_unpkg()
@@ -260,15 +250,35 @@ class P2AssetBundle extends \yii\web\AssetBundle
 			. '@' . $this->dataItem('version') . $this->tail();
 	}
 
-	private function sourcePath_unpkg()
-	{
-		return '@npm/' . $this->package() . $this->tail();
-	}
-
 	private function baseUrl_cdnjs()
 	{
 		return 'https://cdnjs.cloudflare.com/ajax/libs/' . $this->package()
 			. '/' . $this->dataItem('version') . $this->tail();
+	}
+
+	private function baseUrl_bootswatch()
+	{
+		return $this->bootstrap_baseUrl . '/' . self::bootswatchTheme();
+	}
+
+	private function baseUrl_moment()
+	{
+		return $this->baseUrl_unpkg();
+	}
+
+	private function sourcePath_bootstrap()
+	{
+		return $this->sourcePath_unpkg;
+	}
+
+	private function sourcePath_jquery()
+	{
+		return $this->sourcePath_unpkg();
+	}
+
+	private function sourcePath_unpkg()
+	{
+		return '@npm/' . $this->package() . $this->tail();
 	}
 
 	private function sourcePath_cdnjs()
@@ -281,19 +291,9 @@ class P2AssetBundle extends \yii\web\AssetBundle
 		return $this->dataItem('sourcePath');
 	}
 
-	private function baseUrl_bootswatch()
-	{
-		return $this->bootstrap_baseUrl . '/' . self::bootswatchTheme();
-	}
-
 	private function sourcePath_bootswatch()
 	{
 		return $this->sourcePath_unpkg . '/' . self::bootswatchTheme();
-	}
-
-	private function baseUrl_moment()
-	{
-		return $this->baseUrl_unpkg();
 	}
 
 	private function sourcePath_moment()
