@@ -42,7 +42,7 @@ return [
 	'bootstrap' => [
 		'pattern' => 'bootstrap',
 		'version' => '4.3.1',
-		'path' => 'dist',
+		'tail' => 'dist',
 		'static' => [
 			'cssOptions' => [
 				'integrity' => 'sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T',
@@ -61,7 +61,7 @@ return [
 		'pattern' => 'bootstrap',
 		'package' => 'bootstrap',
 		'version' => '4.3.1',
-		'path' => 'dist',
+		'tail' => 'dist',
 		'static' => [
 			'jsOptions' => [
 				'integrity' => 'sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o',
@@ -78,7 +78,7 @@ return [
 	'bootstrap-switch' => [
 		'pattern' => 'unpkg',
 		'version' => '3.4.0',
-		'path' => 'dist',
+		'tail' => 'dist',
 		'js' => [
 			'js/bootstrap-switch.min.js'
 		],
@@ -89,7 +89,7 @@ return [
 	'chart.js' => [
 		'pattern' => 'unpkg',
 		'version' => '2.8.0',
-		'path' => 'dist',
+		'tail' => 'dist',
 		'css' => [
 			'Chart.min.css'
 		],
@@ -113,7 +113,7 @@ return [
 	'ekko-lightbox' => [
 		'pattern' => 'unpkg',
 		'version' => '5.3.0',
-		'path' => 'dist',
+		'tail' => 'dist',
 		'css' => [
 			'ekko-lightbox.css'
 		],
@@ -194,7 +194,7 @@ return [
 	'jquery' => [
 		'pattern' => 'jquery',
 		'version' => '3.4.1',
-		'path' => 'dist',
+		'tail' => 'dist',
 		'baseUrl' => 'https://code.jquery.com',
 		'sourcePath' => '@npm/jquery/dist',
 		'static' => [
@@ -216,7 +216,7 @@ return [
 		'pattern' => 'jquery',
 		'package' => 'jquery',
 		'version' => '3.4.1',
-		'path' => 'dist',
+		'tail' => 'dist',
 		'baseUrl' => 'https://code.jquery.com',
 		'sourcePath' => '@npm/jquery/dist',
 		'static' => [
@@ -254,7 +254,7 @@ return [
 	'jszip' => [
 		'pattern' => 'unpkg',
 		'version' => '3.2.2',
-		'path' => 'dist',
+		'tail' => 'dist',
 		'js' => [
 			'jszip.min.js'
 		],
@@ -265,7 +265,7 @@ return [
 	'lightbox2' => [
 		'pattern' => 'unpkg',
 		'version' => '2.11.1',
-		'path' => 'dist',
+		'tail' => 'dist',
 		'css' => [
 			'css/lightbox.min.css'
 		],
@@ -279,7 +279,7 @@ return [
 	'magnific-popup' => [
 		'pattern' => 'unpkg',
 		'version' => '1.1.0',
-		'path' => 'dist',
+		'tail' => 'dist',
 		'css' => [
 			'magnific-popup.css'
 		],
@@ -293,7 +293,7 @@ return [
 	'masonry-layout' => [
 		'pattern' => 'unpkg',
 		'version' => '4.2.2',
-		'path' => 'dist',
+		'tail' => 'dist',
 		'js' => [
 			'masonry.pkgd.min.js'
 		],
@@ -304,7 +304,7 @@ return [
 	'metismenu' => [
 		'pattern' => 'unpkg',
 		'version' => '3.0.4',
-		'path' => 'dist',
+		'tail' => 'dist',
 		'css' => [
 			'metisMenu.min.css'
 		],
@@ -332,7 +332,7 @@ return [
 	'pdfmake' => [
 		'pattern' => 'unpkg',
 		'version' => '0.1.58',
-		'path' => 'build',
+		'tail' => 'build',
 		'js' => [
 			'build'
 		],
@@ -385,7 +385,7 @@ return [
 	'scrollreveal' => [
 		'pattern' => 'unpkg',
 		'version' => '3.3.4',
-		'path' => 'dist',
+		'tail' => 'dist',
 		'js' => [
 			'scrollreveal.min.js'
 		],
@@ -406,7 +406,7 @@ return [
 	'sweetalert' => [
 		'pattern' => 'unpkg',
 		'version' => '2.1.2',
-		'path' => 'dist',
+		'tail' => 'dist',
 		'js' => [
 			'sweetalert.min.js'
 		],
@@ -451,7 +451,7 @@ return [
 		'pattern' => 'unpkg',
 		'package' => 'pdfmake',
 		'version' => '0.1.58',
-		'path' => 'build',
+		'tail' => 'build',
 		'js' => [
 			'vfs_fonts.js.min.js'
 		],

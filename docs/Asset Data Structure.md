@@ -12,7 +12,7 @@ name | | | Unique key for all assets.
  | static         | | Items specific to `static` usage.
  | | css            | Package CSS if specific to `static`.
  | | js             | Package JS if specific to `static`.
- | | cssIintegrity  | Package cssOptions if specific to `static`.
+ | | cssIintegrity 4 | Package cssOptions if specific to `static`.
  | | jsIintegrity   | Package jsOptions if specific to `static`.
  | | cssOptions     | Package cssOptions if specific to `static`.
  | | jsOptions      | Package jsOptions if specific to `static`.

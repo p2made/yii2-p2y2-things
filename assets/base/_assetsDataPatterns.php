@@ -76,7 +76,7 @@ return [
 		'pattern' => 'unpkg',
 		'package' => 'package', // when needed
 		'version' => '0.0.0',
-		'path' => 'path',
+		'tail' => 'path',
 		'css' => [
 			'asset.min.css'
 		],

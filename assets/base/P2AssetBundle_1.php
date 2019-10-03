@@ -57,18 +57,6 @@ class P2AssetBundle extends \yii\web\AssetBundle
 	 */
 	private $_package;
 
-	/*
-	 * @var boolean
-	 * private $_useStatic = false;
-	 */
-	private static $_useStatic;
-
-	/*
-	 * @var array | false
-	 * private $_assetsEnd = false;
-	 */
-	private static $_assetsEnd;
-
 	private static $_theme;
 
 	/*
