@@ -8,12 +8,12 @@ use yii\web\AssetBundle;
  * @author Pierre M <devleaks.be@gmail.com>
  * @since 1.0
  */
-class IsotopeAsset extends AssetBundle
+class PackeryAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/isotope/dist/';
+    public $sourcePath = '@bower/packery/dist/';
 
     public $js = [
-        'isotope.pkgd.js',
+        'packery.pkgd.js',
     ];
 
     public $depends = [

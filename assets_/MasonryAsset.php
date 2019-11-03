@@ -1,29 +1,22 @@
 <?php
-/**
- * MasonryAsset.php
- *
- * Yii2 asset for Masonry
- * http://masonry.desandro.com
- *
- * @author Pedro Plowman
- * @copyright Copyright &copy; Pedro Plowman, 2019
- * @link https://github.com/p2made
- * @package p2made/yii2-p2y2-things
- * @class \p2m\assets\base\MasonryAsset
- * @license MIT
- */
+
+namespace devleaks\metafizzy;
+
+use yii\web\AssetBundle;
 
 /**
- * Load this asset with...
- * p2m\assets\MasonryAsset::register($this);
- *
- * or specify as a dependency with...
- *     'p2m\assets\MasonryAsset',
+ * @author Pierre M <devleaks.be@gmail.com>
+ * @since 1.0
  */
-
-namespace p2m\assets;
-
-class MasonryAsset extends \p2m\assets\base\P2AssetBundle
+class MasonryAsset extends AssetBundle
 {
-	protected $assetName = 'masonry-layout';
+    public $sourcePath = '@bower/masonry/dist/';
+
+    public $js = [
+        'masonry.pkgd.js',
+    ];
+
+    public $depends = [
+        'yii\web\JqueryAsset',
+    ];
 }
