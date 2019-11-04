@@ -59,7 +59,7 @@ class DataTablesAutoFillAsset extends \p2m\assets\base\P2AssetBundle
 		],
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
-			'p2m\assets\base\DataTablesAutoFillAssetBase',
+			'p2m\assets\base\DataTablesAutoFillBase',
 		],
 	];
 }

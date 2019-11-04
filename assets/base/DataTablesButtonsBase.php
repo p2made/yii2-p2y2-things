@@ -1,6 +1,6 @@
 <?php
 /**
- * DataTablesButtonsAssetBase.php
+ * DataTablesButtonsBase.php
  *
  * Yii2 asset for DataTables
  * https://datatables.net
@@ -11,7 +11,7 @@
  * @license MIT
  *
  * @package p2made/yii2-p2y2-moment
- * @class \p2m\assets\base\DataTablesButtonsAssetBase
+ * @class \p2m\assets\base\DataTablesButtonsBase
  */
 
 /**
@@ -26,15 +26,15 @@
 
 /**
  * Load this asset with...
- * p2m\assets\base\DataTablesButtonsAssetBase::register($this);
+ * p2m\assets\base\DataTablesButtonsBase::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\assets\base\DataTablesButtonsAssetBase',
+ *     'p2m\assets\base\DataTablesButtonsBase',
  */
 
 namespace p2m\assets\base;
 
-class DataTablesButtonsAssetBase extends \p2m\assets\base\P2AssetBundle
+class DataTablesButtonsBase extends \p2m\assets\base\P2AssetBundle
 {
 	protected $packageName = 'datatables.net-buttons';
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * DataTablesResponsiveAssetBase.php
+ * DataTablesResponsiveBase.php
  *
  * Yii2 asset for DataTables
  * https://datatables.net
@@ -11,7 +11,7 @@
  * @license MIT
  *
  * @package p2made/yii2-p2y2-moment
- * @class \p2m\assets\base\DataTablesResponsiveAssetBase
+ * @class \p2m\assets\base\DataTablesResponsiveBase
  */
 
 /**
@@ -26,15 +26,15 @@
 
 /**
  * Load this asset with...
- * p2m\assets\base\DataTablesResponsiveAssetBase::register($this);
+ * p2m\assets\base\DataTablesResponsiveBase::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\assets\base\DataTablesResponsiveAssetBase',
+ *     'p2m\assets\base\DataTablesResponsiveBase',
  */
 
 namespace p2m\assets\base;
 
-class DataTablesResponsiveAssetBase extends \p2m\assets\base\P2AssetBundle
+class DataTablesResponsiveBase extends \p2m\assets\base\P2AssetBundle
 {
 	protected $packageName = 'datatables.net-responsive';
 
