@@ -28,7 +28,7 @@ class MomentTimezoneWithData10YearRangeAsset extends \p2m\assets\base\MomentTime
 {
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment-timezone@##version##/builds',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment-timezone@##-version-##/builds',
 			'js' => [
 				'moment-timezone-with-data-10-year-range.min.js',
 			],

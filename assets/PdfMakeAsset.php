@@ -32,7 +32,7 @@ class PdfMakeAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/##version##',
+			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/##-version-##',
 			'js' => [
 				'pdfmake.min.js',
 			],

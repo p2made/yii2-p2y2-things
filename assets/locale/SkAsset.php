@@ -28,7 +28,7 @@ class SkAsset extends \p2m\assets\locale\base\MomentAssetBase
 {
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##version##/locale',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
 			'js' => [
 				'sk.js',
 			],

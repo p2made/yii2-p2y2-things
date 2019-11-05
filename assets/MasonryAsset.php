@@ -32,7 +32,7 @@ class MasonryAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/masonry-layout@##version##/dist',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/masonry-layout@##-version-##/dist',
 			'js' => [
 				'masonry.pkgd.min.js',
 			],

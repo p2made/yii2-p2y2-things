@@ -32,7 +32,7 @@ class MorrisAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/morris.js@##version##',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/morris.js@##-version-##',
 			'css' => [
 				'morris.min.css',
 			],

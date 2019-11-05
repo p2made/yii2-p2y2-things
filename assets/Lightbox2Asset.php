@@ -32,7 +32,7 @@ class Lightbox2Asset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/lightbox2@##version##/dist',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/lightbox2@##-version-##/dist',
 			'css' => [
 				'css/lightbox.min.css',
 			],

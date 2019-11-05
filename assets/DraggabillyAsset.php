@@ -32,7 +32,7 @@ class DraggabillyAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/draggabilly@##version##/dist',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/draggabilly@##-version-##/dist',
 			'js' => [
 				'draggabilly.pkgd.min.js',
 			],

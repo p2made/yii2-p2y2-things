@@ -28,7 +28,7 @@ class MomentTimezoneWithData20122022Asset extends \p2m\assets\base\MomentTimezon
 {
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment-timezone@##version##/builds',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment-timezone@##-version-##/builds',
 			'js' => [
 				'moment-timezone-with-data-2012-2022.min.js',
 			],

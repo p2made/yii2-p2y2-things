@@ -32,7 +32,7 @@ class DataTablesFixedHeaderAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/fixedheader/##version##',
+			'baseUrl' => 'https://cdn.datatables.net/fixedheader/##-version-##',
 			'css' => [
 				'css/fixedHeader.bootstrap4.min.css',
 			],

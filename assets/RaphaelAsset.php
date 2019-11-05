@@ -32,7 +32,7 @@ class RaphaelAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/raphael@##version##',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/raphael@##-version-##',
 			'js' => [
 				'raphael.min.js',
 			],

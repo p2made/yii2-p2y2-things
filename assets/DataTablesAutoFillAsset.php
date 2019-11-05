@@ -32,7 +32,7 @@ class DataTablesAutoFillAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/autofill/##version##',
+			'baseUrl' => 'https://cdn.datatables.net/autofill/##-version-##',
 			'css' => [
 				'css/autoFill.bootstrap4.min.css',
 			],

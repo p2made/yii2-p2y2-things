@@ -32,7 +32,7 @@ class DataTablesFixedColumnsAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/fixedcolumns/##version##',
+			'baseUrl' => 'https://cdn.datatables.net/fixedcolumns/##-version-##',
 			'css' => [
 				'css/fixedColumns.bootstrap4.min.css',
 			],

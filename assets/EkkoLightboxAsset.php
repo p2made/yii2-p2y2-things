@@ -32,7 +32,7 @@ class EkkoLightboxAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/ekko-lightbox@##version##/dist',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/ekko-lightbox@##-version-##/dist',
 			'css' => [
 				'ekko-lightbox.min.css',
 			],

@@ -42,7 +42,7 @@ class DataTablesAutoFillBase extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/buttons/##version##',
+			'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
 			'js' => [
 				'js/dataTables.autoFill.min.js',
 			],

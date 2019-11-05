@@ -32,7 +32,7 @@ class FitvidsAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/fitvids@##version##/dist',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/fitvids@##-version-##/dist',
 			'js' => [
 				'fitvids.min.js',
 			],

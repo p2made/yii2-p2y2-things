@@ -32,7 +32,7 @@ class AnimateAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/animate.css@##version##',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/animate.css@##-version-##',
 			'css' => [
 				'animate.min.css',
 			],

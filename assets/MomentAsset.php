@@ -28,7 +28,7 @@ class MomentAsset extends \p2m\assets\base\MomentAssetBase
 {
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##version##/min',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/min',
 			'js' => [
 				'moment.min.js',
 			],

@@ -32,7 +32,7 @@ class SimpleLineIconsAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/simple-line-icons@##version##/css',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/simple-line-icons@##-version-##/css',
 			'css' => [
 				'simple-line-icons.min.css',
 			],

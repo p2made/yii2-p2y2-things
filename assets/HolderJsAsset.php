@@ -32,7 +32,7 @@ class HolderJsAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/holderjs@##version##',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/holderjs@##-version-##',
 			'js' => [
 				'holder.min.js',
 			],

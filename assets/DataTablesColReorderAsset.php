@@ -32,7 +32,7 @@ class DataTablesColReorderAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/colreorder/##version##',
+			'baseUrl' => 'https://cdn.datatables.net/colreorder/##-version-##',
 			'css' => [
 				'css/colReorder.bootstrap4.min.css',
 			],

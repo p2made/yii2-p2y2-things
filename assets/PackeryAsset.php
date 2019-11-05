@@ -32,7 +32,7 @@ class PackeryAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/packery@##version##/dist',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/packery@##-version-##/dist',
 			'js' => [
 				'packery.pkgd.min.js',
 			],

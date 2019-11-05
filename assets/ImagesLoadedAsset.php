@@ -32,7 +32,7 @@ class ImagesLoadedAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/imagesloaded@##version##',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/imagesloaded@##-version-##',
 			'js' => [
 				'imagesloaded.pkgd.min.js',
 			],

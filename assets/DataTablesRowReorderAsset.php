@@ -32,7 +32,7 @@ class DataTablesRowReorderAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/rowreorder/##version##',
+			'baseUrl' => 'https://cdn.datatables.net/rowreorder/##-version-##',
 			'css' => [
 				'css/rowReorder.bootstrap4.min.css',
 			],

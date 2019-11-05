@@ -32,7 +32,7 @@ class DataTablesScrollerAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/scroller/##version##',
+			'baseUrl' => 'https://cdn.datatables.net/scroller/##-version-##',
 			'css' => [
 				'css/scroller.bootstrap4.min.css',
 			],

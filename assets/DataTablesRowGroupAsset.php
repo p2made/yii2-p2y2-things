@@ -32,7 +32,7 @@ class DataTablesRowGroupAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/rowgroup/##version##',
+			'baseUrl' => 'https://cdn.datatables.net/rowgroup/##-version-##',
 			'css' => [
 				'css/rowGroup.bootstrap4.min.css',
 			],

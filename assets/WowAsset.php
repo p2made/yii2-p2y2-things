@@ -32,7 +32,7 @@ class WowAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/wow/##version##',
+			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/wow/##-version-##',
 			'js' => [
 				'wow.min.js',
 			],

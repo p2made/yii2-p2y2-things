@@ -32,7 +32,7 @@ class ChartJsAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/chart.js@##version##/dist',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/chart.js@##-version-##/dist',
 			'css' => [
 				'Chart.min.css',
 			],

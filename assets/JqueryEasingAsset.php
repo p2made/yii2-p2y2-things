@@ -32,7 +32,7 @@ class JqueryEasingAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/jquery.easing@##version##',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/jquery.easing@##-version-##',
 			'js' => [
 				'jquery.easing.min.js',
 			],

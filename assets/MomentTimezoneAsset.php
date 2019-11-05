@@ -28,7 +28,7 @@ class MomentTimezoneAsset extends \p2m\assets\base\MomentTimezoneAssetBase
 {
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment-timezone@##version##/builds',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment-timezone@##-version-##/builds',
 			'js' => [
 				'moment-timezone.min.js',
 			],

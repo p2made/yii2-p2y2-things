@@ -32,7 +32,7 @@ class DataTablesButtonsAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/buttons/##version##',
+			'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
 			'css' => [
 				'css/buttons.bootstrap4.min.css',
 			],

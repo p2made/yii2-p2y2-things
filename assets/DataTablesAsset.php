@@ -32,7 +32,7 @@ class DataTablesAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/##version##',
+			'baseUrl' => 'https://cdn.datatables.net/##-version-##',
 			'css' => [
 				'css/dataTables.bootstrap4.min.css',
 			],

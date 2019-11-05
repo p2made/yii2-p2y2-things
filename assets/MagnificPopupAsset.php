@@ -32,7 +32,7 @@ class MagnificPopupAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/magnific-popup@##version##/dist',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/magnific-popup@##-version-##/dist',
 			'css' => [
 				'magnific-popup.min.css',
 			],

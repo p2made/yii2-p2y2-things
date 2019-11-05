@@ -32,7 +32,7 @@ class QunitAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/qunit@##version##',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/qunit@##-version-##',
 			'css' => [
 				'qunit/qunit.min.css',
 			],

@@ -32,7 +32,7 @@ class DataTablesResponsiveAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/responsive/##version##',
+			'baseUrl' => 'https://cdn.datatables.net/responsive/##-version-##',
 			'css' => [
 				'css/responsive.bootstrap4.min.css',
 			],

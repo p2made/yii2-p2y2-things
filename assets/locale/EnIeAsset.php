@@ -28,7 +28,7 @@ class EnIeAsset extends \p2m\assets\locale\base\MomentAssetBase
 {
 	protected $packageData = [
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##version##/locale',
+			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
 			'js' => [
 				'en-ie.js',
 			],
