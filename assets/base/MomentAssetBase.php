@@ -1,9 +1,9 @@
 <?php
 /**
- * P2AssetBundle.php
+ * MomentAssetBase.php
  *
- * Yii2 asset for Bootstrap
- * https://getbootstrap.com
+ * Yii2 asset for Moment.js & Moment Timezone
+ * https://momentjs.com
  *
  * @author Pedro Plowman
  * @copyright Copyright &copy; Pedro Plowman, 2019
@@ -11,7 +11,7 @@
  * @license MIT
  *
  * @package p2made/yii2-p2y2-moment
- * @class \p2m\assets\base\P2AssetBundle
+ * @class \p2m\assets\base\MomentAssetBase
  */
 
 /**
@@ -26,21 +26,17 @@
 
 /**
  * Load this asset with...
- * p2m\assets\base\P2AssetBundle::register($this);
+ * p2m\assets\base\MomentAssetBase::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\assets\base\P2AssetBundle',
+ *     'p2m\assets\base\MomentAssetBase',
  */
 
 namespace p2m\assets\base;
 
-class P2AssetBundle extends \p2m\base\assets\P2AssetBase
+class MomentAssetBase extends \p2m\base\assets\P2AssetBase
 {
-	protected $packageName;
+	protected $packageName = 'moment';
 
-	protected $packageVersion;
-
-	protected $packageData = [];
-
-	protected $_p2mProjectId = 'yii2-p2y2-things';
+	protected $packageVersion = '2.24.0';
 }
