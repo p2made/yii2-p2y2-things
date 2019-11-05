@@ -43,14 +43,14 @@ class P2JqueryAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageData = [
 		'baseUrl' => 'https://cdn.jsdelivr.net/npm/jquery@##-version-##/dist',
 		'sourcePath' => '@npm/jquery/dist',
-		'js' => [
-			'jquery.min.js',
-		],
 		'static' => [
 			'jsOptions' => [
 				'integrity' => 'sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh',
 				'crossorigin' => 'anonymous',
 			],
+		],
+		'js' => [
+			'jquery.min.js',
 		],
 	];
 
@@ -59,27 +59,4 @@ class P2JqueryAsset extends \p2m\assets\base\P2AssetBundle
 		$this->configureAsset($this->packageData);
 		parent::init();
 	}
-
-	/**
-	public $baseUrl = 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist';
-
-	//public $sourcePath = '';
-
-	//public $css = [];
-
-	public $js = [
-		'jquery.min.js',
-	];
-
-	//public $cssOptions = [];
-
-	public $jsOptions = [
-		'integrity' => 'sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh',
-		'crossorigin' => 'anonymous',
-	];
-
-	//public $publishOptions = [];
-
-	//public $depends = [];
-	 */
 }

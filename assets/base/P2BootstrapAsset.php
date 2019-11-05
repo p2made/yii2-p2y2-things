@@ -43,12 +43,6 @@ class P2BootstrapAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageData = [
 		'baseUrl' => 'https://cdn.jsdelivr.net/npm/bootstrap@##-version-##/dist',
 		'sourcePath' => '@npm/bootstrap/dist',
-		'css' => [
-			'css/bootstrap.min.css',
-		],
-		'js' => [
-			'js/bootstrap.min.js',
-		],
 		'static' => [
 			'cssOptions' => [
 				'integrity' => 'sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T',
@@ -59,8 +53,14 @@ class P2BootstrapAsset extends \p2m\assets\base\P2AssetBundle
 				'crossorigin' => 'anonymous',
 			],
 		],
+		'css' => [
+			'css/bootstrap.min.css',
+		],
+		'js' => [
+			'js/bootstrap.min.js',
+		],
 		'depends' => [
-			'p2m\assets\base\P2YiiAsset',
+			'p2m\assets\base\P2JqueryAsset',
 		],
 	];
 
@@ -93,15 +93,10 @@ class P2BootstrapAsset extends \p2m\assets\base\P2AssetBundle
 		if(isset(\Yii::$app->params['p2m']['assets']['bootswatchTheme'])) {
 			$themeName = \Yii::$app->params['p2m']['assets']['bootswatchTheme'];
 
-			$this->packageData['static']['baseUrl'] =
-				'https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/' . $themeName;
-			$this->packageData['published']['sourcePath'] =
-				'@npm/bootswatch/dist/' . $themeName;
+			$this->packageData['baseUrl'] = 'https://stackpath.bootstrapcdn.com/bootswatch/##-version-##/' . $themeName;
+			$this->packageData['sourcePath'] = '@npm/bootswatch/dist/' . $themeName;
 
-			$this->resourceData['static']['css'] = [
-				'bootstrap.min.css',
-			];
-			$this->resourceData['published']['css'] = [
+			$this->resourceData['css'] = [
 				'bootstrap.min.css',
 			];
 		}
@@ -109,36 +104,6 @@ class P2BootstrapAsset extends \p2m\assets\base\P2AssetBundle
 		$this->configureAsset($this->packageData);
 		parent::init();
 	}
-
-	/**
-	public $baseUrl = 'https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist';
-
-	//public $sourcePath = '';
-
-	public $css = [
-		'css/bootstrap.min.css',
-	];
-
-	public $js = [
-		'js/bootstrap.min.js',
-	];
-
-	public $cssOptions = [
-		'integrity' => 'sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T',
-		'crossorigin' => 'anonymous',
-	];
-
-	public $jsOptions = [
-		'integrity' => 'sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM',
-		'crossorigin' => 'anonymous',
-	];
-
-	//public $publishOptions = [];
-
-	public $depends = [
-		'p2m\assets\base\P2JqueryAsset',
-	];
-	 */
 }
 
 /* params
