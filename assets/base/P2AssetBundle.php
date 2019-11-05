@@ -36,11 +36,11 @@ namespace p2m\assets\base;
 
 class P2AssetBundle extends \p2m\base\assets\P2AssetBase
 {
+	protected $_p2mProjectId = 'yii2-p2y2-things';
+
 	protected $packageName;
 
 	protected $packageVersion;
 
 	protected $packageData = [];
-
-	protected $_p2mProjectId = 'yii2-p2y2-things';
 }
