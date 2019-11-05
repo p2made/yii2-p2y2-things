@@ -47,4 +47,10 @@ class MomentTimezoneWithData20122022Asset extends \p2m\assets\base\MomentTimezon
 			'p2m\assets\P2CoreAsset',
 		],
 	];
+
+	public function init()
+	{
+		$this->configureAsset($this->packageData);
+		parent::init();
+	}
 }

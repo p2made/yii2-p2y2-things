@@ -25,11 +25,18 @@ class P2CoreAsset extends \yii\web\AssetBundle
 {
 	public $sourcePath = '@p2m/assets/lib';
 
-	public $css = ['css' => ['css/p2additions.css']];
+	public $css = [
+		'css' => ['css/p2additions.css']
+	];
 
-	public $js = ['js' => ['js/p2additions.js']];
+	public $js = [
+		'js' => ['js/p2additions.js']
+	];
 
-	public $depends = ['p2m\assets\base\P2BootstrapAsset'];
+	public $depends = [
+		'p2m\assets\base\P2BootstrapAsset',
+		'p2m\assets\base\P2YiiAsset',
+	];
 }
 
 /* dependency lines for all assets... */

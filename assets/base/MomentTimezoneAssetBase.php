@@ -39,4 +39,10 @@ class MomentTimezoneAssetBase extends \p2m\base\assets\P2AssetBase
 	protected $packageName = 'moment';
 
 	protected $packageVersion = '0.5.27';
+
+	public function init()
+	{
+		$this->configureAsset($this->packageData);
+		parent::init();
+	}
 }

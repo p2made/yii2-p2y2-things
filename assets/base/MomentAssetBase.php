@@ -39,4 +39,10 @@ class MomentAssetBase extends \p2m\base\assets\P2AssetBase
 	protected $packageName = 'moment';
 
 	protected $packageVersion = '2.24.0';
+
+	public function init()
+	{
+		$this->configureAsset($this->packageData);
+		parent::init();
+	}
 }

@@ -43,4 +43,10 @@ class P2AssetBundle extends \p2m\base\assets\P2AssetBase
 	protected $packageVersion;
 
 	protected $packageData = [];
+
+	public function init()
+	{
+		$this->configureAsset($this->packageData);
+		parent::init();
+	}
 }

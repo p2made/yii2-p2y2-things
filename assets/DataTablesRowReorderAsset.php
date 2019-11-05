@@ -62,4 +62,10 @@ class DataTablesRowReorderAsset extends \p2m\assets\base\P2AssetBundle
 			'p2m\assets\DataTablesAsset',
 		],
 	];
+
+	public function init()
+	{
+		$this->configureAsset($this->packageData);
+		parent::init();
+	}
 }

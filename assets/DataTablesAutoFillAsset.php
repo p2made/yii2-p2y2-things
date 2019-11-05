@@ -62,4 +62,10 @@ class DataTablesAutoFillAsset extends \p2m\assets\base\P2AssetBundle
 			'p2m\assets\base\DataTablesAutoFillBase',
 		],
 	];
+
+	public function init()
+	{
+		$this->configureAsset($this->packageData);
+		parent::init();
+	}
 }

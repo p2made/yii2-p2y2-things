@@ -47,4 +47,10 @@ class MomentTimezoneUtilsAsset extends \p2m\assets\base\MomentTimezoneAssetBase
 			'p2m\assets\P2CoreAsset',
 		],
 	];
+
+	public function init()
+	{
+		$this->configureAsset($this->packageData);
+		parent::init();
+	}
 }

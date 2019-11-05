@@ -41,21 +41,45 @@ class P2JqueryAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '3.4.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/jquery@##-version-##/dist',
+		'sourcePath' => '@npm/jquery/dist',
+		'js' => [
+			'jquery.min.js',
+		],
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/jquery@##-version-##/dist',
-			'js' => [
-				'jquery.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/jquery/dist',
-			'js' => [
-				'jquery.min.js',
-			],
-		],
 	];
+
+	public function init()
+	{
+		$this->configureAsset($this->packageData);
+		parent::init();
+	}
+
+	/**
+	public $baseUrl = 'https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist';
+
+	//public $sourcePath = '';
+
+	//public $css = [];
+
+	public $js = [
+		'jquery.min.js',
+	];
+
+	//public $cssOptions = [];
+
+	public $jsOptions = [
+		'integrity' => 'sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh',
+		'crossorigin' => 'anonymous',
+	];
+
+	//public $publishOptions = [];
+
+	//public $depends = [];
+	 */
 }

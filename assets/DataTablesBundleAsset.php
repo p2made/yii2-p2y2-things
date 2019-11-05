@@ -46,4 +46,10 @@ class DataTablesBundleAsset extends \yii\web\AssetBundle
 		'p2m\assets\DataTablesScrollerAsset',
 		'p2m\assets\DataTablesSelectAsset',
 	];
+
+	public function init()
+	{
+		$this->configureAsset($this->packageData);
+		parent::init();
+	}
 }

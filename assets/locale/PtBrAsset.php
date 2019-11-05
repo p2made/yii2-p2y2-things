@@ -47,4 +47,10 @@ class PtBrAsset extends \p2m\assets\locale\base\MomentAssetBase
 			'p2m\assets\locale\P2CoreAsset',
 		],
 	];
+
+	public function init()
+	{
+		$this->configureAsset($this->packageData);
+		parent::init();
+	}
 }

@@ -41,30 +41,22 @@ class P2BootstrapAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '4.3.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/bootstrap@##-version-##/dist',
+		'sourcePath' => '@npm/bootstrap/dist',
+		'css' => [
+			'css/bootstrap.min.css',
+		],
+		'js' => [
+			'js/bootstrap.min.js',
+		],
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/bootstrap@##-version-##/dist',
-			'css' => [
-				'css/bootstrap.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T',
 				'crossorigin' => 'anonymous',
 			],
-			'js' => [
-				'js/bootstrap.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM',
 				'crossorigin' => 'anonymous',
-			],
-		],
-		'published' => [
-			'sourcePath' => '@npm/bootstrap/dist',
-			'css' => [
-				'css/bootstrap.min.css',
-			],
-			'js' => [
-				'js/bootstrap.min.js',
 			],
 		],
 		'depends' => [
@@ -96,7 +88,7 @@ class P2BootstrapAsset extends \p2m\assets\base\P2AssetBundle
 		['yeti'      => 'sha384-w6tc0TXjTUnYHwVwGgnYyV12wbRoJQo9iMlC2KdkdmVvntGgzT9jvqNEF/uKaF4m'],
 	];
 
-	protected function __construct($config = [])
+	public function init()
 	{
 		if(isset(\Yii::$app->params['p2m']['assets']['bootswatchTheme'])) {
 			$themeName = \Yii::$app->params['p2m']['assets']['bootswatchTheme'];
@@ -114,8 +106,39 @@ class P2BootstrapAsset extends \p2m\assets\base\P2AssetBundle
 			];
 		}
 
-		parent::__construct();
+		$this->configureAsset($this->packageData);
+		parent::init();
 	}
+
+	/**
+	public $baseUrl = 'https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist';
+
+	//public $sourcePath = '';
+
+	public $css = [
+		'css/bootstrap.min.css',
+	];
+
+	public $js = [
+		'js/bootstrap.min.js',
+	];
+
+	public $cssOptions = [
+		'integrity' => 'sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T',
+		'crossorigin' => 'anonymous',
+	];
+
+	public $jsOptions = [
+		'integrity' => 'sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM',
+		'crossorigin' => 'anonymous',
+	];
+
+	//public $publishOptions = [];
+
+	public $depends = [
+		'p2m\assets\base\P2JqueryAsset',
+	];
+	 */
 }
 
 /* params
