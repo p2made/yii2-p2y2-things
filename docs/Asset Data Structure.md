@@ -1,6 +1,80 @@
 P2Y2 Asset Data Structure
 ====
 
+```
+	protected $packageData = [
+			'baseUrl' => 'baseUrl',
+			'sourcePath' => 'sourcePath',
+			'css' => [
+				'css/cssfile.css',
+			],
+			'cssOptions' => [
+			],
+			'js' => [
+				'js/jsfile.js',
+			],
+			'jsOptions' => [
+			],
+		'static' => [
+			'css' => [
+				'css/cssfile.css',
+				[
+					'css/cssfile.css'
+					'integrity' => 'static-hash', // iff css has hash[s]
+					'crossorigin' => 'anonymous', // iff css has hash[s]
+				],
+			],
+			'cssOptions' => [
+				'integrity' => 'static-hash', // iff css has hash[s]
+				'crossorigin' => 'anonymous', // iff css has hash[s]
+			],
+			'js' => [
+				'js/jsfile.js',
+				[
+					'js/jsfile.js'
+					'integrity' => 'static-hash', // iff js has hash[s]
+					'crossorigin' => 'anonymous', // iff js has hash[s]
+				],
+			],
+			'jsOptions' => [
+				'integrity' => 'static-hash', // iff js has hash[s]
+				'crossorigin' => 'anonymous', // iff js has hash[s]
+			],
+			'publishOptions' => [
+			],
+		],
+		'published' => [
+			'css' => [
+				'css/cssfile.css',
+			],
+			'cssOptions' => [
+			],
+			'js' => [
+				'js/jsfile.js',
+			],
+			'jsOptions' => [
+			],
+			'publishOptions' => [
+			],
+		],
+			'publishOptions' => [
+			],
+		'depends' => [
+			'some\useful\ThingAsset',
+		],
+	];
+```
+
+
+
+
+
+
+
+
+
+
+
 L1 | L2 | l3 | Notes
 --- | --- | --- | -----
 name | | | Unique key for all assets.
