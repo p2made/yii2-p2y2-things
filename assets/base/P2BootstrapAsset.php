@@ -34,8 +34,6 @@
 
 namespace p2m\assets\base;
 
-use p2m\base\helpers\P2AssetsSettings as Settings;
-
 class P2BootstrapAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $packageName = 'bootstrap';
@@ -100,30 +98,21 @@ class P2BootstrapAsset extends \p2m\assets\base\P2AssetBundle
 
 	protected function __construct($config = [])
 	{
-		if(isset(\Yii::$app->params['p2assets']['bootswatchTheme'])) {
-			$themeName = \Yii::$app->params['p2assets']['bootswatchTheme'];
-			$this->resourceData['sourcePath'] = '@npm/bootswatch/dist/' . $themeName;
-			$this->resourceData['published']['baseUrl'] = [
-				'bootswatch/##-version-##/' . $themeName,
+		if(isset(\Yii::$app->params['p2m']['assets']['bootswatchTheme'])) {
+			$themeName = \Yii::$app->params['p2m']['assets']['bootswatchTheme'];
+
+			$this->packageData['static']['baseUrl'] =
+				'https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/' . $themeName;
+			$this->packageData['published']['sourcePath'] =
+				'@npm/bootswatch/dist/' . $themeName;
+
+			$this->resourceData['static']['css'] = [
+				'bootstrap.min.css',
 			];
 			$this->resourceData['published']['css'] = [
 				'bootstrap.min.css',
 			];
-			$this->resourceData['static']['css'] = [
-				'bootstrap.min.css',
-			];
 		}
-
-		$this->configureAsset($this->resourceData);
-		parent::init();
-	}
-
-
-
-
-
-
-
 
 		parent::__construct();
 	}
