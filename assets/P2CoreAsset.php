@@ -19,7 +19,7 @@
  *     'p2m\assets\base\P2CoreAsset',
  */
 
-namespace p2m\assets\base;
+namespace p2m\assets;
 
 class P2CoreAsset extends \yii\web\AssetBundle
 {
