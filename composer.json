@@ -27,7 +27,7 @@
 		"issues": "https://github.com/p2made/yii2-p2y2-things/issues?state=open",
 		"source": "https://github.com/p2made/yii2-p2y2-things"
 	},
-	"version": "3.0.0-dev",
+	"version": "4.0.0-dev",
 	"minimum-stability": "dev",
 	"prefer-stable" : true,
 	"require": {
@@ -76,8 +76,7 @@
 		"npm-asset/simple-line-icons": "~2.4",
 		"npm-asset/sweetalert": "~2.1",
 		"bower-asset/pdfmake": "~0.1",
-		"bower-asset/wow": "~1.1",
-		"moontoast/math": "~1.1"
+		"bower-asset/wow": "~1.1"
 	},
 	"autoload": {
 		"psr-4": {
