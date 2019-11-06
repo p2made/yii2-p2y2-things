@@ -56,7 +56,7 @@ class QunitAsset extends \p2m\assets\base\P2AssetBundle
 			'qunit/qunit.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

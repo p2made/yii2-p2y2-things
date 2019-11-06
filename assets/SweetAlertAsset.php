@@ -43,7 +43,7 @@ class SweetAlertAsset extends \p2m\assets\base\P2AssetBundle
 			'sweetalert.min.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

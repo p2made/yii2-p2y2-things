@@ -43,7 +43,7 @@ class EnSgAsset extends \p2m\assets\base\P2AssetBundle
 			'en-SG.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

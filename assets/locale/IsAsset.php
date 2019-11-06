@@ -43,7 +43,7 @@ class IsAsset extends \p2m\assets\base\P2AssetBundle
 			'is.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

@@ -43,7 +43,7 @@ class KnAsset extends \p2m\assets\base\P2AssetBundle
 			'kn.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

@@ -43,7 +43,7 @@ class UzAsset extends \p2m\assets\base\P2AssetBundle
 			'uz.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

@@ -43,7 +43,7 @@ class AzAsset extends \p2m\assets\base\P2AssetBundle
 			'az.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

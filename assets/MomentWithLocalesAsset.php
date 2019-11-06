@@ -43,7 +43,7 @@ class MomentWithLocalesAsset extends \p2m\assets\base\P2AssetBundle
 			'moment-with-locales.min.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

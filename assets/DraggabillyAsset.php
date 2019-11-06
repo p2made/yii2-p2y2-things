@@ -43,7 +43,7 @@ class DraggabillyAsset extends \p2m\assets\base\P2AssetBundle
 			'draggabilly.pkgd.min.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

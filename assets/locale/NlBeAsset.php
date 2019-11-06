@@ -43,7 +43,7 @@ class NlBeAsset extends \p2m\assets\base\P2AssetBundle
 			'nl-be.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

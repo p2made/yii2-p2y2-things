@@ -43,7 +43,7 @@ class ImagesLoadedAsset extends \p2m\assets\base\P2AssetBundle
 			'imagesloaded.pkgd.min.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

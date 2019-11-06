@@ -43,7 +43,7 @@ class LtAsset extends \p2m\assets\base\P2AssetBundle
 			'lt.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

@@ -43,7 +43,7 @@ class EsUsAsset extends \p2m\assets\base\P2AssetBundle
 			'es-us.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

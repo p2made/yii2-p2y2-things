@@ -43,7 +43,7 @@ class JvAsset extends \p2m\assets\base\P2AssetBundle
 			'jv.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

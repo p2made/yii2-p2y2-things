@@ -43,7 +43,7 @@ class FrChAsset extends \p2m\assets\base\P2AssetBundle
 			'fr-ch.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

@@ -43,7 +43,7 @@ class BeAsset extends \p2m\assets\base\P2AssetBundle
 			'be.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

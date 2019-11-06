@@ -53,7 +53,7 @@ class DataTablesRowGroupAsset extends \p2m\assets\base\P2AssetBundle
 			'js/rowGroup.bootstrap4.min.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

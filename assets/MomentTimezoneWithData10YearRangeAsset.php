@@ -43,7 +43,7 @@ class MomentTimezoneWithData10YearRangeAsset extends \p2m\assets\base\P2AssetBun
 			'moment-timezone-with-data-10-year-range.min.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

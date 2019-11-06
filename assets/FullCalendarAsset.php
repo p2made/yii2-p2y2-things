@@ -50,7 +50,7 @@ class FullCalendarAsset extends \p2m\assets\base\P2AssetBundle
 			'fullcalendar.min.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

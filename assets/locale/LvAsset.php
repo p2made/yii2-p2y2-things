@@ -43,7 +43,7 @@ class LvAsset extends \p2m\assets\base\P2AssetBundle
 			'lv.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

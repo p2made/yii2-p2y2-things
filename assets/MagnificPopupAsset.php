@@ -53,7 +53,7 @@ class MagnificPopupAsset extends \p2m\assets\base\P2AssetBundle
 			'jquery.magnific-popup.min.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

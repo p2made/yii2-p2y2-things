@@ -43,7 +43,7 @@ class ArMaAsset extends \p2m\assets\base\P2AssetBundle
 			'ar-ma.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

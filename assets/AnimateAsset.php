@@ -43,7 +43,7 @@ class AnimateAsset extends \p2m\assets\base\P2AssetBundle
 			'animate.min.css',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

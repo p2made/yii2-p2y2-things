@@ -43,7 +43,7 @@ class MomentTimezoneWithDataAsset extends \p2m\assets\base\P2AssetBundle
 			'moment-timezone-with-data.min.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

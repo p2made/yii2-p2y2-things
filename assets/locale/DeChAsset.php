@@ -43,7 +43,7 @@ class DeChAsset extends \p2m\assets\base\P2AssetBundle
 			'de-ch.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

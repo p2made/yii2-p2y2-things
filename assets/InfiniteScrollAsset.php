@@ -43,7 +43,7 @@ class InfiniteScrollAsset extends \p2m\assets\base\P2AssetBundle
 			'infinite-scroll.pkgd.min.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 

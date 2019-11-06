@@ -43,7 +43,7 @@ class KyAsset extends \p2m\assets\base\P2AssetBundle
 			'ky.js',
 		],
 		'depends' => [
-			'p2massets2CoreAsset',
+			'p2m\assets\P2CoreAsset',
 		],
 	];
 
