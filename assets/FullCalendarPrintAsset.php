@@ -37,10 +37,14 @@ class FullCalendarPrintAsset extends \p2m\assets\base\P2AssetBundle
 			'cssOptions' => [
 				'integrity' => 'sha384-Q4MjQXexIIZhDecCSVc79g7WtM16+sjB6ubWmtL2tM7bOFLC38NjV8SlNRcy/Xpl',
 				'crossorigin' => 'anonymous',
+				'media' => 'print'
 			],
 		],
 		'css' => [
 			'fullcalendar.print.min.css',
+		],
+		'cssOptions' => [
+			'media' => 'print'
 		],
 		'depends' => [
 			'p2massets2CoreAsset',
