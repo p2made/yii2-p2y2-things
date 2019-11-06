@@ -1,6 +1,6 @@
 <?php
 /**
- * DataTablesAutoFillBase.php
+ * DataTablesAutoFillAssetBase.php
  *
  * Yii2 asset for DataTables
  * https://datatables.net
@@ -11,20 +11,20 @@
  * @license MIT
  *
  * @package p2made/yii2-p2y2-moment
- * @class \p2m\assets\base\DataTablesAutoFillBase
+ * @class \p2m\assets\base\DataTablesAutoFillAssetBase
  */
 
 /**
  * Load this asset with...
- * p2m\assets\base\DataTablesAutoFillBase::register($this);
+ * p2m\assets\base\DataTablesAutoFillAssetBase::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\assets\base\DataTablesAutoFillBase',
+ *     'p2m\assets\base\DataTablesAutoFillAssetBase',
  */
 
 namespace p2m\assets\base;
 
-class DataTablesAutoFillBase extends \p2m\assets\base\P2AssetBundle
+class DataTablesAutoFillAssetBase extends \p2m\assets\base\P2AssetBundle
 {
 	protected $packageName = 'datatables.net-autofill';
 
