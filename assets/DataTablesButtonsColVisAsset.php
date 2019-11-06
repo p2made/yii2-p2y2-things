@@ -43,7 +43,7 @@ class DataTablesButtonsColVisAsset extends \p2m\assets\base\P2AssetBundle
 			'js/buttons.colVis.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2m\assets\DataTablesButtonsAsset',
 		],
 	];
 
