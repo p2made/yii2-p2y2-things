@@ -43,7 +43,7 @@ class DataTablesAutoFillAssetBase extends \p2m\assets\base\P2AssetBundle
 			'js/dataTables.autoFill.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2m\assets\DataTablesAsset',
 		],
 	];
 
