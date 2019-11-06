@@ -29,7 +29,7 @@ class DataTablesBundleAsset extends \yii\web\AssetBundle
 	public $depends = [
 		'p2m\assets\JSZipAsset',
 		'p2m\assets\PdfMakeAsset',
-		'p2m\assets\DataTablesBootstrapAsset',
+		'p2m\assets\DataTablesAsset',
 		'p2m\assets\DataTablesAutoFillAsset',
 		'p2m\assets\DataTablesButtonsAsset',
 		'p2m\assets\DataTablesButtonsColVisAsset',

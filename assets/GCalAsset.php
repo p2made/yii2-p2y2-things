@@ -31,21 +31,16 @@ class GCalAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '3.10.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/fullcalendar@##-version-##/dist',
+		'sourcePath' => '@npm/fullcalendar/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/fullcalendar@##-version-##/dist',
-			'js' => [
-				'gcal.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-BTR3F1dHjU7D0+QiywB/Q412qtnIaJCI2dUNb7yKyWOvzXjupdzk72THpdU/rliu',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/fullcalendar/dist',
-			'js' => [
-				'gcal.min.js',
-			],
+		'js' => [
+			'gcal.min.js',
 		],
 		'depends' => [
 			'p2m\assets\P2CoreAsset',

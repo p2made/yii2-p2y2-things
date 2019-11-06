@@ -1,6 +1,6 @@
 <?php
 /**
- * DataTablesBootstrapAsset.php
+ * DataTablesAsset.php
  *
  * Yii2 asset for DataTables
  * https://datatables.net
@@ -11,20 +11,20 @@
  * @license MIT
  *
  * @package p2made/yii2-p2y2-moment
- * @class \p2m\assets\DataTablesBootstrapAsset
+ * @class \p2m\assets\DataTablesAsset
  */
 
 /**
  * Load this asset with...
- * p2m\assets\DataTablesBootstrapAsset::register($this);
+ * p2m\assets\DataTablesAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\assets\DataTablesBootstrapAsset',
+ *     'p2m\assets\DataTablesAsset',
  */
 
 namespace p2m\assets;
 
-class DataTablesBootstrapAsset extends \p2m\assets\base\P2AssetBundle
+class DataTablesAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $packageName = 'datatables.net-bs4';
 
