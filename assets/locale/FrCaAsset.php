@@ -2,7 +2,7 @@
 /**
  * FrCaAsset.php
  *
- * Yii2 asset for 
+ * Yii2 asset for moment
  * https://momentjs.com
  *
  * @author Pedro Plowman
@@ -24,27 +24,26 @@
 
 namespace p2m\assets\locale;
 
-class FrCaAsset extends \p2m\assets\locale\base\MomentAssetBase
+class FrCaAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $packageName = 'moment';
+
+	protected $packageVersion = '2.24.0';
+
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
+		'sourcePath' => '@npm/moment/locale',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
-			'js' => [
-				'fr-ca.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-6n+nviiWTKB5imTPSatifyZMMx/83YkPzED2AECPZVl7OFDZ4SIVGXFE8uDUGAkc',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/moment/locale',
-			'js' => [
-				'fr-ca.js',
-			],
+		'js' => [
+			'fr-ca.js',
 		],
 		'depends' => [
-			'p2m\assets\locale\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

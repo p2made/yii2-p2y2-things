@@ -31,24 +31,19 @@ class DraggabillyAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.2.0';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/draggabilly@##-version-##/dist',
+		'sourcePath' => '@npm/draggabilly/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/draggabilly@##-version-##/dist',
-			'js' => [
-				'draggabilly.pkgd.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-JvmwKtrs1CjFC41kayyey74PQsYWrxToeXr0tsEyeYgZwi2aT4XZccR8SFqcobPC',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/draggabilly/dist',
-			'js' => [
-				'draggabilly.pkgd.min.js',
-			],
+		'js' => [
+			'draggabilly.pkgd.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

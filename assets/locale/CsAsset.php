@@ -2,7 +2,7 @@
 /**
  * CsAsset.php
  *
- * Yii2 asset for 
+ * Yii2 asset for moment
  * https://momentjs.com
  *
  * @author Pedro Plowman
@@ -24,27 +24,26 @@
 
 namespace p2m\assets\locale;
 
-class CsAsset extends \p2m\assets\locale\base\MomentAssetBase
+class CsAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $packageName = 'moment';
+
+	protected $packageVersion = '2.24.0';
+
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
+		'sourcePath' => '@npm/moment/locale',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
-			'js' => [
-				'cs.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-+kucl+Uluan4CpizG7eBtjnqyT9Wt2xcnLyBXwwtxx+ytiURuKJ9cn9JUCNjynyb',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/moment/locale',
-			'js' => [
-				'cs.js',
-			],
+		'js' => [
+			'cs.js',
 		],
 		'depends' => [
-			'p2m\assets\locale\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

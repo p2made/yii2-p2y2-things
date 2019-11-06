@@ -31,25 +31,19 @@ class DataTablesButtonsHTML5Asset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '1.6.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
+		'sourcePath' => '@npm/datatables.net-buttons',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
-			'js' => [
-				'js/buttons.html5.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-Pl8RVCqSvsApnng2TEtrl1lHWlEozdPYTpk35W5LeFsrUsPk64XprIZXQOUq4hGj',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-buttons',
-			'js' => [
-				'js/buttons.html5.min.js',
-			],
+		'js' => [
+			'js/buttons.html5.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\DataTablesButtonsAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

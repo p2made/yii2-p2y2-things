@@ -2,7 +2,7 @@
 /**
  * SrCyrlAsset.php
  *
- * Yii2 asset for 
+ * Yii2 asset for moment
  * https://momentjs.com
  *
  * @author Pedro Plowman
@@ -24,27 +24,26 @@
 
 namespace p2m\assets\locale;
 
-class SrCyrlAsset extends \p2m\assets\locale\base\MomentAssetBase
+class SrCyrlAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $packageName = 'moment';
+
+	protected $packageVersion = '2.24.0';
+
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
+		'sourcePath' => '@npm/moment/locale',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
-			'js' => [
-				'sr-cyrl.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-wEd8+jzMTRMcHbcqzKlM7Eer/p39+DHapoWjsObgaUkyuJTp0Hfa5nE5f81ZlS4b',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/moment/locale',
-			'js' => [
-				'sr-cyrl.js',
-			],
+		'js' => [
+			'sr-cyrl.js',
 		],
 		'depends' => [
-			'p2m\assets\locale\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

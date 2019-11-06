@@ -31,8 +31,9 @@ class MorrisAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '0.5.0';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/morris.js@##-version-##',
+		'sourcePath' => '@npm/morris.js',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/morris.js@##-version-##',
 			'css' => [
 				'morris.min.css',
 			],
@@ -40,26 +41,19 @@ class MorrisAsset extends \p2m\assets\base\P2AssetBundle
 				'integrity' => 'sha384-QtmAcfo2z5YBnthp8cMvCB5AWnYhqjU8Q6loSdnhaL07hTbTyZLGo5/NkmyvcLic',
 				'crossorigin' => 'anonymous',
 			],
-			'js' => [
-				'morris.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-MrrVsMWyWD/58C8bLi2HA+haFjprTcQgAi/RIkF+Pu93ugZuKEZErN84oJiuRtJa',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/morris.js',
-			'css' => [
-				'morris.css',
-			],
-			'js' => [
-				'morris.min.js',
-			],
+		'css' => [
+			'morris.css',
+		],
+		'js' => [
+			'morris.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\RaphaelAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

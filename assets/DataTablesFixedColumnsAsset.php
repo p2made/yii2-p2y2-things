@@ -31,11 +31,9 @@ class DataTablesFixedColumnsAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '3.3.0';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/fixedcolumns/##-version-##',
+		'sourcePath' => '@npm/datatables.net-fixedcolumns-bs4',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/fixedcolumns/##-version-##',
-			'css' => [
-				'css/fixedColumns.bootstrap4.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-sp/ugs3gRXj2G8/7yAMKuDyewdaPI1a9NLyTw32OhgRIQ+TPpNWWeujzp5Bd9+AX',
 				'crossorigin' => 'anonymous',
@@ -48,18 +46,14 @@ class DataTablesFixedColumnsAsset extends \p2m\assets\base\P2AssetBundle
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-fixedcolumns-bs4',
-			'css' => [
-				'css/fixedColumns.bootstrap4.min.css',
-			],
-			'js' => [
-				'js/fixedColumns.bootstrap4.min.js',
-			],
+		'css' => [
+			'css/fixedColumns.bootstrap4.min.css',
+		],
+		'js' => [
+			'js/fixedColumns.bootstrap4.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\DataTablesAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

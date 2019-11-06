@@ -31,11 +31,9 @@ class DataTablesRowReorderAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '1.2.6';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/rowreorder/##-version-##',
+		'sourcePath' => '@npm/datatables.net-rowreorder-bs4',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/rowreorder/##-version-##',
-			'css' => [
-				'css/rowReorder.bootstrap4.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-pVrsWa1E1GlEJUfnZXLCxT6AScWbwY/NkJAW8vKG5ZhEbCsSUfj7tY/ePTD9MevD',
 				'crossorigin' => 'anonymous',
@@ -48,18 +46,14 @@ class DataTablesRowReorderAsset extends \p2m\assets\base\P2AssetBundle
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-rowreorder-bs4',
-			'css' => [
-				'css/rowReorder.bootstrap4.min.css',
-			],
-			'js' => [
-				'js/rowReorder.bootstrap4.min.js',
-			],
+		'css' => [
+			'css/rowReorder.bootstrap4.min.css',
+		],
+		'js' => [
+			'js/rowReorder.bootstrap4.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\DataTablesAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

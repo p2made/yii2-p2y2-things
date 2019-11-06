@@ -31,24 +31,19 @@ class ScrollRevealAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '4.0.5';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/scrollreveal@##-version-##/dist',
+		'sourcePath' => '@npm/scrollreveal/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/scrollreveal@##-version-##/dist',
-			'js' => [
-				'scrollreveal.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-plDrqMHgu5akDTXIrAQhPO/4CW+KQgfTc1aXcxU9BFcm2RokcPRlqLWclkVN0tf4',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/scrollreveal/dist',
-			'js' => [
-				'scrollreveal.min.js',
-			],
+		'js' => [
+			'scrollreveal.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

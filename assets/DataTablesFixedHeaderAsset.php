@@ -31,11 +31,9 @@ class DataTablesFixedHeaderAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '3.1.6';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/fixedheader/##-version-##',
+		'sourcePath' => '@npm/datatables.net-fixedheader-bs4',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/fixedheader/##-version-##',
-			'css' => [
-				'css/fixedHeader.bootstrap4.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-WCvWgurF5s3iQOhbC89lPn7E9F0QnmdzbG4MOluQuDFxCarl/3LXKgCeQKvjf+dF',
 				'crossorigin' => 'anonymous',
@@ -48,18 +46,14 @@ class DataTablesFixedHeaderAsset extends \p2m\assets\base\P2AssetBundle
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-fixedheader-bs4',
-			'css' => [
-				'css/fixedHeader.bootstrap4.min.css',
-			],
-			'js' => [
-				'js/fixedHeader.bootstrap4.min.js',
-			],
+		'css' => [
+			'css/fixedHeader.bootstrap4.min.css',
+		],
+		'js' => [
+			'js/fixedHeader.bootstrap4.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\DataTablesAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

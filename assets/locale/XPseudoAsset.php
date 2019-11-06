@@ -2,7 +2,7 @@
 /**
  * XPseudoAsset.php
  *
- * Yii2 asset for 
+ * Yii2 asset for moment
  * https://momentjs.com
  *
  * @author Pedro Plowman
@@ -24,27 +24,26 @@
 
 namespace p2m\assets\locale;
 
-class XPseudoAsset extends \p2m\assets\locale\base\MomentAssetBase
+class XPseudoAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $packageName = 'moment';
+
+	protected $packageVersion = '2.24.0';
+
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
+		'sourcePath' => '@npm/moment/locale',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
-			'js' => [
-				'x-pseudo.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-BKocvUn2kkJ06YQyh1jP1xkHrc80lk5Rz2odTJFVPuHlqRaOQVsZMocNpwt11L+C',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/moment/locale',
-			'js' => [
-				'x-pseudo.js',
-			],
+		'js' => [
+			'x-pseudo.js',
 		],
 		'depends' => [
-			'p2m\assets\locale\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

@@ -31,34 +31,26 @@ class Lightbox2Asset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.11.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/lightbox2@##-version-##/dist',
+		'sourcePath' => '@npm/lightbox2/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/lightbox2@##-version-##/dist',
-			'css' => [
-				'css/lightbox.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-MzHT0pgTPI8fjMvEz54yA7HmSVjLLsxl+ytGS13+EOr/L5uLaBakmchzKgDYsSQz',
 				'crossorigin' => 'anonymous',
-			],
-			'js' => [
-				'js/lightbox.min.js',
 			],
 			'jsOptions' => [
 				'integrity' => 'sha384-iYi/WcdpdDnsQeo7Bv1vEZtM+pjKSYb7Wo8zmDR89W1cOVp8VPi1ovc5dCFfOJml',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/lightbox2/dist',
-			'css' => [
-				'css/lightbox.min.css',
-			],
-			'js' => [
-				'js/lightbox.min.js',
-			],
+		'css' => [
+			'css/lightbox.min.css',
+		],
+		'js' => [
+			'js/lightbox.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

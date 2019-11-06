@@ -31,11 +31,9 @@ class DataTablesScrollerAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.0.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/scroller/##-version-##',
+		'sourcePath' => '@npm/datatables.net-scroller-bs4',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/scroller/##-version-##',
-			'css' => [
-				'css/scroller.bootstrap4.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-wIRbCocqGp2W33vrUhPum15S17ENhIRifUVmP+DPvKsI9jaMV6DGZ1JQEm0Wts8b',
 				'crossorigin' => 'anonymous',
@@ -48,18 +46,14 @@ class DataTablesScrollerAsset extends \p2m\assets\base\P2AssetBundle
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-scroller-bs4',
-			'css' => [
-				'css/scroller.bootstrap4.min.css',
-			],
-			'js' => [
-				'js/scroller.bootstrap4.min.js',
-			],
+		'css' => [
+			'css/scroller.bootstrap4.min.css',
+		],
+		'js' => [
+			'js/scroller.bootstrap4.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\DataTablesAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

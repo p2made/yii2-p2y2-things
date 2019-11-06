@@ -31,34 +31,26 @@ class ChartJsAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.9.2';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/chart.js@##-version-##/dist',
+		'sourcePath' => '@npm/chart.js/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/chart.js@##-version-##/dist',
-			'css' => [
-				'Chart.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-q9MZ/PQCC1nIFQdrr9yNOFXeSaXjv/yPOJOdBd32aODh8+EM6udfo91a6mRbEDih',
 				'crossorigin' => 'anonymous',
-			],
-			'js' => [
-				'Chart.min.js',
 			],
 			'jsOptions' => [
 				'integrity' => 'sha384-HD3oWWU02oY2e4gmUXEKY8D/aII2L2qM2+yU3/o/9H/dZdfhrSd6DLhQefqosgrj',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/chart.js/dist',
-			'css' => [
-				'Chart.min.css',
-			],
-			'js' => [
-				'Chart.min.js',
-			],
+		'css' => [
+			'Chart.min.css',
+		],
+		'js' => [
+			'Chart.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

@@ -31,24 +31,19 @@ class IsotopeAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '3.0.6';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/isotope-layout@##-version-##/dist',
+		'sourcePath' => '@npm/isotope-layout/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/isotope-layout@##-version-##/dist',
-			'js' => [
-				'isotope.pkgd.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-vtH+5pZsjdWxaTWlFSCrWM6i0TIG0HKOqJbPo91LB35dvWpVzuWdJeVoNweP+eoY',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/isotope-layout/dist',
-			'js' => [
-				'isotope.pkgd.min.js',
-			],
+		'js' => [
+			'isotope.pkgd.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

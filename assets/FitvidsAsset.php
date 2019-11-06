@@ -31,24 +31,19 @@ class FitvidsAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.1.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/fitvids@##-version-##/dist',
+		'sourcePath' => '@npm/fitvids/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/fitvids@##-version-##/dist',
-			'js' => [
-				'fitvids.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-gv1n+hTwWrE0qXw6bl3Yf+WNM8ffb/60Tstd86MrcYMBv2gNRABDixs9r2jn4f4I',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/fitvids/dist',
-			'js' => [
-				'fitvids.min.js',
-			],
+		'js' => [
+			'fitvids.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

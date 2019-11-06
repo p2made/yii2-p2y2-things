@@ -31,8 +31,9 @@ class SimpleLineIconsAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.4.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/simple-line-icons@##-version-##/css',
+		'sourcePath' => '@npm/simple-line-icons/css',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/simple-line-icons@##-version-##/css',
 			'css' => [
 				'simple-line-icons.min.css',
 			],
@@ -41,14 +42,11 @@ class SimpleLineIconsAsset extends \p2m\assets\base\P2AssetBundle
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/simple-line-icons/css',
-			'css' => [
-				'simple-line-icons.css',
-			],
+		'css' => [
+			'simple-line-icons.css',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

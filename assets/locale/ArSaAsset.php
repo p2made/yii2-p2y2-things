@@ -2,7 +2,7 @@
 /**
  * ArSaAsset.php
  *
- * Yii2 asset for 
+ * Yii2 asset for moment
  * https://momentjs.com
  *
  * @author Pedro Plowman
@@ -24,27 +24,26 @@
 
 namespace p2m\assets\locale;
 
-class ArSaAsset extends \p2m\assets\locale\base\MomentAssetBase
+class ArSaAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $packageName = 'moment';
+
+	protected $packageVersion = '2.24.0';
+
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
+		'sourcePath' => '@npm/moment/locale',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
-			'js' => [
-				'ar-sa.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-2hXYwuAF343TBLq8KtxjEuqRgAc/cqSVRAkFnUPVHbWZuzPxWPko0u/D8P3OInS3',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/moment/locale',
-			'js' => [
-				'ar-sa.js',
-			],
+		'js' => [
+			'ar-sa.js',
 		],
 		'depends' => [
-			'p2m\assets\locale\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

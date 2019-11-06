@@ -31,35 +31,26 @@ class DataTablesAutoFillAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.3.4';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/autofill/##-version-##',
+		'sourcePath' => '@npm/datatables.net-autofill-bs4',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/autofill/##-version-##',
-			'css' => [
-				'css/autoFill.bootstrap4.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-UQiYV506lsxVwwSgMRYrON2zHOJRxal00n3itqC8DoX7QzokQyQ/0ZMZVMvcc/2T',
 				'crossorigin' => 'anonymous',
-			],
-			'js' => [
-				'js/autoFill.bootstrap4.min.js',
 			],
 			'jsOptions' => [
 				'integrity' => 'sha384-ve+9IYl+b4Xe2YHsHn+EfUNo2uUyvLX7RtvuRViSXsY76AaPCRzKR3r0Vd19Z9uN',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-autofill-bs4',
-			'css' => [
-				'css/autoFill.bootstrap4.min.css',
-			],
-			'js' => [
-				'js/autoFill.bootstrap4.min.js',
-			],
+		'css' => [
+			'css/autoFill.bootstrap4.min.css',
+		],
+		'js' => [
+			'js/autoFill.bootstrap4.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\base\DataTablesAutoFillBase',
+			'p2massets2CoreAsset',
 		],
 	];
 

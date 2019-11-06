@@ -2,7 +2,7 @@
 /**
  * MomentTimezoneWithData10YearRangeAsset.php
  *
- * Yii2 asset for 
+ * Yii2 asset for moment-timezone
  * https://momentjs.com/timezone/
  *
  * @author Pedro Plowman
@@ -24,27 +24,26 @@
 
 namespace p2m\assets;
 
-class MomentTimezoneWithData10YearRangeAsset extends \p2m\assets\base\MomentTimezoneAssetBase
+class MomentTimezoneWithData10YearRangeAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $packageName = 'moment-timezone';
+
+	protected $packageVersion = '0.5.27';
+
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment-timezone@##-version-##/builds',
+		'sourcePath' => '@npm/moment-timezone/builds',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment-timezone@##-version-##/builds',
-			'js' => [
-				'moment-timezone-with-data-10-year-range.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-fO3cEHozXmapThhGq0+8sd29pE5J+KSzFriB9QC9SXDGPYiWQhKYVkcvekJaRZhT',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/moment-timezone/builds',
-			'js' => [
-				'moment-timezone-with-data-10-year-range.min.js',
-			],
+		'js' => [
+			'moment-timezone-with-data-10-year-range.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

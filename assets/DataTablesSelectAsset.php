@@ -31,11 +31,9 @@ class DataTablesSelectAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '1.3.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/select/##-version-##',
+		'sourcePath' => '@npm/datatables.net-select-bs4',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/select/##-version-##',
-			'css' => [
-				'css/select.bootstrap4.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-GT95DpievPCoEMQK7wFUKNSmBUItft1absIeFqP30FKpnjz8YPvV34CC79GirigE',
 				'crossorigin' => 'anonymous',
@@ -48,18 +46,14 @@ class DataTablesSelectAsset extends \p2m\assets\base\P2AssetBundle
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-select-bs4',
-			'css' => [
-				'css/select.bootstrap4.min.css',
-			],
-			'js' => [
-				'js/select.bootstrap4.min.js',
-			],
+		'css' => [
+			'css/select.bootstrap4.min.css',
+		],
+		'js' => [
+			'js/select.bootstrap4.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\DataTablesAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

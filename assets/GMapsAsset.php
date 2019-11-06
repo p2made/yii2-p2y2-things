@@ -31,25 +31,19 @@ class GMapsAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '0.4.24';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/gmaps@##-version-##',
+		'sourcePath' => '@npm/gmaps',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/gmaps@##-version-##',
-			'js' => [
-				'gmaps.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-0dtH2vLXnuX/8zr9v+SWIUywQYGezOWhJwjVYIMzJHSk2Zj1+h30lqT63x3EfKko',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/gmaps',
-			'js' => [
-				'gmaps.min.js',
-			],
+		'js' => [
+			'gmaps.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\GMapsApiAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

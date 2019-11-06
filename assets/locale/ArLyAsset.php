@@ -2,7 +2,7 @@
 /**
  * ArLyAsset.php
  *
- * Yii2 asset for 
+ * Yii2 asset for moment
  * https://momentjs.com
  *
  * @author Pedro Plowman
@@ -24,27 +24,26 @@
 
 namespace p2m\assets\locale;
 
-class ArLyAsset extends \p2m\assets\locale\base\MomentAssetBase
+class ArLyAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $packageName = 'moment';
+
+	protected $packageVersion = '2.24.0';
+
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
+		'sourcePath' => '@npm/moment/locale',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
-			'js' => [
-				'ar-ly.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-U0af6ngdzkIN5uiRSoLQuEbz6VfECnXQdoXb/KuYgB5ArWL318nINLEWl7yMPUGj',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/moment/locale',
-			'js' => [
-				'ar-ly.js',
-			],
+		'js' => [
+			'ar-ly.js',
 		],
 		'depends' => [
-			'p2m\assets\locale\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

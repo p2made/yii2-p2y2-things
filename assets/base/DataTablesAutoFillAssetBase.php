@@ -15,16 +15,6 @@
  */
 
 /**
- * ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ #####
- * ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ #####
- * ##### ^ #####                                           ##### ^ #####
- * ##### ^ #####      DO NOT USE THIS CLASS DIRECTLY!      ##### ^ #####
- * ##### ^ #####                                           ##### ^ #####
- * ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ #####
- * ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ #####
- */
-
-/**
  * Load this asset with...
  * p2m\assets\base\DataTablesAutoFillBase::register($this);
  *
@@ -41,25 +31,19 @@ class DataTablesAutoFillBase extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.3.4';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/autofill/##-version-##',
+		'sourcePath' => '@npm/datatables.net-autofill',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
-			'js' => [
-				'js/dataTables.autoFill.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-2IhmQai5yN8b2EX5F5BWSAUJ0Te/LtSC0BGnUuoUcQcnD9qVVpurky9IRmLnegaN',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-buttons',
-			'js' => [
-				'js/dataTables.autoFill.min.js',
-			],
+		'js' => [
+			'js/dataTables.autoFill.min.js',
 		],
 		'depends' => [
-			'p2m\assets\base\P2CoreAsset',
-			'p2m\assets\DataTablesAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

@@ -31,24 +31,19 @@ class InfiniteScrollAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '3.0.6';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/infinite-scroll@##-version-##/dist',
+		'sourcePath' => '@npm/infinite-scroll/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/infinite-scroll@##-version-##/dist',
-			'js' => [
-				'infinite-scroll.pkgd.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-2o0eDtiURg21bbJ8Gfe0FVoA7nyRucxrUJH+rtZ46TKP8+D66f2ayNyUcBv6QDbM',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/infinite-scroll/dist',
-			'js' => [
-				'infinite-scroll.pkgd.min.js',
-			],
+		'js' => [
+			'infinite-scroll.pkgd.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

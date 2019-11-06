@@ -31,24 +31,19 @@ class AnimateAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '3.7.2';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/animate.css@##-version-##',
+		'sourcePath' => '@npm/animate.css',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/animate.css@##-version-##',
-			'css' => [
-				'animate.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-7/Tl0k65OTvDSvtuq7aPR7aa0aCz7ZKqHsbMRLxhzueldW+9MZpCe9LB1c5UBuNS',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/animate.css',
-			'css' => [
-				'animate.min.css',
-			],
+		'css' => [
+			'animate.min.css',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

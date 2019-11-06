@@ -31,24 +31,19 @@ class MasonryAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '4.2.2';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/masonry-layout@##-version-##/dist',
+		'sourcePath' => '@npm/masonry-layout/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/masonry-layout@##-version-##/dist',
-			'js' => [
-				'masonry.pkgd.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/masonry-layout/dist',
-			'js' => [
-				'masonry.pkgd.min.js',
-			],
+		'js' => [
+			'masonry.pkgd.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

@@ -31,34 +31,26 @@ class MetisMenuAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '3.0.4';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/metismenu@##-version-##/dist',
+		'sourcePath' => '@npm/metismenu/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/metismenu@##-version-##/dist',
-			'css' => [
-				'metisMenu.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-rgBcEBQdBqrvZ6WDaSQ5mMTJjjvfVaE5XKzr6jZv1NpC081d/basfjfN1kgxPrhv',
 				'crossorigin' => 'anonymous',
-			],
-			'js' => [
-				'metisMenu.min.js',
 			],
 			'jsOptions' => [
 				'integrity' => 'sha384-f68cq6E0KVMyT6ziVIbnLolP0WxKFI92KkQcpn+INnIlKdHtLUFxhkrYIjJzE0q1',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/metismenu/dist',
-			'css' => [
-				'metisMenu.min.css',
-			],
-			'js' => [
-				'metisMenu.min.js',
-			],
+		'css' => [
+			'metisMenu.min.css',
+		],
+		'js' => [
+			'metisMenu.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

@@ -31,8 +31,9 @@ class EkkoLightboxAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '5.3.0';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/ekko-lightbox@##-version-##/dist',
+		'sourcePath' => '@npm/ekko-lightbox/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/ekko-lightbox@##-version-##/dist',
 			'css' => [
 				'ekko-lightbox.min.css',
 			],
@@ -40,25 +41,19 @@ class EkkoLightboxAsset extends \p2m\assets\base\P2AssetBundle
 				'integrity' => 'sha384-Ra8Ik6nG0Uz2AquVG7R7zBuRUY/0u3NjxO8G88yp+z8o1s6+QkHih0Y+q8SdYdim',
 				'crossorigin' => 'anonymous',
 			],
-			'js' => [
-				'ekko-lightbox.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-bqIl0+8hxcMpOFf8O3ffwAy5qTUbFPyuNFytX/omkD4RDPMOBtt/uV6Lqlw7sljM',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/ekko-lightbox/dist',
-			'css' => [
-				'ekko-lightbox.css',
-			],
-			'js' => [
-				'ekko-lightbox.min.js',
-			],
+		'css' => [
+			'ekko-lightbox.css',
+		],
+		'js' => [
+			'ekko-lightbox.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

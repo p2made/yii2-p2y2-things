@@ -2,7 +2,7 @@
 /**
  * TlPhAsset.php
  *
- * Yii2 asset for 
+ * Yii2 asset for moment
  * https://momentjs.com
  *
  * @author Pedro Plowman
@@ -24,27 +24,26 @@
 
 namespace p2m\assets\locale;
 
-class TlPhAsset extends \p2m\assets\locale\base\MomentAssetBase
+class TlPhAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $packageName = 'moment';
+
+	protected $packageVersion = '2.24.0';
+
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
+		'sourcePath' => '@npm/moment/locale',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
-			'js' => [
-				'tl-ph.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-RhREaK3HaBWIHvCjDEaOKh1Re7dcOBtSskBHamo4xUJWx31hzeKhfnyg7t2GPCwH',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/moment/locale',
-			'js' => [
-				'tl-ph.js',
-			],
+		'js' => [
+			'tl-ph.js',
 		],
 		'depends' => [
-			'p2m\assets\locale\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

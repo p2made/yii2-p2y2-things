@@ -31,24 +31,19 @@ class PackeryAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.1.2';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/packery@##-version-##/dist',
+		'sourcePath' => '@npm/packery/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/packery@##-version-##/dist',
-			'js' => [
-				'packery.pkgd.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-oDkIpS8P/WkhvJZRketv7d32JVt7Rc2ZpaZV4sEDokacrFvLBs1q1vlgtKm9vxJJ',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/packery/dist',
-			'js' => [
-				'packery.pkgd.min.js',
-			],
+		'js' => [
+			'packery.pkgd.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

@@ -15,16 +15,6 @@
  */
 
 /**
- * ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ #####
- * ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ #####
- * ##### ^ #####                                           ##### ^ #####
- * ##### ^ #####      DO NOT USE THIS CLASS DIRECTLY!      ##### ^ #####
- * ##### ^ #####                                           ##### ^ #####
- * ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ #####
- * ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ #####
- */
-
-/**
  * Load this asset with...
  * p2m\assets\base\DataTablesResponsiveBase::register($this);
  *
@@ -41,25 +31,19 @@ class DataTablesResponsiveBase extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.2.3';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/responsive/##-version-##',
+		'sourcePath' => '@npm/datatables.net-responsive',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
-			'js' => [
-				'js/jsfile.js',
-			],
 			'jsOptions' => [
-				'integrity' => 'hash',
+				'integrity' => 'sha384-utW62Q5udTycRsqDMdQwjeaKASTAE2cf20juuz5yfC1n1hu8gBJ1Pn0oEzKIb8Gd',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-buttons',
-			'js' => [
-				'js/jsfile.js',
-			],
+		'js' => [
+			'js/dataTables.responsive.min.js',
 		],
 		'depends' => [
-			'p2m\assets\base\P2CoreAsset',
-			'p2m\assets\DataTablesAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

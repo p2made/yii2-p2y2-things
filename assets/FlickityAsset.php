@@ -31,34 +31,26 @@ class FlickityAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.2.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/flickity@##-version-##/dist',
+		'sourcePath' => '@npm/flickity/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/flickity@##-version-##/dist',
-			'css' => [
-				'flickity.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-YUf2GTc+8SEfw9NTIrQvlptcV/7jkO53QXZKUqJ3sp3QVKUbMAdb8txjxf8BjgFX',
 				'crossorigin' => 'anonymous',
-			],
-			'js' => [
-				'flickity.pkgd.min.js',
 			],
 			'jsOptions' => [
 				'integrity' => 'sha384-bbqpT4L0LrPaMT563kDc2Vj+2MPL/vQOoEHVOrXRO71BwJBFDIHhuBEmjcXxl7zD',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/flickity/dist',
-			'css' => [
-				'flickity.min.css',
-			],
-			'js' => [
-				'flickity.pkgd.min.js',
-			],
+		'css' => [
+			'flickity.min.css',
+		],
+		'js' => [
+			'flickity.pkgd.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

@@ -31,25 +31,19 @@ class DataTablesButtonsPrintAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '1.6.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
+		'sourcePath' => '@npm/datatables.net-buttons',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
-			'js' => [
-				'js/buttons.print.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-XB54OBl3rOOjrhqlr+qwWqLv0GRnzVGFYKHPwdJnah4TyB7vQuYckQSsxQxGOA8d',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-buttons',
-			'js' => [
-				'js/buttons.print.min.js',
-			],
+		'js' => [
+			'js/buttons.print.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\DataTablesButtonsAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

@@ -28,27 +28,22 @@ class PdfMakeAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $packageName = 'pdfmake';
 
-	protected $packageVersion = '0.1.62';
+	protected $packageVersion = '0.1.60';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/##-version-##',
+		'sourcePath' => '@bower/pdfmake/build',
 		'static' => [
-			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/##-version-##',
-			'js' => [
-				'pdfmake.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-bp4sgoC2kLRngEiDQvdyF2U/YLPD3wgh8pucz+VKwwSZT/F8pYMqC569o6409LKr',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@bower/pdfmake/build',
-			'js' => [
-				'pdfmake.min.js',
-			],
+		'js' => [
+			'pdfmake.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

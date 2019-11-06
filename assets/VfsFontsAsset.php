@@ -28,27 +28,22 @@ class VfsFontsAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $packageName = 'pdfmake';
 
-	protected $packageVersion = '0.1.62';
+	protected $packageVersion = '0.1.60';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/##-version-##',
+		'sourcePath' => '@bower/pdfmake/build',
 		'static' => [
-			'baseUrl' => 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/##-version-##',
-			'js' => [
-				'vfs_fonts.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-UAA3vlTPq9dwxB61awBFhR7Y5uBFOKQWuZueu4C6uI48gjIoqI/OTmYWEYWZXbGR',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@bower/pdfmake/build',
-			'js' => [
-				'vfs_fonts.js',
-			],
+		'js' => [
+			'vfs_fonts.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

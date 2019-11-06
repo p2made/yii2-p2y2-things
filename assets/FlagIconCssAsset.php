@@ -31,24 +31,19 @@ class FlagIconCssAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '3.4.5';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/flag-icon-css@##-version-##/css',
+		'sourcePath' => '@npm/flag-icon-css/css',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/flag-icon-css@##-version-##/css',
-			'css' => [
-				'flag-icon.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-TIJGXlVZjQ+dYPHg+oN3KvSwKHZQ4RYNPfQcWedc6mLkHd/fkZBWaf0h9Jtk022u',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/flag-icon-css/css',
-			'css' => [
-				'flag-icon.min.css',
-			],
+		'css' => [
+			'flag-icon.min.css',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

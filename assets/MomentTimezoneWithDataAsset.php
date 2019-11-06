@@ -2,7 +2,7 @@
 /**
  * MomentTimezoneWithDataAsset.php
  *
- * Yii2 asset for 
+ * Yii2 asset for moment-timezone
  * https://momentjs.com/timezone/
  *
  * @author Pedro Plowman
@@ -24,27 +24,26 @@
 
 namespace p2m\assets;
 
-class MomentTimezoneWithDataAsset extends \p2m\assets\base\MomentTimezoneAssetBase
+class MomentTimezoneWithDataAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $packageName = 'moment-timezone';
+
+	protected $packageVersion = '0.5.27';
+
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment-timezone@##-version-##/builds',
+		'sourcePath' => '@npm/moment-timezone/builds',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment-timezone@##-version-##/builds',
-			'js' => [
-				'moment-timezone-with-data.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-uByKoV0SBU+rgBKwp1KJqdbdWS70ta8SkmmV74Zq7ZSCk9hgn8+cpB6PbrHGjPOB',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/moment-timezone/builds',
-			'js' => [
-				'moment-timezone-with-data.min.js',
-			],
+		'js' => [
+			'moment-timezone-with-data.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

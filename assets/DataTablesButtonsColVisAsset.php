@@ -31,25 +31,19 @@ class DataTablesButtonsColVisAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '1.6.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
+		'sourcePath' => '@npm/datatables.net-buttons',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
-			'js' => [
-				'js/buttons.colVis.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-7bRJ6aqXBMYvsip3KZiArnrtxB1kiVwaWEgoVTyD1HBZMfrl3ho+Pg4mTeV6mNE/',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-buttons',
-			'js' => [
-				'js/buttons.colVis.min.js',
-			],
+		'js' => [
+			'js/buttons.colVis.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\DataTablesButtonsAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

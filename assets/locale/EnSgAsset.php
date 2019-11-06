@@ -2,7 +2,7 @@
 /**
  * EnSgAsset.php
  *
- * Yii2 asset for 
+ * Yii2 asset for moment
  * https://momentjs.com
  *
  * @author Pedro Plowman
@@ -24,27 +24,26 @@
 
 namespace p2m\assets\locale;
 
-class EnSgAsset extends \p2m\assets\locale\base\MomentAssetBase
+class EnSgAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $packageName = 'moment';
+
+	protected $packageVersion = '2.24.0';
+
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
+		'sourcePath' => '@npm/moment/locale',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
-			'js' => [
-				'en-SG.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-Iq1I+veSV1EJNzARIvN8Mx0uvvrl4sxbb9fsLPgKL7XSNfgki1885Gw/xk3aj0wO',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/moment/locale',
-			'js' => [
-				'en-SG.js',
-			],
+		'js' => [
+			'en-SG.js',
 		],
 		'depends' => [
-			'p2m\assets\locale\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

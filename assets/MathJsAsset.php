@@ -31,24 +31,19 @@ class MathJsAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '6.2.3';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/mathjs@##-version-##/dist',
+		'sourcePath' => '@npm/mathjs/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/mathjs@##-version-##/dist',
-			'js' => [
-				'math.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-WAbmGwLxJL310ItZFNyboj/yP4Ik1O3hYIKB4Pmfj2gLJqJV69nckszmDrw1SDR9',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/mathjs/dist',
-			'js' => [
-				'math.min.js',
-			],
+		'js' => [
+			'math.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

@@ -31,25 +31,19 @@ class DataTablesButtonsFlashAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '1.6.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
+		'sourcePath' => '@npm/datatables.net-buttons',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
-			'js' => [
-				'js/buttons.flash.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-wSYm3f5KwqkbUyg1t+MTmmR9bfnkC0/8c5jXFDqjkOl9nAg5H0eS2Tx2Ca7dB8hk',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-buttons',
-			'js' => [
-				'js/buttons.flash.min.js',
-			],
+		'js' => [
+			'js/buttons.flash.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\DataTablesButtonsAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

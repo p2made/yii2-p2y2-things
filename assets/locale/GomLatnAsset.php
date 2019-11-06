@@ -2,7 +2,7 @@
 /**
  * GomLatnAsset.php
  *
- * Yii2 asset for 
+ * Yii2 asset for moment
  * https://momentjs.com
  *
  * @author Pedro Plowman
@@ -24,27 +24,26 @@
 
 namespace p2m\assets\locale;
 
-class GomLatnAsset extends \p2m\assets\locale\base\MomentAssetBase
+class GomLatnAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $packageName = 'moment';
+
+	protected $packageVersion = '2.24.0';
+
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
+		'sourcePath' => '@npm/moment/locale',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
-			'js' => [
-				'gom-latn.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-pS1twgDaPmkwT6Dg01l4MOvo278csmDicPOlOeqYsqmEClh7KPGvMuRv6VjxVhzd',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/moment/locale',
-			'js' => [
-				'gom-latn.js',
-			],
+		'js' => [
+			'gom-latn.js',
 		],
 		'depends' => [
-			'p2m\assets\locale\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

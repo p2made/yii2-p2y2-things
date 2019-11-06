@@ -2,7 +2,7 @@
 /**
  * EsDoAsset.php
  *
- * Yii2 asset for 
+ * Yii2 asset for moment
  * https://momentjs.com
  *
  * @author Pedro Plowman
@@ -24,27 +24,26 @@
 
 namespace p2m\assets\locale;
 
-class EsDoAsset extends \p2m\assets\locale\base\MomentAssetBase
+class EsDoAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $packageName = 'moment';
+
+	protected $packageVersion = '2.24.0';
+
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
+		'sourcePath' => '@npm/moment/locale',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
-			'js' => [
-				'es-do.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-NtcMz99sXYcdh/ghU8Xq0G5TgZ16Km9XZYA4Ep3SOI+ZmpD6Yq3YDeWcD5kyczDM',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/moment/locale',
-			'js' => [
-				'es-do.js',
-			],
+		'js' => [
+			'es-do.js',
 		],
 		'depends' => [
-			'p2m\assets\locale\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

@@ -15,16 +15,6 @@
  */
 
 /**
- * ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ #####
- * ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ #####
- * ##### ^ #####                                           ##### ^ #####
- * ##### ^ #####      DO NOT USE THIS CLASS DIRECTLY!      ##### ^ #####
- * ##### ^ #####                                           ##### ^ #####
- * ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ #####
- * ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ ##### ^ #####
- */
-
-/**
  * Load this asset with...
  * p2m\assets\base\DataTablesButtonsBase::register($this);
  *
@@ -41,25 +31,19 @@ class DataTablesButtonsBase extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '1.6.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
+		'sourcePath' => '@npm/datatables.net-buttons',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/buttons/##-version-##',
-			'js' => [
-				'js/dataTables.buttons.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-VN/74A9zRhPrbgZ1tJ4dzGabANCIhsrKx6v6iXVFh5SIy6noRPJ+otLRTwJ260hq',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-buttons',
-			'js' => [
-				'js/dataTables.buttons.min.js',
-			],
+		'js' => [
+			'js/dataTables.buttons.min.js',
 		],
 		'depends' => [
-			'p2m\assets\base\P2CoreAsset',
-			'p2m\assets\DataTablesAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

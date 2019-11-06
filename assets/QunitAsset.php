@@ -31,8 +31,9 @@ class QunitAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.9.3';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/qunit@##-version-##',
+		'sourcePath' => '@npm/qunit',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/qunit@##-version-##',
 			'css' => [
 				'qunit/qunit.min.css',
 			],
@@ -48,17 +49,14 @@ class QunitAsset extends \p2m\assets\base\P2AssetBundle
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/qunit',
-			'css' => [
-				'qunit/qunit.css',
-			],
-			'js' => [
-				'qunit/qunit.js',
-			],
+		'css' => [
+			'qunit/qunit.css',
+		],
+		'js' => [
+			'qunit/qunit.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

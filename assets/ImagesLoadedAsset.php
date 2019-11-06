@@ -31,24 +31,19 @@ class ImagesLoadedAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '4.1.4';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/imagesloaded@##-version-##',
+		'sourcePath' => '@npm/imagesloaded',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/imagesloaded@##-version-##',
-			'js' => [
-				'imagesloaded.pkgd.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-YnGSHPPWEUDKMHFPOVmNP7Xyfwx5G0CHet6IoNgiX6CbFZS8gCeIfEgB1MgPwjdI',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/imagesloaded',
-			'js' => [
-				'imagesloaded.pkgd.min.js',
-			],
+		'js' => [
+			'imagesloaded.pkgd.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

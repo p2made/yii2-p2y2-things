@@ -31,24 +31,19 @@ class AmplitudeJsAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '5.0.2';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/amplitudejs@##-version-##/dist',
+		'sourcePath' => '@npm/amplitudejs/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/amplitudejs@##-version-##/dist',
-			'js' => [
-				'amplitude.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-XNbCKm0IHmWzKrC7P4RWj/25uQuL3tuXGj2mdm7X9EnVswHsL57sh/Hk3Sn6x4b2',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/amplitudejs/dist',
-			'js' => [
-				'amplitude.min.js',
-			],
+		'js' => [
+			'amplitude.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

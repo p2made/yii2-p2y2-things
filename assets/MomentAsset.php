@@ -2,7 +2,7 @@
 /**
  * MomentAsset.php
  *
- * Yii2 asset for
+ * Yii2 asset for moment
  * https://momentjs.com
  *
  * @author Pedro Plowman
@@ -24,27 +24,26 @@
 
 namespace p2m\assets;
 
-class MomentAsset extends \p2m\assets\base\MomentAssetBase
+class MomentAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $packageName = 'moment';
+
+	protected $packageVersion = '2.24.0';
+
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/min',
+		'sourcePath' => '@npm/moment/min',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/min',
-			'js' => [
-				'moment.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-fYxN7HsDOBRo1wT/NSZ0LkoNlcXvpDpFy6WzB42LxuKAX7sBwgo7vuins+E1HCaw',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/moment/min',
-			'js' => [
-				'moment.min.js',
-			],
+		'js' => [
+			'moment.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

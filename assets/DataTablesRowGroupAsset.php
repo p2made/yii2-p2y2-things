@@ -31,11 +31,9 @@ class DataTablesRowGroupAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '1.1.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/rowgroup/##-version-##',
+		'sourcePath' => '@npm/datatables.net-rowgroup-bs4',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/rowgroup/##-version-##',
-			'css' => [
-				'css/rowGroup.bootstrap4.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-sREga0SY0aJ5RceXnqhT2UZXVIHrg0DxCvj0RzvTw4hcB9oAz/yTn4dAuKZzicIA',
 				'crossorigin' => 'anonymous',
@@ -48,18 +46,14 @@ class DataTablesRowGroupAsset extends \p2m\assets\base\P2AssetBundle
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-rowgroup-bs4',
-			'css' => [
-				'css/rowGroup.bootstrap4.min.css',
-			],
-			'js' => [
-				'js/rowGroup.bootstrap4.min.js',
-			],
+		'css' => [
+			'css/rowGroup.bootstrap4.min.css',
+		],
+		'js' => [
+			'js/rowGroup.bootstrap4.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\DataTablesAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

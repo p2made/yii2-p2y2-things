@@ -31,24 +31,19 @@ class RaphaelAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.3.0';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/raphael@##-version-##',
+		'sourcePath' => '@npm/raphael',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/raphael@##-version-##',
-			'js' => [
-				'raphael.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-5fwEhxN8gjmQlK6ngccfyi8BVu5leqLqTqliCXNoLVGCjpGfzJwJ2pS8BLDIxWSt',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/raphael',
-			'js' => [
-				'raphael.min.js',
-			],
+		'js' => [
+			'raphael.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

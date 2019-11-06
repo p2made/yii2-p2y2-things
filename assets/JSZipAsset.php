@@ -31,24 +31,19 @@ class JSZipAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '3.2.2';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/jszip@##-version-##/dist',
+		'sourcePath' => '@npm/jszip/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/jszip@##-version-##/dist',
-			'js' => [
-				'jszip.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-kdlp/eaq4ocpSzG9lDxW0fS3Ed5zL6eVEqOG9E/cDKR2XcXTiXQkRR4WAuQ+6Bt1',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/jszip/dist',
-			'js' => [
-				'jszip.min.js',
-			],
+		'js' => [
+			'jszip.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

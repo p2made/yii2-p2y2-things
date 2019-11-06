@@ -31,24 +31,19 @@ class HolderJsAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.9.6';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/holderjs@##-version-##',
+		'sourcePath' => '@npm/holderjs',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/holderjs@##-version-##',
-			'js' => [
-				'holder.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-bSAO0//FZ+kEkMUA+BQwV9+DKxRuFoPhjdZJZmjmoc3M66CVZE/uRacR/B8tBVl+',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/holderjs',
-			'js' => [
-				'holder.min.js',
-			],
+		'js' => [
+			'holder.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

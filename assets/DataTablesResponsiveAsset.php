@@ -31,35 +31,26 @@ class DataTablesResponsiveAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.2.3';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/responsive/##-version-##',
+		'sourcePath' => '@npm/datatables.net-responsive-bs4',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/responsive/##-version-##',
-			'css' => [
-				'css/responsive.bootstrap4.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-50PJC5h4XMO6dSTQY4Ol00P2fJMX5wWrQb+vi0KHSDsQxt7/lf/h2aMpB+npa4xo',
 				'crossorigin' => 'anonymous',
-			],
-			'js' => [
-				'js/responsive.bootstrap4.min.js',
 			],
 			'jsOptions' => [
 				'integrity' => 'sha384-1dq/VDAF2KuzYz0N0KG39nI4v4MC7WeyP+lfpNEGOlCgaO61VwJxK7FRBYuiewdG',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-responsive-bs4',
-			'css' => [
-				'css/responsive.bootstrap4.min.css',
-			],
-			'js' => [
-				'js/responsive.bootstrap4.min.js',
-			],
+		'css' => [
+			'css/responsive.bootstrap4.min.css',
+		],
+		'js' => [
+			'js/responsive.bootstrap4.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\base\DataTablesResponsiveBase',
+			'p2massets2CoreAsset',
 		],
 	];
 

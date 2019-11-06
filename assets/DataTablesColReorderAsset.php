@@ -31,11 +31,9 @@ class DataTablesColReorderAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '1.5.2';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/colreorder/##-version-##',
+		'sourcePath' => '@npm/datatables.net-colreorder-bs4',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/colreorder/##-version-##',
-			'css' => [
-				'css/colReorder.bootstrap4.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-RZygVb1fZHVXuu7ppEDHdp39XsL8YoCh4VjdoKiWkjwwfOXVpxJhSsUfMKKmRzam',
 				'crossorigin' => 'anonymous',
@@ -48,18 +46,14 @@ class DataTablesColReorderAsset extends \p2m\assets\base\P2AssetBundle
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-colreorder-bs4',
-			'css' => [
-				'css/colReorder.bootstrap4.min.css',
-			],
-			'js' => [
-				'js/colReorder.bootstrap4.min.js',
-			],
+		'css' => [
+			'css/colReorder.bootstrap4.min.css',
+		],
+		'js' => [
+			'js/colReorder.bootstrap4.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\DataTablesAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

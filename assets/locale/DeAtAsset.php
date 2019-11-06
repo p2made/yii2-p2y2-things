@@ -2,7 +2,7 @@
 /**
  * DeAtAsset.php
  *
- * Yii2 asset for 
+ * Yii2 asset for moment
  * https://momentjs.com
  *
  * @author Pedro Plowman
@@ -24,27 +24,26 @@
 
 namespace p2m\assets\locale;
 
-class DeAtAsset extends \p2m\assets\locale\base\MomentAssetBase
+class DeAtAsset extends \p2m\assets\base\P2AssetBundle
 {
+	protected $packageName = 'moment';
+
+	protected $packageVersion = '2.24.0';
+
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
+		'sourcePath' => '@npm/moment/locale',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/moment@##-version-##/locale',
-			'js' => [
-				'de-at.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-E2aWn3SvWVodBfQ5nm4EBSx5Be4AB39QQnlsFJIYIT8TFVYp19mrsDqnR24Fc1sb',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/moment/locale',
-			'js' => [
-				'de-at.js',
-			],
+		'js' => [
+			'de-at.js',
 		],
 		'depends' => [
-			'p2m\assets\locale\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

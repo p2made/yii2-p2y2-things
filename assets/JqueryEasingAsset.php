@@ -31,24 +31,19 @@ class JqueryEasingAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '1.4.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/jquery.easing@##-version-##',
+		'sourcePath' => '@npm/jquery.easing',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/jquery.easing@##-version-##',
-			'js' => [
-				'jquery.easing.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-leGYpHE9Tc4N9OwRd98xg6YFpB9shlc/RkilpFi0ljr3QD4tFoFptZvgnnzzwG4Q',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/jquery.easing',
-			'js' => [
-				'jquery.easing.min.js',
-			],
+		'js' => [
+			'jquery.easing.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

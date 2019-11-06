@@ -1,6 +1,6 @@
 <?php
 /**
- * FullCalendarAsset.php
+ * FullCalendarPrintAsset.php
  *
  * Yii2 asset for FullCalendar
  * https://fullcalendar.io
@@ -11,20 +11,20 @@
  * @license MIT
  *
  * @package p2made/yii2-p2y2-moment
- * @class \p2m\assets\FullCalendarAsset
+ * @class \p2m\assets\FullCalendarPrintAsset
  */
 
 /**
  * Load this asset with...
- * p2m\assets\FullCalendarAsset::register($this);
+ * p2m\assets\FullCalendarPrintAsset::register($this);
  *
  * or specify as a dependency with...
- *     'p2m\assets\FullCalendarAsset',
+ *     'p2m\assets\FullCalendarPrintAsset',
  */
 
 namespace p2m\assets;
 
-class FullCalendarAsset extends \p2m\assets\base\P2AssetBundle
+class FullCalendarPrintAsset extends \p2m\assets\base\P2AssetBundle
 {
 	protected $packageName = 'fullcalendar';
 
@@ -35,19 +35,12 @@ class FullCalendarAsset extends \p2m\assets\base\P2AssetBundle
 		'sourcePath' => '@npm/fullcalendar/dist',
 		'static' => [
 			'cssOptions' => [
-				'integrity' => 'sha384-mdYNffWokBizEbCT6AVUtjikREPx4Xie/WwFgE6+qb+h8epAkpW3d0NO5ERE3lsk',
-				'crossorigin' => 'anonymous',
-			],
-			'jsOptions' => [
-				'integrity' => 'sha384-ivvIdHDJeBKiNjk+36/EoCd4+YmEY6vutKat7pEoN3v2thfDTNvyAqyxt1c+P5RT',
+				'integrity' => 'sha384-Q4MjQXexIIZhDecCSVc79g7WtM16+sjB6ubWmtL2tM7bOFLC38NjV8SlNRcy/Xpl',
 				'crossorigin' => 'anonymous',
 			],
 		],
 		'css' => [
-			'fullcalendar.min.css',
-		],
-		'js' => [
-			'fullcalendar.min.js',
+			'fullcalendar.print.min.css',
 		],
 		'depends' => [
 			'p2massets2CoreAsset',
@@ -60,8 +53,3 @@ class FullCalendarAsset extends \p2m\assets\base\P2AssetBundle
 		parent::init();
 	}
 }
-namespace	p2m\assets
-baseUrl	https://cdn.jsdelivr.net/npm/fullcalendar@##-version-##/dist
-sourcePath	@npm/fullcalendar/dist
-js	gcal.min.js
-js_hash	sha384-BTR3F1dHjU7D0+QiywB/Q412qtnIaJCI2dUNb7yKyWOvzXjupdzk72THpdU/rliu

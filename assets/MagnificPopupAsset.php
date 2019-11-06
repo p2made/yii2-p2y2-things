@@ -31,8 +31,9 @@ class MagnificPopupAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '1.1.0';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/magnific-popup@##-version-##/dist',
+		'sourcePath' => '@npm/magnific-popup/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/magnific-popup@##-version-##/dist',
 			'css' => [
 				'magnific-popup.min.css',
 			],
@@ -40,25 +41,19 @@ class MagnificPopupAsset extends \p2m\assets\base\P2AssetBundle
 				'integrity' => 'sha384-FYQAfABe21FtIXd6+luYjhBcJomlPYbofGGps6AyyOhObtv/Spp69Ujm04FbHa9W',
 				'crossorigin' => 'anonymous',
 			],
-			'js' => [
-				'jquery.magnific-popup.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-fexNtx3nPE3sjIQuGk8G2X8X/aSEBVMC58R839hkgsY/Xjhvkm7m2otGhwrdESWj',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/magnific-popup/dist',
-			'css' => [
-				'magnific-popup.css',
-			],
-			'js' => [
-				'jquery.magnific-popup.min.js',
-			],
+		'css' => [
+			'magnific-popup.css',
+		],
+		'js' => [
+			'jquery.magnific-popup.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

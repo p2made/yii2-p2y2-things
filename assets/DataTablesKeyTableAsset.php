@@ -31,11 +31,9 @@ class DataTablesKeyTableAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.5.1';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.datatables.net/keytable/##-version-##',
+		'sourcePath' => '@npm/datatables.net-keytable-bs4',
 		'static' => [
-			'baseUrl' => 'https://cdn.datatables.net/keytable/##-version-##',
-			'css' => [
-				'css/keyTable.bootstrap4.min.css',
-			],
 			'cssOptions' => [
 				'integrity' => 'sha384-yJbK2SgMp7dq69V9ykO2BN4oLSTAdtCT2rijg6Q7XggrijC8tXH3joWeewmRunmA',
 				'crossorigin' => 'anonymous',
@@ -48,18 +46,14 @@ class DataTablesKeyTableAsset extends \p2m\assets\base\P2AssetBundle
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/datatables.net-keytable-bs4',
-			'css' => [
-				'css/keyTable.bootstrap4.min.css',
-			],
-			'js' => [
-				'js/keyTable.bootstrap4.min.js',
-			],
+		'css' => [
+			'css/keyTable.bootstrap4.min.css',
+		],
+		'js' => [
+			'js/keyTable.bootstrap4.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
-			'p2m\assets\DataTablesAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 

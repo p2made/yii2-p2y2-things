@@ -31,24 +31,19 @@ class SweetAlertAsset extends \p2m\assets\base\P2AssetBundle
 	protected $packageVersion = '2.1.2';
 
 	protected $packageData = [
+		'baseUrl' => 'https://cdn.jsdelivr.net/npm/sweetalert@##-version-##/dist',
+		'sourcePath' => '@npm/sweetalert/dist',
 		'static' => [
-			'baseUrl' => 'https://cdn.jsdelivr.net/npm/sweetalert@##-version-##/dist',
-			'js' => [
-				'sweetalert.min.js',
-			],
 			'jsOptions' => [
 				'integrity' => 'sha384-RIQuldGV8mnjGdob13cay/K1AJa+LR7VKHqSXrrB5DPGryn4pMUXRLh92Ev8KlGF',
 				'crossorigin' => 'anonymous',
 			],
 		],
-		'published' => [
-			'sourcePath' => '@npm/sweetalert/dist',
-			'js' => [
-				'sweetalert.min.js',
-			],
+		'js' => [
+			'sweetalert.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2massets2CoreAsset',
 		],
 	];
 
