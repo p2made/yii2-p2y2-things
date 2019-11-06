@@ -53,7 +53,7 @@ class DataTablesKeyTableAsset extends \p2m\assets\base\P2AssetBundle
 			'js/keyTable.bootstrap4.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2m\assets\DataTablesAsset',
 		],
 	];
 
