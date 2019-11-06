@@ -50,7 +50,7 @@ class DataTablesResponsiveAsset extends \p2m\assets\base\P2AssetBundle
 			'js/responsive.bootstrap4.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2m\assets\base\DataTablesResponsiveAssetBase',
 		],
 	];
 
