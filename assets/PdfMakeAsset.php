@@ -43,7 +43,6 @@ class PdfMakeAsset extends \p2m\assets\base\P2AssetBundle
 			'pdfmake.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
 			'p2m\assets\VfsFontsAsset',
 		],
 	];
