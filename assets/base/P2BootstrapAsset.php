@@ -50,7 +50,7 @@ class P2BootstrapAsset extends \p2m\assets\base\P2AssetBundle
 			'js/bootstrap.min.js',
 		],
 		'depends' => [
-			'p2m\assets\P2CoreAsset',
+			'p2m\assets\base\P2JqueryAsset',
 		],
 	];
 
