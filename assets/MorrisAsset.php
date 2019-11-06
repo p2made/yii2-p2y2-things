@@ -54,6 +54,7 @@ class MorrisAsset extends \p2m\assets\base\P2AssetBundle
 		],
 		'depends' => [
 			'p2m\assets\P2CoreAsset',
+			'p2m\assets\RaphaelAsset',
 		],
 	];
 
