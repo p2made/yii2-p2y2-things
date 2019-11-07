@@ -267,8 +267,8 @@ The following sources are used for published assets...
 In order of preference, the CDNs used are...
 
 - vendor CDN
-- [cdnjs](https://cdnjs.com/)
 - [jsDelivr](http://www.jsdelivr.com/)
+- [cdnjs](https://cdnjs.com/)
 
 Very occasionally the CDN version of a resource may be a little behind the published version.
 
