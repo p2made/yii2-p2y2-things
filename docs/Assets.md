@@ -38,7 +38,7 @@ circle-buttons | `p2m\assets\CircleButtonsAsset`
 []() | `p2m\assets\PdfMakeAsset`
 [prettyPhoto](http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/) | `p2m\assets\PrettyPhotoAsset`
 []() | `p2m\assets\QunitAsset`
-[Rapha‘l](http://raphaeljs.com) | `p2m\assets\RaphaelAsset`
+[RaphaÃ«l](http://raphaeljs.com) | `p2m\assets\RaphaelAsset`
 [SweetAlert](http://t4t5.github.io/sweetalert/) | `p2m\assets\SweetAlertAsset`
 timeline | `p2m\assets\TimelineAsset`
 [Timeline.css](https://github.com/christian-fei/Timeline.css) | `p2m\assets\TimelineCssAsset`
